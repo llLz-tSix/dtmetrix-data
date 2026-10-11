@@ -112,7 +112,7 @@
         '<span class="chip">' + VERDICT[v] + '</span><span class="hint">оценка матчапа</span>' +
         '<div class="ci"><i style="left:' + l + "%;width:" + w + '%"></i><u></u></div>' +
         '<div class="mm">' + mm + "</div>" +
-        "<p>" + esc(why(r)) + "</p><small>Коридор " + r.ci_low.toFixed(0) + "–" + r.ci_high.toFixed(0) + "% · " + r.eff_games.toLocaleString("ru") + " игр</small></div></div>";
+        "<p>" + esc(why(r)) + "</p><small>Коридор " + r.ci_low.toFixed(0) + "–" + r.ci_high.toFixed(0) + "% · " + r.eff_games.toLocaleString("ru") + ' игр в парах с этими врагами</small></div></div>';
     }).join("");
     Array.prototype.forEach.call(el.querySelectorAll(".card"), function (c) {
       var pick = function () { selected = +c.dataset.i; renderPicks(); renderBuild(); };
@@ -163,8 +163,14 @@
   }
   function renderFoot() {
     var made = D.generated ? new Date(D.generated) : null, old = made && (Date.now() - made.getTime()) > 72 * 3600 * 1000;
-    $("foot").innerHTML = "Это подсказка по матчапам против выбранных героев, а не прогноз исхода матча. Данные: STRATZ (матчапы всех рангов), OpenDota (базовые винрейты)" +
-      (made ? ", снимок от " + made.toLocaleDateString("ru") + (old ? ' <span class="warn">(данные устарели)</span>' : "") : "") +
+    var w = D.window;
+    var scope = w
+      ? "Матчапы: STRATZ, рейтинги " + w.brackets + ", " + new Date(w.from).toLocaleDateString("ru") + " – " + new Date(w.to).toLocaleDateString("ru") + " (около двух месяцев). "
+      : "Матчапы: STRATZ. ";
+    $("foot").innerHTML = "Это подсказка по матчапам против выбранных героев, а не прогноз исхода матча. " + scope +
+      "Число игр это сумма по парам «ваш герой против каждого из врагов», один матч может учитываться несколько раз. " +
+      "Билды: STRATZ, Legend и выше, последняя неделя данных. Позиции героев: OpenDota" +
+      (made ? ". Снимок от " + made.toLocaleDateString("ru") + (old ? ' <span class="warn">(данные устарели)</span>' : "") : "") +
       ". Dota 2 является товарным знаком Valve Corporation; проект не связан с Valve.";
   }
   function update() { renderSlots(); renderRole(); renderPicks(); renderBuild(); renderCounters(); writeHash(); }
