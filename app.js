@@ -133,9 +133,13 @@
     $("bt").textContent = "Билд · " + r.name;
     if (!b) { $("bd").innerHTML = '<div class="hint">Для этого героя билда пока нет.</div>'; return; }
     var stages = [["Старт", b.start], ["До 15 минут", b.early], ["До 30 минут", b.core], ["Поздняя игра", b.late]];
-    $("bd").innerHTML = stages.filter(function (s) { return s[1] && s[1].length; }).map(function (s) {
-      return '<div class="ph"><h4>' + s[0] + "</h4>" + itemsRow(s[1]) + "</div>";
-    }).join("");
+    var note = b.src === "stratz"
+      ? "По матчам Legend+ на этой позиции" + (b.games ? " (" + b.games.toLocaleString("ru") + " матчей)" : "") + ". Наведите на предмет, чтобы увидеть детали."
+      : "Типовой набор для роли: данных по этому герою пока мало.";
+    $("bd").innerHTML = '<div class="hint" style="margin:0 0 10px">' + note + "</div>" +
+      stages.filter(function (s) { return s[1] && s[1].length; }).map(function (s) {
+        return '<div class="ph"><h4>' + s[0] + "</h4>" + itemsRow(s[1]) + "</div>";
+      }).join("");
   }
   function renderCounters() {
     var el = $("cn");
