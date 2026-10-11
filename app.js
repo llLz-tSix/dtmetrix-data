@@ -10,18 +10,22 @@
   var hide = "this.style.visibility='hidden'";
   var esc = function (s) { return String(s).replace(/[&<>"']/g, function (c) { return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]; }); };
 
-  var D = null, enemies = [], role = "carry", selected = 0, rows = [], cur = 0;
+  var D = null, enemies = [], role = "carry", rank = "legend", selected = 0, rows = [], cur = 0;
+  var RANK_LABEL = { all: "Все ранги", legend: "Legend и выше", divine: "Divine и выше" };
+  var RANK_NOTE = { all: "все ранги", legend: "рейтинги Legend-Ancient и Divine-Immortal", divine: "рейтинг Divine-Immortal" };
 
   /* ---------- состояние в адресе (#r=carry&e=2,5,14), чтобы драфтом можно было делиться ---------- */
   function readHash() {
     var p = new URLSearchParams(location.hash.replace(/^#/, ""));
     var r = p.get("r");
     if (r && D.roles.indexOf(r) >= 0) role = r;
+    var k = p.get("k");
+    rank = k && ranks().indexOf(k) >= 0 ? k : D.default_set;
     enemies = (p.get("e") || "").split(",").map(Number).filter(function (id) { return D.byId[id]; })
       .filter(function (id, i, a) { return a.indexOf(id) === i; }).slice(0, 5);
   }
   function writeHash() {
-    var h = "r=" + role + (enemies.length ? "&e=" + enemies.join(",") : "");
+    var h = "r=" + role + (rank !== D.default_set ? "&k=" + rank : "") + (enemies.length ? "&e=" + enemies.join(",") : "");
     try { history.replaceState(null, "", "#" + h); } catch (e) { /* file:// и т.п. */ }
   }
 
@@ -39,6 +43,18 @@
         var i = +s.dataset.i;
         if (enemies[i] !== undefined) { enemies.splice(i, 1); update(); listHeroes(); } else $("q").focus();
       };
+    });
+  }
+  function ranks() {
+    var list = [D.default_set].concat(Object.keys(D.rank_sets || {}));
+    return ["all", "legend", "divine"].filter(function (k) { return list.indexOf(k) >= 0; });
+  }
+  function renderRank() {
+    $("rank").innerHTML = ranks().map(function (k) {
+      return '<button type="button" data-k="' + k + '" class="' + (k === rank ? "on" : "") + '" aria-pressed="' + (k === rank) + '">' + RANK_LABEL[k] + "</button>";
+    }).join("");
+    Array.prototype.forEach.call($("rank").querySelectorAll("button"), function (b) {
+      b.onclick = function () { rank = b.dataset.k; selected = 0; update(); };
     });
   }
   function renderRole() {
@@ -95,7 +111,7 @@
       $("ptitle").textContent = "Лучшие пики";
       return;
     }
-    rows = DMEngine.analyze(D, enemies, role, 8);
+    rows = DMEngine.analyze(D, enemies, role, 8, rank);
     $("ptitle").textContent = "Лучшие пики · " + ROLE_LABEL[role];
     if (selected >= rows.length) selected = 0;
     el.innerHTML = rows.map(function (r, i) {
@@ -165,7 +181,7 @@
     var made = D.generated ? new Date(D.generated) : null, old = made && (Date.now() - made.getTime()) > 72 * 3600 * 1000;
     var w = D.window;
     var scope = w
-      ? "Матчапы: STRATZ, рейтинги " + w.brackets + ", " + new Date(w.from).toLocaleDateString("ru") + " – " + new Date(w.to).toLocaleDateString("ru") + " (около двух месяцев). "
+      ? "Матчапы: STRATZ, " + RANK_NOTE[rank] + ", " + new Date(w.from).toLocaleDateString("ru") + " – " + new Date(w.to).toLocaleDateString("ru") + " (около двух месяцев). "
       : "Матчапы: STRATZ. ";
     $("foot").innerHTML = "Это подсказка по матчапам против выбранных героев, а не прогноз исхода матча. " + scope +
       "Число игр это сумма по парам «ваш герой против каждого из врагов», один матч может учитываться несколько раз. " +
@@ -173,7 +189,7 @@
       (made ? ". Снимок от " + made.toLocaleDateString("ru") + (old ? ' <span class="warn">(данные устарели)</span>' : "") : "") +
       ". Dota 2 является товарным знаком Valve Corporation; проект не связан с Valve.";
   }
-  function update() { renderSlots(); renderRole(); renderPicks(); renderBuild(); renderCounters(); writeHash(); }
+  function update() { renderSlots(); renderRole(); renderRank(); renderPicks(); renderBuild(); renderCounters(); renderFoot(); writeHash(); }
 
   /* ---------- фон: приглушённые фиолетовые цифры ---------- */
   function rain() {
@@ -223,7 +239,7 @@
       else done("Скопируйте из адресной строки");
     };
     addEventListener("hashchange", function () { readHash(); selected = 0; update(); });
-    renderFoot(); update();
+    update();
   }
 
   rain();

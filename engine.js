@@ -25,20 +25,20 @@
   }
 
   /* Пара кандидат-враг: байесовская поправка к базовому винрейту героя. */
-  function pair(D, cand, enemyId) {
-    var row = D.pairs[String(enemyId)];
+  function pair(D, cand, enemyId, pairs, mu) {
+    var row = pairs[String(enemyId)];
     var v = row && row[String(cand.id)];
     var games = 0, wins = 0;
     if (v && v[0] >= D.min_pair) { games = v[0]; wins = v[0] - v[1]; }   // в снимке v[1] = победы врага
     var nEff = games + D.k_pair;
-    var wEff = wins + D.k_pair * cand.mu;
+    var wEff = wins + D.k_pair * mu;
     return { games: games, rate: wEff / nEff, nEff: nEff, raw: games ? wins / games : null };
   }
 
-  function candidate(D, cand, enemies, ri) {
+  function candidate(D, cand, enemies, ri, pairsSet, mu) {
     var pairs = [], weights = [], totalW = 0, gamesTotal = 0, matched = 0;
     enemies.forEach(function (eid) {
-      var p = pair(D, cand, eid);
+      var p = pair(D, cand, eid, pairsSet, mu);
       p.id = eid;
       p.weight = D.byId[eid].w[ri];
       pairs.push(p);
@@ -60,13 +60,15 @@
       id: cand.id, name: cand.name, slug: cand.slug,
       score: rateSum * 100 - pen, ci_low: lo * 100 - pen, ci_high: hi * 100 - pen,
       rarity_penalty: pen, eff_games: gamesTotal, matched: matched,
-      low_evidence: gamesTotal < D.min_total, baseline: cand.mu * 100, pairs: pairs
+      low_evidence: gamesTotal < D.min_total, baseline: mu * 100, pairs: pairs
     };
   }
 
   /* Лучшие пики против состава для роли role (carry|mid|offlaner|support4|support5). */
-  function analyze(D, enemyIds, role, limit) {
+  function analyze(D, enemyIds, role, limit, rank) {
     prep(D);
+    var set = rank && rank !== D.default_set && D.rank_sets && D.rank_sets[rank] ? D.rank_sets[rank] : null;
+    var pairsSet = set ? set.pairs : D.pairs;
     limit = limit || 8;
     var ri = D.roles.indexOf(role);
     var enemies = enemyIds.map(Number).filter(function (id) { return D.byId[id]; });
@@ -74,7 +76,7 @@
     var rows = [];
     D.list.forEach(function (c) {
       if (enemies.indexOf(c.id) >= 0 || c.mask[ri] !== "1") return;
-      rows.push(candidate(D, c, enemies, ri));
+      rows.push(candidate(D, c, enemies, ri, pairsSet, set && set.mu[c.id] !== undefined ? set.mu[c.id] : c.mu));
     });
     rows.sort(function (a, b) {
       return (b.ci_low - a.ci_low) || (b.eff_games - a.eff_games) || (b.score - a.score);

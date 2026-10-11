@@ -74,6 +74,10 @@ header h1{margin:0;font-size:22px}header p{margin:2px 0 0;color:var(--mut);font-
  .soon{display:none}
  #cnt{display:none}
 }
+.sechead{display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap;margin-bottom:10px}.sechead .sec{margin:0}
+.rank{display:flex;gap:4px;background:var(--c);border:1px solid var(--line);border-radius:99px;padding:3px}
+.rank button{border:0;background:none;color:var(--mut);font:inherit;font-size:12.5px;padding:6px 12px;border-radius:99px;cursor:pointer;white-space:nowrap}
+.rank button.on{background:var(--ac);color:#0e0b1a;font-weight:600}
 </style></head><body>
 <canvas id="rain" aria-hidden="true"></canvas>
 <div class="page">
@@ -87,7 +91,7 @@ header h1{margin:0;font-size:22px}header p{margin:2px 0 0;color:var(--mut);font-
 <div class="role" id="role" role="group" aria-label="Ваша роль"></div></div></section>
 
 <div class="layout">
-<main><div class="sec" id="ptitle">Лучшие пики</div><div class="cards" id="pk"></div></main>
+<main><div class="sechead"><div class="sec" id="ptitle">Лучшие пики</div><div class="rank" id="rank" role="group" aria-label="Ранг игроков, по матчам которых считается оценка"></div></div><div class="cards" id="pk"></div></main>
 <aside class="side-col"><div class="pn"><div class="sec" id="bt">Билд</div><div id="bd"></div></div>
 <div class="pn"><div class="sec">Контрпредметы</div><div id="cn"></div></div></aside>
 </div>
