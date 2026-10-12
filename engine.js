@@ -108,7 +108,42 @@
     return { key: "mid", label: "Нейтрально" };
   }
 
-  var api = { prep: prep, analyze: analyze, verdict: verdict, pairStatus: pairStatus, rarityPenalty: rarityPenalty };
+  /* Контрпредметы под выбранного героя: ответы на врагов из таблиц роли, оставляя только предметы из его
+     предметов, которые он реально покупает (билд и редкие ситуативные покупки); точечные пары героев заменяют общий
+     совет; блокировки героя исключают предметы. Эталон на Python: build_site_data.site_counters. */
+  function counters(D, heroId, role, enemyIds, limit) {
+    limit = limit || 6;
+    var key = role.indexOf("support") === 0 ? "support" : role;
+    var per = (D.hero_items || {})[String(heroId)] || {};
+    var mine = per[role] || per[Object.keys(per)[0]] || [];
+    var allowed = {};
+    mine.forEach(function (s) { allowed[s] = true; });
+    var block = {};
+    ((D.blocked || {})[String(heroId)] || []).forEach(function (s) { block[s] = true; });
+    var over = (D.vs_overrides || {})[String(heroId)] || {};
+    var table = (D.counters || {})[key] || {};
+    var grouped = {}, order = [];
+    enemyIds.forEach(function (eid) {
+      var rows = over[String(eid)];
+      if (!rows) {
+        rows = (table[String(eid)] || []).filter(function (r) {
+          var parts = r[5] || [r[3]];
+          if (parts.some(function (s) { return block[s]; })) return false;
+          return r[4] === "specific" || !mine.length || parts.some(function (s) { return allowed[s]; });
+        });
+      }
+      rows.forEach(function (r) {
+        var g = grouped[r[0]];
+        if (!g) { g = grouped[r[0]] = { item: r[0], reason: r[1], timing: r[2], slug: r[3], targets: [] }; order.push(r[0]); }
+        g.targets.push(Number(eid));
+      });
+    });
+    return order.map(function (k) { return grouped[k]; }).sort(function (a, b) {
+      return (b.targets.length - a.targets.length) || ((a.timing !== "early") - (b.timing !== "early"));
+    }).slice(0, limit);
+  }
+
+  var api = { prep: prep, analyze: analyze, counters: counters, verdict: verdict, pairStatus: pairStatus, rarityPenalty: rarityPenalty };
   if (typeof module !== "undefined" && module.exports) module.exports = api;
   else root.DMEngine = api;
 })(typeof self !== "undefined" ? self : this);

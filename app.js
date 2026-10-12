@@ -131,7 +131,7 @@
         "<p>" + esc(why(r)) + "</p><small>Коридор " + r.ci_low.toFixed(0) + "–" + r.ci_high.toFixed(0) + "% · " + r.eff_games.toLocaleString("ru") + ' игр в парах с этими врагами</small></div></div>';
     }).join("");
     Array.prototype.forEach.call(el.querySelectorAll(".card"), function (c) {
-      var pick = function () { selected = +c.dataset.i; renderPicks(); renderBuild(); };
+      var pick = function () { selected = +c.dataset.i; renderPicks(); renderBuild(); renderCounters(); };
       c.onclick = pick;
       c.onkeydown = function (e) { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); pick(); } };
     });
@@ -158,24 +158,18 @@
       }).join("");
   }
   function renderCounters() {
-    var el = $("cn");
-    if (!enemies.length) { el.innerHTML = '<div class="hint">Появятся после выбора врагов.</div>'; return; }
-    var key = role.indexOf("support") === 0 ? "support" : role;
-    var table = D.counters[key] || {}, grouped = {}, order = [];
-    enemies.forEach(function (eid) {
-      (table[String(eid)] || []).forEach(function (c) {
-        var g = grouped[c[0]];
-        if (!g) { g = grouped[c[0]] = { item: c[0], reason: c[1], timing: c[2], slug: c[3], targets: [] }; order.push(c[0]); }
-        g.targets.push(eid);
-      });
-    });
-    var list = order.map(function (k) { return grouped[k]; }).sort(function (a, b) {
-      return (b.targets.length - a.targets.length) || ((a.timing !== "early") - (b.timing !== "early"));
-    }).slice(0, 6);
+    var el = $("cn"), pick = rows[selected];
+    if (!enemies.length || !pick) { $("ct").textContent = "Контрпредметы"; el.innerHTML = '<div class="hint">Появятся после выбора врагов.</div>'; return; }
+    $("ct").textContent = "Контрпредметы · " + pick.name;
+    var list = DMEngine.counters(D, pick.id, role, enemies, 6);
+    var mine = {};
+    var per = (D.hero_items || {})[String(pick.id)] || {};
+    (per[role] || per[Object.keys(per)[0]] || []).forEach(function (s) { mine[s] = true; });
     el.innerHTML = list.map(function (c) {
       var who = c.targets.map(function (id) { return '<img class="h" src="' + heroImg(D.byId[id].slug) + '" alt="" onerror="' + hide + '"> ' + esc(D.byId[id].name); }).join(", ");
-      return '<div class="cn"><img class="i" src="' + itemImg(c.slug) + '" alt="" onerror="' + hide + '"><div><b>' + esc(c.item) + "</b><br><small>" + who + ": " + esc(c.reason) + "</small></div></div>";
-    }).join("") || '<div class="hint">Для этого состава особых контрпредметов нет.</div>';
+      var own = mine[c.slug] ? ' <span class="hint">· есть в билде</span>' : "";
+      return '<div class="cn"><img class="i" src="' + itemImg(c.slug) + '" alt="" onerror="' + hide + '"><div><b>' + esc(c.item) + "</b>" + own + "<br><small>против " + who + ": " + esc(c.reason) + "</small></div></div>";
+    }).join("") || '<div class="hint">Для этого героя против этих врагов особых контрпредметов нет.</div>';
   }
   function renderFoot() {
     var made = D.generated ? new Date(D.generated) : null, old = made && (Date.now() - made.getTime()) > 72 * 3600 * 1000;
