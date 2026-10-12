@@ -15,6 +15,8 @@ header{display:flex;justify-content:space-between;align-items:center;padding:20p
 .brand{display:flex;align-items:center;gap:12px}.brand img{width:40px;height:40px;flex:none}
 header h1{margin:0;font-size:22px}header p{margin:2px 0 0;color:var(--mut);font-size:13px}
 .soon{padding:7px 14px;border-radius:99px;border:1px solid var(--line);color:var(--mut);font-size:13px}
+.dl{color:var(--ac);border-color:currentColor;text-decoration:none;font-weight:600;transition:background .15s}
+.dl:hover{background:rgba(196,181,253,.12)}
 .pn{background:var(--c);border:1px solid var(--line);border-radius:18px;padding:14px}
 .sec{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--mut);margin:0 0 10px}
 .draft{margin:6px 0 16px;border-color:#3b2f73}
@@ -82,7 +84,7 @@ header h1{margin:0;font-size:22px}header p{margin:2px 0 0;color:var(--mut);font-
 <canvas id="rain" aria-hidden="true"></canvas>
 <div class="page">
 <header><div class="brand"><img src="logo.svg" alt=""><div><h1>Dota Metrix</h1><p>Подсказка по драфту, не предсказание исхода</p></div></div>
-<span class="soon">Оверлей для Dota 2 · скоро</span></header>
+<a class="soon dl" href="https://github.com/llLz-tSix/dtmetrix-data/releases/latest/download/DotaMetrix-Setup.exe" title="Оверлей поверх игры: пики во время драфта, билд и контрпредметы в матче. Windows 10/11, ~76 МБ">Скачать оверлей · Windows</a></header>
 
 <section class="draft pn"><div class="dh"><div class="sec">Вражеская команда</div>
 <div class="tools"><span id="cnt"></span><button class="link" id="share" type="button" title="Скопировать ссылку на этот драфт">Ссылка</button><button class="link" id="reset" type="button">Очистить</button></div></div>
