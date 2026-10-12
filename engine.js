@@ -6,6 +6,7 @@
 
   const RARITY_PP_PER_DECADE = 1.5;
   const RARITY_MAX_PP = 2.5;
+  const MIN_COUNTERS = 3;
 
   function prep(D) {
     if (D._ready) return D;
@@ -122,25 +123,29 @@
     ((D.blocked || {})[String(heroId)] || []).forEach(function (s) { block[s] = true; });
     var over = (D.vs_overrides || {})[String(heroId)] || {};
     var table = (D.counters || {})[key] || {};
-    var grouped = {}, order = [];
+    var grouped = {}, order = [], spare = {}, spareOrder = [];
+    function add(bucket, ord, r, eid) {
+      var g = bucket[r[0]];
+      if (!g) { g = bucket[r[0]] = { item: r[0], reason: r[1], timing: r[2], slug: r[3], targets: [], rare: false }; ord.push(r[0]); }
+      g.targets.push(Number(eid));
+    }
     enemyIds.forEach(function (eid) {
       var rows = over[String(eid)];
-      if (!rows) {
-        rows = (table[String(eid)] || []).filter(function (r) {
-          var parts = r[5] || [r[3]];
-          if (parts.some(function (s) { return block[s]; })) return false;
-          return r[4] === "specific" || !mine.length || parts.some(function (s) { return allowed[s]; });
-        });
-      }
-      rows.forEach(function (r) {
-        var g = grouped[r[0]];
-        if (!g) { g = grouped[r[0]] = { item: r[0], reason: r[1], timing: r[2], slug: r[3], targets: [] }; order.push(r[0]); }
-        g.targets.push(Number(eid));
+      if (rows) { rows.forEach(function (r) { add(grouped, order, r, eid); }); return; }
+      (table[String(eid)] || []).forEach(function (r) {
+        var parts = r[5] || [r[3]];
+        if (parts.some(function (s) { return block[s]; })) return;
+        if (r[4] === "specific" || !mine.length || parts.some(function (s) { return allowed[s]; })) add(grouped, order, r, eid);
+        else add(spare, spareOrder, r, eid);
       });
     });
-    return order.map(function (k) { return grouped[k]; }).sort(function (a, b) {
-      return (b.targets.length - a.targets.length) || ((a.timing !== "early") - (b.timing !== "early"));
-    }).slice(0, limit);
+    function cmp(a, b) { return (b.targets.length - a.targets.length) || ((a.timing !== "early") - (b.timing !== "early")); }
+    var out = order.map(function (k) { return grouped[k]; }).sort(cmp).slice(0, limit);
+    if (out.length < MIN_COUNTERS) {
+      spareOrder.filter(function (k) { return !grouped[k]; }).map(function (k) { return spare[k]; }).sort(cmp)
+        .forEach(function (g) { if (out.length < MIN_COUNTERS) { g.rare = true; out.push(g); } });
+    }
+    return out;
   }
 
   var api = { prep: prep, analyze: analyze, counters: counters, verdict: verdict, pairStatus: pairStatus, rarityPenalty: rarityPenalty };

@@ -167,7 +167,7 @@
     (per[role] || per[Object.keys(per)[0]] || []).forEach(function (s) { mine[s] = true; });
     el.innerHTML = list.map(function (c) {
       var who = c.targets.map(function (id) { return '<img class="h" src="' + heroImg(D.byId[id].slug) + '" alt="" onerror="' + hide + '"> ' + esc(D.byId[id].name); }).join(", ");
-      var own = mine[c.slug] ? ' <span class="hint">· есть в билде</span>' : "";
+      var own = c.rare ? ' <span class="hint">· этот герой берёт редко</span>' : mine[c.slug] ? ' <span class="hint">· есть в билде</span>' : "";
       return '<div class="cn"><img class="i" src="' + itemImg(c.slug) + '" alt="" onerror="' + hide + '"><div><b>' + esc(c.item) + "</b>" + own + "<br><small>против " + who + ": " + esc(c.reason) + "</small></div></div>";
     }).join("") || '<div class="hint">Для этого героя против этих врагов особых контрпредметов нет.</div>';
   }
