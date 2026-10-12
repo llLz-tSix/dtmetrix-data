@@ -1,0 +1,10 @@
+{
+ "version": "0.1.0",
+ "url": "app-0.1.0.zip",
+ "sha256": "66679b4d9b742c94875a9f5c8429b2cd71b57218496f7145aee345306efc4825",
+ "size": 1394945,
+ "min_runtime": 1,
+ "python": "3.12",
+ "installer_url": "https://github.com/llLz-tSix/dtmetrix-data/releases/latest/download/DotaMetrix-Setup.exe",
+ "notes": ""
+}
