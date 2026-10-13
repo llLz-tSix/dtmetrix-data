@@ -1,19 +1,19 @@
 {
- "version": "0.1.10",
- "url": "app-0.1.10.zip",
- "sha256": "c2090e9a59bcdf5de88531860ee0450107705862e97b70d10dfa534ef4d9b719",
- "size": 1510539,
+ "version": "0.1.11",
+ "url": "app-0.1.11.zip",
+ "sha256": "20dc37b7062aa3ce502685befbcf4ff29598dfacb59104086fab97ed66ada48b",
+ "size": 1518544,
  "min_runtime": 1,
  "python": "3.12",
  "min_version": "0.0.0",
  "block_message": "",
  "installer_url": "https://github.com/llLz-tSix/dtmetrix-data/releases/latest/download/DotaMetrix-Setup.exe",
- "notes": "Отчёты об ошибках через Worker, токен убран из программы",
+ "notes": "Рубильник: шифрованное состояние, мягче правила без сети",
  "installer": {
-  "runtime": "c55dba1c6ecb486f721a",
-  "url": "https://github.com/llLz-tSix/dtmetrix-data/releases/download/v0.1.10/DotaMetrix-Setup.exe",
-  "sha256": "eb12b11d590fcf72b1c128249e1fb8e1490c0c713f2cfa0267b2e3df01f54057",
-  "size": 81198720
+  "runtime": "6f2e4fa183aece1188fc",
+  "url": "https://github.com/llLz-tSix/dtmetrix-data/releases/download/v0.1.11/DotaMetrix-Setup.exe",
+  "sha256": "e531ace264a9426202b596aff5cab1181398aa22bdc13edb02f1e0ad519987d2",
+  "size": 81197971
  },
- "sig": "60b431343eee99d7a2dd2be3df8f14e72a9816e73507cf7051904fae86e0d572acae6f5b211fe531d21135fa109b325c706f48b83dd11128e1c60345be10800c"
+ "sig": "ff55212b6d64318061a91956695bff222761110c19388787fb747801130511f6c47734a4ea3b03c643f9b9ab3aab4bd539ac49d18f035e8bf09b642e21279309"
 }
