@@ -1,19 +1,19 @@
 {
- "version": "0.1.11",
- "url": "app-0.1.11.zip",
- "sha256": "20dc37b7062aa3ce502685befbcf4ff29598dfacb59104086fab97ed66ada48b",
- "size": 1518544,
+ "version": "0.1.12",
+ "url": "app-0.1.12.zip",
+ "sha256": "01fbc17ad5a2884b29d76971a8e46c1e863a39c1cfd1949c7c07337dc269bbd6",
+ "size": 1526736,
  "min_runtime": 1,
  "python": "3.12",
  "min_version": "0.0.0",
  "block_message": "",
  "installer_url": "https://github.com/llLz-tSix/dtmetrix-data/releases/latest/download/DotaMetrix-Setup.exe",
- "notes": "Рубильник: шифрованное состояние, мягче правила без сети",
+ "notes": "Оверлей: меньше фантомных героев на драфте, слоты больше не съезжают, ошибка распаковки исправлена",
  "installer": {
-  "runtime": "6f2e4fa183aece1188fc",
-  "url": "https://github.com/llLz-tSix/dtmetrix-data/releases/download/v0.1.11/DotaMetrix-Setup.exe",
-  "sha256": "e531ace264a9426202b596aff5cab1181398aa22bdc13edb02f1e0ad519987d2",
-  "size": 81197971
+  "runtime": "0b27739dd78897c3ca0d",
+  "url": "https://github.com/llLz-tSix/dtmetrix-data/releases/download/v0.1.12/DotaMetrix-Setup.exe",
+  "sha256": "5231e0f8db8d7b46045b84d4fc18651bca22b9a3a8d77bf8b0ea83df2d7abdfc",
+  "size": 81210042
  },
- "sig": "ff55212b6d64318061a91956695bff222761110c19388787fb747801130511f6c47734a4ea3b03c643f9b9ab3aab4bd539ac49d18f035e8bf09b642e21279309"
+ "sig": "cfa215fa36dacd156fed6a1f5cdf831b52a4e6aaeae350d72e7566d03811cb265fc714ac7dbaa990802d1c5ed4ae0888b99509fad920d3bccb3ee477939cfa07"
 }
