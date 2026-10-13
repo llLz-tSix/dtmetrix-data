@@ -1,19 +1,19 @@
 {
- "version": "0.1.9",
- "url": "app-0.1.9.zip",
- "sha256": "72e1be12f8e20c46b61610734b40de5167642d3bbd16252d913f203dcc42b315",
- "size": 1515804,
+ "version": "0.1.10",
+ "url": "app-0.1.10.zip",
+ "sha256": "c2090e9a59bcdf5de88531860ee0450107705862e97b70d10dfa534ef4d9b719",
+ "size": 1510539,
  "min_runtime": 1,
  "python": "3.12",
  "min_version": "0.0.0",
  "block_message": "",
  "installer_url": "https://github.com/llLz-tSix/dtmetrix-data/releases/latest/download/DotaMetrix-Setup.exe",
- "notes": "Логотип оверлея чётче на экранах с масштабом",
+ "notes": "Отчёты об ошибках через Worker, токен убран из программы",
  "installer": {
-  "runtime": "4dd5953668c7846f22b0",
-  "url": "https://github.com/llLz-tSix/dtmetrix-data/releases/download/v0.1.9/DotaMetrix-Setup.exe",
-  "sha256": "141a3c6b30ec96e307cf3d8e15d95baf22b7f24e26ac79046bb385a3bcc00199",
-  "size": 81185182
+  "runtime": "c55dba1c6ecb486f721a",
+  "url": "https://github.com/llLz-tSix/dtmetrix-data/releases/download/v0.1.10/DotaMetrix-Setup.exe",
+  "sha256": "eb12b11d590fcf72b1c128249e1fb8e1490c0c713f2cfa0267b2e3df01f54057",
+  "size": 81198720
  },
- "sig": "77afe81cc6446d8541df1936fdf24da0d16a949f7c1beafa79083422afea4ccb1e073322e6d6af1e79abf13c2c1818bbce5a6ad4fe7ba4fb9d2b0f9c0dea0100"
+ "sig": "60b431343eee99d7a2dd2be3df8f14e72a9816e73507cf7051904fae86e0d572acae6f5b211fe531d21135fa109b325c706f48b83dd11128e1c60345be10800c"
 }
