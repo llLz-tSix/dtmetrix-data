@@ -1,19 +1,19 @@
 {
- "version": "0.1.8",
- "url": "app-0.1.8.zip",
- "sha256": "108b84100798c86cf86bc16d4d35925033f6e97383e15c650afe7337e381424b",
- "size": 1515494,
+ "version": "0.1.9",
+ "url": "app-0.1.9.zip",
+ "sha256": "72e1be12f8e20c46b61610734b40de5167642d3bbd16252d913f203dcc42b315",
+ "size": 1515804,
  "min_runtime": 1,
  "python": "3.12",
  "min_version": "0.0.0",
  "block_message": "",
  "installer_url": "https://github.com/llLz-tSix/dtmetrix-data/releases/latest/download/DotaMetrix-Setup.exe",
- "notes": "Иконка Dota Metrix в поиске «Пуск» и на панели задач.",
+ "notes": "Логотип оверлея чётче на экранах с масштабом",
  "installer": {
-  "runtime": "07e65e029ac377dd3e16",
-  "url": "https://github.com/llLz-tSix/dtmetrix-data/releases/download/v0.1.8/DotaMetrix-Setup.exe",
-  "sha256": "38447dd19ec6fb1c87d536bdf33ec066316f1ecdaccdb8a3cee5915cb7cf774c",
-  "size": 81200216
+  "runtime": "4dd5953668c7846f22b0",
+  "url": "https://github.com/llLz-tSix/dtmetrix-data/releases/download/v0.1.9/DotaMetrix-Setup.exe",
+  "sha256": "141a3c6b30ec96e307cf3d8e15d95baf22b7f24e26ac79046bb385a3bcc00199",
+  "size": 81185182
  },
- "sig": "caacc18b6efebab192f85c6acb3824d2ed5419ea3666dffcd0905e86ab0a20f05a0126aa4df984e9c6791e91d0b7d1d2a7ec49aac56d8bd1e51a60e95eacd10e"
+ "sig": "77afe81cc6446d8541df1936fdf24da0d16a949f7c1beafa79083422afea4ccb1e073322e6d6af1e79abf13c2c1818bbce5a6ad4fe7ba4fb9d2b0f9c0dea0100"
 }
