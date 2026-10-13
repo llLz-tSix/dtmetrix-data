@@ -1,13 +1,13 @@
 {
- "version": "0.1.4",
- "url": "app-0.1.4.zip",
- "sha256": "3edda42c9ac77baa968a879fd141840d60acbe26d56cbac5db704af5ff5204e3",
- "size": 1506201,
+ "version": "0.1.5",
+ "url": "app-0.1.5.zip",
+ "sha256": "1510d47be419fc248e497470ac173849596bd25e4f834183b2198378dadbb28a",
+ "size": 1515221,
  "min_runtime": 1,
  "python": "3.12",
  "min_version": "0.0.0",
  "block_message": "",
  "installer_url": "https://github.com/llLz-tSix/dtmetrix-data/releases/latest/download/DotaMetrix-Setup.exe",
  "notes": "",
- "sig": "0615a936f710aed17a7bd9e044ac6b05ead577a1b84e15522d6a190462ee0ac71fb30c4311ae39890ec96d9c43f61983d791ec760176d3ac2829f95db9b0df0b"
+ "sig": "17a403306c8bcaf71f8acc5f2f320ef97156b3a0806dd8bc8989e2b52b80f4dad141344db08aa4a4e4dd16765d66c3e4c41fc26b5c09438cb160c219daf35f0e"
 }
