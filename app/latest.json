@@ -1,19 +1,19 @@
 {
- "version": "0.1.12",
- "url": "app-0.1.12.zip",
- "sha256": "01fbc17ad5a2884b29d76971a8e46c1e863a39c1cfd1949c7c07337dc269bbd6",
- "size": 1526736,
+ "version": "0.1.13",
+ "url": "app-0.1.13.zip",
+ "sha256": "0e6871a628d4baa3afb678b5ab659d7050c6e81f266cef01b1f6a2ed5bf02967",
+ "size": 1539871,
  "min_runtime": 1,
  "python": "3.12",
  "min_version": "0.0.0",
  "block_message": "",
  "installer_url": "https://github.com/llLz-tSix/dtmetrix-data/releases/latest/download/DotaMetrix-Setup.exe",
- "notes": "Оверлей: меньше фантомных героев на драфте, слоты больше не съезжают, ошибка распаковки исправлена",
+ "notes": "Оверлей: удобное перетаскивание, подсказка про режим Без рамки, понятные сообщения о портретах",
  "installer": {
-  "runtime": "0b27739dd78897c3ca0d",
-  "url": "https://github.com/llLz-tSix/dtmetrix-data/releases/download/v0.1.12/DotaMetrix-Setup.exe",
-  "sha256": "5231e0f8db8d7b46045b84d4fc18651bca22b9a3a8d77bf8b0ea83df2d7abdfc",
-  "size": 81210042
+  "runtime": "923daed49b0280828a19",
+  "url": "https://github.com/llLz-tSix/dtmetrix-data/releases/download/v0.1.13/DotaMetrix-Setup.exe",
+  "sha256": "3aed029e96e141b47f796b1c697a9bdb2a41634531fa35c256fb9fe0c88b4f60",
+  "size": 81210582
  },
- "sig": "cfa215fa36dacd156fed6a1f5cdf831b52a4e6aaeae350d72e7566d03811cb265fc714ac7dbaa990802d1c5ed4ae0888b99509fad920d3bccb3ee477939cfa07"
+ "sig": "06cff6133f8d36f8b73b26f63de89a79afb13562afed581a929088f79da0b758d0e163363dcdbb86e9e434d40a79cccfd6c0119cdc6b3a2cad040aaebc28c10a"
 }
