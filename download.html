@@ -13,8 +13,9 @@
 <style>
 :root{--bg:#0e0b1a;--c:#1a1530;--c2:#241d44;--line:#2b2350;--tx:#f1eeff;--mut:#9a92c4;--ac:#c4b5fd;--g:#4ade80;--y:#facc15;--r:#fb7185}
 *{box-sizing:border-box}html{color-scheme:dark}
-body{margin:0;background:radial-gradient(1200px 600px at 70% -10%,#241d44 0,#06040d 60%) fixed;color:var(--tx);font:15.5px/1.6 "Segoe UI",system-ui,-apple-system,Roboto,sans-serif}
-.page{max-width:900px;margin:0 auto;padding:0 18px 48px}
+body{margin:0;background:#06040d;color:var(--tx);font:15.5px/1.6 "Segoe UI",system-ui,-apple-system,Roboto,sans-serif}
+#rain{opacity:.28;position:fixed;inset:0;width:100%;height:100%;z-index:0;pointer-events:none}
+.page{position:relative;z-index:1;max-width:900px;margin:0 auto;padding:0 18px 48px;background:rgba(14,11,26,.6);min-height:100vh}
 header{display:flex;justify-content:space-between;align-items:center;padding:20px 0 6px;gap:12px;flex-wrap:wrap}
 .brand{display:flex;align-items:center;gap:12px;color:inherit;text-decoration:none}.brand img{width:40px;height:40px}
 .brand b{font-size:22px}.back{color:var(--ac);text-decoration:none;font-size:14px}.back:hover{text-decoration:underline}
@@ -36,7 +37,9 @@ details{border-top:1px solid var(--line);padding:10px 0}details:first-of-type{bo
 summary{cursor:pointer;font-weight:600}summary:hover{color:var(--ac)}details p{margin:8px 0 2px;color:#d8d2f5}
 .muted{color:var(--mut);font-size:13px}
 footer{margin-top:22px;color:var(--mut);font-size:12.5px;line-height:1.55}
-</style></head><body><div class="page">
+</style></head><body>
+<canvas id="rain" aria-hidden="true"></canvas>
+<div class="page">
 <header><a class="brand" href="./"><img src="logo.svg" alt=""><b>Dota Metrix</b></a><a class="back" href="./">← Подбор пиков на сайте</a></header>
 
 <section class="hero">
@@ -84,6 +87,31 @@ footer{margin-top:22px;color:var(--mut);font-size:12.5px;line-height:1.55}
 <footer>Dota Metrix — независимый проект. Dota 2 является товарным знаком Valve Corporation; проект не связан с Valve и не одобрен ею.</footer>
 </div>
 <script>
+// фон как на главной: приглушённые фиолетовые цифры (site/app.js: rain)
+(function () {
+  var cv = document.getElementById("rain"), cx = cv.getContext("2d"), F = 16, cols, drops, w, h;
+  var still = window.matchMedia && matchMedia("(prefers-reduced-motion: reduce)").matches;
+  function size() {
+    var d = window.devicePixelRatio || 1; w = innerWidth; h = innerHeight;
+    cv.width = w * d; cv.height = h * d; cx.setTransform(d, 0, 0, d, 0, 0);
+    cols = Math.ceil(w / F); drops = []; for (var i = 0; i < cols; i++) drops.push(Math.random() * h / F);
+    cx.fillStyle = "#06040d"; cx.fillRect(0, 0, w, h);
+  }
+  function tick() {
+    cx.fillStyle = "rgba(6,4,13,.16)"; cx.fillRect(0, 0, w, h); cx.font = F + "px ui-monospace,Consolas,monospace";
+    for (var i = 0; i < cols; i += 3) {
+      var y = drops[i] * F;
+      cx.fillStyle = "#a78bfa"; cx.fillText(Math.floor(Math.random() * 10), i * F, y);
+      cx.fillStyle = "rgba(139,92,246,.5)"; cx.fillText(Math.floor(Math.random() * 10), i * F, y - F);
+      if (y > h && Math.random() > .975) drops[i] = 0;
+      drops[i] += .3 + (i % 5) * .06;
+    }
+  }
+  size(); addEventListener("resize", size);
+  if (still) { tick(); return; }
+  var last = 0;
+  (function loop(t) { if (!document.hidden && t - last > 70) { tick(); last = t; } requestAnimationFrame(loop); })(0);
+})();
 // версия и размер текущего установщика из манифеста обновлений (если не загрузится - остаётся текст по умолчанию)
 fetch("app/latest.json", { cache: "no-cache" }).then(function (r) { return r.json(); }).then(function (m) {
   var mb = m.installer && m.installer.size ? Math.round(m.installer.size / 1048576) + " МБ" : "около 77 МБ";
