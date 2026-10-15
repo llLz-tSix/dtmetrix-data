@@ -1,19 +1,19 @@
 {
- "version": "0.1.14",
- "url": "app-0.1.14.zip",
- "sha256": "d9e9f7ef09d3b2a48610c3eb8299f51583fabcd2e4cbed70051f11bd80f5f41d",
- "size": 1540319,
+ "version": "0.1.15",
+ "url": "app-0.1.15.zip",
+ "sha256": "0022d0ee2e794391d1ce43c26365637c19ed5de7ec156035995158a285f29afb",
+ "size": 1557742,
  "min_runtime": 1,
  "python": "3.12",
  "min_version": "0.0.0",
  "block_message": "",
  "installer_url": "https://github.com/llLz-tSix/dtmetrix-data/releases/latest/download/DotaMetrix-Setup.exe",
- "notes": "Оверлей не ждёт сеть: работает на последних данных и без интернета, обновляет их в фоне.",
+ "notes": "Русские пути Windows, панель героев, автообновление из оверлея",
  "installer": {
-  "runtime": "8db67a4c2cea8673c1aa",
-  "url": "https://github.com/llLz-tSix/dtmetrix-data/releases/download/v0.1.14/DotaMetrix-Setup.exe",
-  "sha256": "deca83bdc050bbe795f8d141addbb14467748f077cb8f0eb87ee6bd6729c66a6",
-  "size": 81214951
+  "runtime": "87aa3d4b47171d4a928e",
+  "url": "https://github.com/llLz-tSix/dtmetrix-data/releases/download/v0.1.15/DotaMetrix-Setup.exe",
+  "sha256": "fbb9c119c6f16ca23f35f8de35264afe34f67e108b13fc365b96e5de257d4b46",
+  "size": 81237669
  },
- "sig": "49633e8489c10f05e4a687db9f154284d47749cb8f7ba5ed49e6938c4a516dc19c94577ef959f37ddb547cbfe64c64fc22ba3e48dc88423110b067974442b20c"
+ "sig": "22bb0aa457f031e089c8960b40a157493ad2627c57a4dafd50ad8f65b57208f7ff36f40180157e941efc188671fa6f7f03512d215aedf0645d502a34edddbb05"
 }
