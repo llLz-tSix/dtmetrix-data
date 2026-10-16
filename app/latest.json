@@ -1,19 +1,19 @@
 {
- "version": "0.1.18",
- "url": "app-0.1.18.zip",
- "sha256": "da19369be326185cad7c8dd77d7aaa2bff05064bc0ea5cc0287b63137d891e3e",
- "size": 1646346,
+ "version": "0.1.19",
+ "url": "app-0.1.19.zip",
+ "sha256": "a5086ade87f26733902969be4af39861f5a45497c69c0a6f023bf5373f6c5344",
+ "size": 1659582,
  "min_runtime": 1,
  "python": "3.12",
  "min_version": "0.0.0",
  "block_message": "",
  "installer_url": "https://github.com/llLz-tSix/dtmetrix-data/releases/latest/download/DotaMetrix-Setup.exe",
- "notes": "Неверно распознанного врага можно исправить кликом по его иконке в рейке. Контрпредметы с пометкой «сейчас» и «позже» по времени матча, купленное в билде бледнее, следующая покупка в рамке. В подсказке пика видны интервал оценки, число игр и синергия с союзниками.",
+ "notes": "Больше нет выдуманных героев в пустых слотах драфта. Драфт считается законченным, только когда выбрали все, а не только вы. Клик по оверлею не уводит Dota в фон: звук не пропадает. Если миникарта справа, рейка встаёт к правому краю (переключатель в настройках).",
  "installer": {
   "runtime": "e8fedf8c2dd5e698de38",
   "url": "https://github.com/llLz-tSix/dtmetrix-data/releases/download/v0.1.16/DotaMetrix-Setup.exe",
   "sha256": "4de8e74dee03e9a58d35d7b7e37c1cd7ce2997821c7ba1afeb189488f57ee11c",
   "size": 81292762
  },
- "sig": "88f2e437d0e622dc689d9eb8d1cdffd132e004b03bcee2547b9c8c02d4b42f96f13360d5f56307a3ce57448c1cb25f62d1d06411a6d4b43fb5fcf0939dc5ae00"
+ "sig": "2bcc4514c6c3e4a8aa23376b331bbf8da4822dcbd1bcd4987bb31a4b0c26a24c39cefad4acb1abd449c527aa78dd6c417ef89bc37e75d0c043cfab3cd0372701"
 }
