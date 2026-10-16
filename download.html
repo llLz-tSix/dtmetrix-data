@@ -26,6 +26,7 @@ header{display:flex;justify-content:space-between;align-items:center;padding:20p
 .meta{display:block;margin-top:10px;color:var(--mut);font-size:13px}
 .pn{background:rgba(26,21,48,.85);border:1px solid var(--line);border-radius:18px;padding:18px 20px;margin:14px 0}
 h2{margin:0 0 10px;font-size:19px}
+h3{margin:16px 0 8px;font-size:15px}
 .steps{counter-reset:s;list-style:none;margin:0;padding:0}
 .steps li{counter-increment:s;position:relative;padding:0 0 12px 44px;min-height:32px}
 .steps li::before{content:counter(s);position:absolute;left:0;top:0;width:30px;height:30px;border-radius:50%;background:var(--c2);border:1px solid var(--ac);color:var(--ac);font-weight:700;display:flex;align-items:center;justify-content:center;font-size:14px}
@@ -63,6 +64,14 @@ footer{margin-top:22px;color:var(--mut);font-size:12.5px;line-height:1.55}
 <li>Или в Steam: <b>Dota 2 → Свойства → Параметры запуска</b>: <code>-windowed -noborder</code></li>
 </ul>
 <div class="note">Если оверлей пишет «панель не найдена» или экран чёрный — почти всегда игра запущена в полноэкранном режиме.</div>
+<h3>Параметр запуска <code>-gamestateintegration</code></h3>
+<p>С ним Dota 2 сама сообщает оверлею вашу <b>сторону</b> (Radiant или Dire), <b>вашего героя</b> и <b>время матча</b>. Тогда не нужно выбирать команду вручную, а в матче оверлей подсказывает следующий предмет билда и сколько золота не хватает.</p>
+<ol class="steps">
+<li>Steam → библиотека → правый клик по <b>Dota 2 → Свойства → Общие → Параметры запуска</b>.</li>
+<li>Допишите через пробел: <code>-gamestateintegration</code>. Вместе с режимом без рамки строка будет такой: <code>-windowed -noborder -gamestateintegration</code></li>
+<li>Перезапустите Dota 2. Файл настройки для игры Dota Metrix кладёт сам.</li>
+</ol>
+<p>Без этого параметра оверлей тоже работает: сторону он находит по вашему нику Steam под портретами на драфте, а если не вышло — её можно выбрать в настройках.</p>
 </section>
 
 <section class="pn"><h2>Как пользоваться</h2><ul>
@@ -76,9 +85,10 @@ footer{margin-top:22px;color:var(--mut);font-size:12.5px;line-height:1.55}
 </ul></section>
 
 <section class="pn"><h2>Вопросы</h2>
-<details><summary>Это бан в Dota 2?</summary><p>Оверлей не читает и не меняет память игры, не встраивается в неё и не нажимает клавиши за вас: он только делает снимок экрана, как OBS или Discord, и показывает своё окно. Подсказки по пикам — та же статистика, что на Dotabuff или в Dota Plus.</p></details>
+<details><summary>Это бан в Dota 2?</summary><p>Оверлей не читает и не меняет память игры, не встраивается в неё и не нажимает клавиши за вас: он только делает снимок экрана, как OBS или Discord, получает от самой Dota 2 официальные данные Game State Integration (если включён параметр запуска) и показывает своё окно. Подсказки по пикам — та же статистика, что на Dotabuff или в Dota Plus.</p></details>
 <details><summary>Антивирус ругается на программу</summary><p>Программы, собранные из Python, иногда ошибочно помечаются антивирусами. Скачивайте установщик только с этой страницы; при ложном срабатывании добавьте папку <code>%LOCALAPPDATA%\DotaMetrix</code> в исключения.</p></details>
 <details><summary>Оверлей не видит героев</summary><p>Проверьте режим «Без рамки», нажмите <kbd>F8</kbd> на экране драфта или в матче. Если не помогло — клик по логотипу → «Сообщить об ошибке»: отчёт со снимком экрана придёт разработчику.</p></details>
+<details><summary>Безопасен ли параметр -gamestateintegration?</summary><p>Да. Это официальная функция Valve — <b>Game State Integration</b>: на ней работают оверлеи для стримеров и подсветка клавиатур и мышей. Игра сама отправляет на ваш компьютер (адрес <code>127.0.0.1</code>, наружу ничего не уходит) только то, что вы и так видите на экране: ваша сторона, герой, предметы, золото и время матча. Данных о врагах и скрытой информации игра через неё не даёт, а программа ничего не может отправить в игру. Это не чит и не причина для бана. Отключить просто: удалите параметр в Steam.</p></details>
 <details><summary>Как обновлять?</summary><p>Никак — программа обновляется сама при запуске и раз в несколько часов сообщает о новой версии значком у часов.</p></details>
 <details><summary>Что программа отправляет в интернет?</summary><p>Только скачивает данные (статистику, билды, обновления). Снимок экрана и журнал уходят разработчику <b>только когда вы сами нажали «Сообщить об ошибке»</b> и только с вашим описанием. Никакой слежки и рекламы.</p></details>
 <details><summary>Как удалить?</summary><p>Параметры Windows → Приложения → Dota Metrix → Удалить. Удаляются и все данные программы.</p></details>
