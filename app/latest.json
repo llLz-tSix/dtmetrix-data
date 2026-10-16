@@ -1,19 +1,19 @@
 {
- "version": "0.1.17",
- "url": "app-0.1.17.zip",
- "sha256": "6655364bbd45933794318a9261136106a572b25480db8fece7d18c5f5172b3d4",
- "size": 1620798,
+ "version": "0.1.18",
+ "url": "app-0.1.18.zip",
+ "sha256": "da19369be326185cad7c8dd77d7aaa2bff05064bc0ea5cc0287b63137d891e3e",
+ "size": 1646346,
  "min_runtime": 1,
  "python": "3.12",
  "min_version": "0.0.0",
  "block_message": "",
  "installer_url": "https://github.com/llLz-tSix/dtmetrix-data/releases/latest/download/DotaMetrix-Setup.exe",
- "notes": "Больше не появляются выдуманные герои на пустых слотах драфта. В матче оверлей подсказывает следующий предмет билда и сколько золота не хватает (нужен параметр запуска -gamestateintegration и перезапуск Dota 2).",
+ "notes": "Неверно распознанного врага можно исправить кликом по его иконке в рейке. Контрпредметы с пометкой «сейчас» и «позже» по времени матча, купленное в билде бледнее, следующая покупка в рамке. В подсказке пика видны интервал оценки, число игр и синергия с союзниками.",
  "installer": {
   "runtime": "e8fedf8c2dd5e698de38",
   "url": "https://github.com/llLz-tSix/dtmetrix-data/releases/download/v0.1.16/DotaMetrix-Setup.exe",
   "sha256": "4de8e74dee03e9a58d35d7b7e37c1cd7ce2997821c7ba1afeb189488f57ee11c",
   "size": 81292762
  },
- "sig": "cce91313d08fb1e62cde97bafb1d34a4539c8b6b247825ab0568beacc8b161ea38d7cf0f886041d1627ad6b7b7dfc6d57410757261cf7993ce35fa0815cfe504"
+ "sig": "88f2e437d0e622dc689d9eb8d1cdffd132e004b03bcee2547b9c8c02d4b42f96f13360d5f56307a3ce57448c1cb25f62d1d06411a6d4b43fb5fcf0939dc5ae00"
 }
