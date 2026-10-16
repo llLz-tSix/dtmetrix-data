@@ -1,19 +1,19 @@
 {
- "version": "0.1.16",
- "url": "app-0.1.16.zip",
- "sha256": "712a116d159946523665320171e06b4edd68a866daa9104d31660adb316b36f8",
- "size": 1606337,
+ "version": "0.1.17",
+ "url": "app-0.1.17.zip",
+ "sha256": "6655364bbd45933794318a9261136106a572b25480db8fece7d18c5f5172b3d4",
+ "size": 1620798,
  "min_runtime": 1,
  "python": "3.12",
  "min_version": "0.0.0",
  "block_message": "",
  "installer_url": "https://github.com/llLz-tSix/dtmetrix-data/releases/latest/download/DotaMetrix-Setup.exe",
- "notes": "Команда и свой герой определяются автоматически: из игры (параметр запуска -gamestateintegration) или по нику Steam на драфте. Исправлено распознавание врагов после драфта.",
+ "notes": "Больше не появляются выдуманные герои на пустых слотах драфта. В матче оверлей подсказывает следующий предмет билда и сколько золота не хватает (нужен параметр запуска -gamestateintegration и перезапуск Dota 2).",
  "installer": {
   "runtime": "e8fedf8c2dd5e698de38",
   "url": "https://github.com/llLz-tSix/dtmetrix-data/releases/download/v0.1.16/DotaMetrix-Setup.exe",
   "sha256": "4de8e74dee03e9a58d35d7b7e37c1cd7ce2997821c7ba1afeb189488f57ee11c",
   "size": 81292762
  },
- "sig": "ee5e46e253494f875717fd6ac6215f3516a851b3151f5145f3ea0a140e0be3ab283f36b0925ad7e9691bc05925486bd548857ff813ed1c252dd3b436b77c610c"
+ "sig": "cce91313d08fb1e62cde97bafb1d34a4539c8b6b247825ab0568beacc8b161ea38d7cf0f886041d1627ad6b7b7dfc6d57410757261cf7993ce35fa0815cfe504"
 }
