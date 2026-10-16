@@ -1,19 +1,19 @@
 {
- "version": "0.1.15",
- "url": "app-0.1.15.zip",
- "sha256": "0022d0ee2e794391d1ce43c26365637c19ed5de7ec156035995158a285f29afb",
- "size": 1557742,
+ "version": "0.1.16",
+ "url": "app-0.1.16.zip",
+ "sha256": "712a116d159946523665320171e06b4edd68a866daa9104d31660adb316b36f8",
+ "size": 1606337,
  "min_runtime": 1,
  "python": "3.12",
  "min_version": "0.0.0",
  "block_message": "",
  "installer_url": "https://github.com/llLz-tSix/dtmetrix-data/releases/latest/download/DotaMetrix-Setup.exe",
- "notes": "Русские пути Windows, панель героев, автообновление из оверлея",
+ "notes": "Команда и свой герой определяются автоматически: из игры (параметр запуска -gamestateintegration) или по нику Steam на драфте. Исправлено распознавание врагов после драфта.",
  "installer": {
-  "runtime": "87aa3d4b47171d4a928e",
-  "url": "https://github.com/llLz-tSix/dtmetrix-data/releases/download/v0.1.15/DotaMetrix-Setup.exe",
-  "sha256": "fbb9c119c6f16ca23f35f8de35264afe34f67e108b13fc365b96e5de257d4b46",
-  "size": 81237669
+  "runtime": "e8fedf8c2dd5e698de38",
+  "url": "https://github.com/llLz-tSix/dtmetrix-data/releases/download/v0.1.16/DotaMetrix-Setup.exe",
+  "sha256": "4de8e74dee03e9a58d35d7b7e37c1cd7ce2997821c7ba1afeb189488f57ee11c",
+  "size": 81292762
  },
- "sig": "22bb0aa457f031e089c8960b40a157493ad2627c57a4dafd50ad8f65b57208f7ff36f40180157e941efc188671fa6f7f03512d215aedf0645d502a34edddbb05"
+ "sig": "ee5e46e253494f875717fd6ac6215f3516a851b3151f5145f3ea0a140e0be3ab283f36b0925ad7e9691bc05925486bd548857ff813ed1c252dd3b436b77c610c"
 }
