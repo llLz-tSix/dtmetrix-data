@@ -1,19 +1,19 @@
 {
- "version": "0.1.19",
- "url": "app-0.1.19.zip",
- "sha256": "a5086ade87f26733902969be4af39861f5a45497c69c0a6f023bf5373f6c5344",
- "size": 1659582,
+ "version": "0.1.20",
+ "url": "app-0.1.20.zip",
+ "sha256": "7349de0ee4634599e498da51f17457a84560d9a296aac6b7127eb79f94e53bdc",
+ "size": 1661856,
  "min_runtime": 1,
  "python": "3.12",
  "min_version": "0.0.0",
  "block_message": "",
  "installer_url": "https://github.com/llLz-tSix/dtmetrix-data/releases/latest/download/DotaMetrix-Setup.exe",
- "notes": "Больше нет выдуманных героев в пустых слотах драфта. Драфт считается законченным, только когда выбрали все, а не только вы. Клик по оверлею не уводит Dota в фон: звук не пропадает. Если миникарта справа, рейка встаёт к правому краю (переключатель в настройках).",
+ "notes": "Открытая панель билда сама обновляется после покупки и когда хватает золота: кликать по оверлею не нужно. Нехватка золота показывается с шагом 50.",
  "installer": {
   "runtime": "e8fedf8c2dd5e698de38",
   "url": "https://github.com/llLz-tSix/dtmetrix-data/releases/download/v0.1.16/DotaMetrix-Setup.exe",
   "sha256": "4de8e74dee03e9a58d35d7b7e37c1cd7ce2997821c7ba1afeb189488f57ee11c",
   "size": 81292762
  },
- "sig": "2bcc4514c6c3e4a8aa23376b331bbf8da4822dcbd1bcd4987bb31a4b0c26a24c39cefad4acb1abd449c527aa78dd6c417ef89bc37e75d0c043cfab3cd0372701"
+ "sig": "653ab04912a17e6d860d7642fac3562488eac76a64c8b7d837e9e497b2ebd90ae68ec315f33348d350d6a36e09784c3290f720c0c7f8e5b740cd3675b4508001"
 }
