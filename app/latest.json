@@ -1,19 +1,19 @@
 {
- "version": "0.1.20",
- "url": "app-0.1.20.zip",
- "sha256": "7349de0ee4634599e498da51f17457a84560d9a296aac6b7127eb79f94e53bdc",
- "size": 1661856,
+ "version": "0.1.21",
+ "url": "app-0.1.21.zip",
+ "sha256": "d57094ca3f21085fefa39ec5c87b2d9e8e6bb55b178d87cb7f70c0d493ef69aa",
+ "size": 1660885,
  "min_runtime": 1,
  "python": "3.12",
  "min_version": "0.0.0",
  "block_message": "",
  "installer_url": "https://github.com/llLz-tSix/dtmetrix-data/releases/latest/download/DotaMetrix-Setup.exe",
- "notes": "Открытая панель билда сама обновляется после покупки и когда хватает золота: кликать по оверлею не нужно. Нехватка золота показывается с шагом 50.",
+ "notes": "Больше не появляется лишний пятый враг (часто Spectre), когда выбраны только четыре героя. Сторона рейки теперь правильно определяется по миникарте. Подсказка покупок идёт по времени матча: опоздавшие предметы не советуются, редкие предметы предлагаются на выбор.",
  "installer": {
   "runtime": "e8fedf8c2dd5e698de38",
   "url": "https://github.com/llLz-tSix/dtmetrix-data/releases/download/v0.1.16/DotaMetrix-Setup.exe",
   "sha256": "4de8e74dee03e9a58d35d7b7e37c1cd7ce2997821c7ba1afeb189488f57ee11c",
   "size": 81292762
  },
- "sig": "653ab04912a17e6d860d7642fac3562488eac76a64c8b7d837e9e497b2ebd90ae68ec315f33348d350d6a36e09784c3290f720c0c7f8e5b740cd3675b4508001"
+ "sig": "b1bc25240d4eda98c43b625db3f96a14030d96915836f9a0da1221af46f6854b74af7d10065652b3cf067ae395455f8fd91d33093e8566f13dc4cb1126fb3800"
 }
