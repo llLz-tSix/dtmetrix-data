@@ -1,19 +1,19 @@
 {
- "version": "0.1.21",
- "url": "app-0.1.21.zip",
- "sha256": "d57094ca3f21085fefa39ec5c87b2d9e8e6bb55b178d87cb7f70c0d493ef69aa",
- "size": 1660885,
+ "version": "0.1.22",
+ "url": "app-0.1.22.zip",
+ "sha256": "f51f8beb75df0ed0ea51f14ca3dc492536978107f9a4271098bda8a320b57656",
+ "size": 1695022,
  "min_runtime": 1,
  "python": "3.12",
  "min_version": "0.0.0",
  "block_message": "",
  "installer_url": "https://github.com/llLz-tSix/dtmetrix-data/releases/latest/download/DotaMetrix-Setup.exe",
- "notes": "Больше не появляется лишний пятый враг (часто Spectre), когда выбраны только четыре героя. Сторона рейки теперь правильно определяется по миникарте. Подсказка покупок идёт по времени матча: опоздавшие предметы не советуются, редкие предметы предлагаются на выбор.",
+ "notes": "Оверлей ведёт покупки по руководству, которое вы выбрали в Dota. Собранные предметы учитываются вместе с частями: больше нет «не хватает на Circlet» всю игру. Панель героев находится надёжнее. В установщике появилось лицензионное соглашение.",
  "installer": {
-  "runtime": "e8fedf8c2dd5e698de38",
-  "url": "https://github.com/llLz-tSix/dtmetrix-data/releases/download/v0.1.16/DotaMetrix-Setup.exe",
-  "sha256": "4de8e74dee03e9a58d35d7b7e37c1cd7ce2997821c7ba1afeb189488f57ee11c",
-  "size": 81292762
+  "runtime": "cd6feaaf940e63850252",
+  "url": "https://github.com/llLz-tSix/dtmetrix-data/releases/download/v0.1.22/DotaMetrix-Setup.exe",
+  "sha256": "2de826220b8e2041f35e1ff3f6c7d5eecce1e1957628a3bb565d12da379856cd",
+  "size": 81378018
  },
- "sig": "b1bc25240d4eda98c43b625db3f96a14030d96915836f9a0da1221af46f6854b74af7d10065652b3cf067ae395455f8fd91d33093e8566f13dc4cb1126fb3800"
+ "sig": "99671f681220c0904b5c838491973dc238610b836834301ad72894355cff3951a3abc66cfa153ef16fe158396d7d7e21dfe83684119052387ee83542c7f80603"
 }
