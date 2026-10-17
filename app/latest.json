@@ -1,19 +1,19 @@
 {
- "version": "0.1.22",
- "url": "app-0.1.22.zip",
- "sha256": "f51f8beb75df0ed0ea51f14ca3dc492536978107f9a4271098bda8a320b57656",
- "size": 1695022,
+ "version": "0.1.23",
+ "url": "app-0.1.23.zip",
+ "sha256": "8851c4c5892bab61222a12c79de4d4b348fa01ff13a2ccf4ded77fcaa7ec9142",
+ "size": 1695990,
  "min_runtime": 1,
  "python": "3.12",
  "min_version": "0.0.0",
  "block_message": "",
  "installer_url": "https://github.com/llLz-tSix/dtmetrix-data/releases/latest/download/DotaMetrix-Setup.exe",
- "notes": "Оверлей ведёт покупки по руководству, которое вы выбрали в Dota. Собранные предметы учитываются вместе с частями: больше нет «не хватает на Circlet» всю игру. Панель героев находится надёжнее. В установщике появилось лицензионное соглашение.",
+ "notes": "Оверлей больше не мигает и не выдумывает героев, когда на панели мало героев: начало драфта, демо-режим героя. Найденная панель запоминается и не теряется после F8.",
  "installer": {
   "runtime": "cd6feaaf940e63850252",
   "url": "https://github.com/llLz-tSix/dtmetrix-data/releases/download/v0.1.22/DotaMetrix-Setup.exe",
   "sha256": "2de826220b8e2041f35e1ff3f6c7d5eecce1e1957628a3bb565d12da379856cd",
   "size": 81378018
  },
- "sig": "99671f681220c0904b5c838491973dc238610b836834301ad72894355cff3951a3abc66cfa153ef16fe158396d7d7e21dfe83684119052387ee83542c7f80603"
+ "sig": "73050aea692100220ee1568996885b09949c2b2a9a47deb68f2e4e9a7afbab5126dbf7151528e7bfafdedb0bdb2dab35fc56b894bfa5b30279fc2ee25a7f9101"
 }
