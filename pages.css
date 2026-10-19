@@ -38,6 +38,9 @@ footer{color:var(--mut);font-size:13px;margin-top:20px}
 .tags a.mt{padding:3px 10px;border:1px solid var(--ac);border-radius:99px;font-size:13px;white-space:nowrap;background:#241d44}
 .rolenav{display:flex;flex-wrap:wrap;gap:8px;margin:14px 0}.rolenav a{padding:7px 14px;border:1px solid var(--line);border-radius:99px;color:var(--tx);background:var(--c)}
 .rolenav a.on,.rolenav a:hover{border-color:var(--ac);text-decoration:none}
+.rolenav button{padding:10px 18px;border:1px solid var(--line);border-radius:99px;color:var(--tx);background:var(--c);font:inherit;font-weight:600;cursor:pointer}
+.rolenav button.on,.rolenav button:hover{border-color:var(--ac);background:#241d44}
+#lists .btn{margin-top:6px}
 .rk{flex:none;min-width:28px;font-weight:800;color:var(--ac);font-size:17px;text-align:center}
 .mc h3{font-size:16px;margin:16px 0 6px;color:var(--ac)}.mc p{margin:0 0 8px}.mc small{color:var(--mut)}
 .mh{display:flex;gap:14px;align-items:center}.mh img{width:112px;height:63px;border-radius:10px;object-fit:cover;flex:none;background:var(--c2)}
