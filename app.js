@@ -11,7 +11,7 @@
   var esc = function (s) { return String(s).replace(/[&<>"']/g, function (c) { return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]; }); };
 
   var D = null, enemies = [], allies = [], target = "e", role = "carry", rank = "legend", selected = 0, rows = [], cur = 0;
-  var RANK_LABEL = { all: "Все ранги", legend: "Legend и выше", divine: "Divine и выше" };
+  var RANK_LABEL = { all: "Все", legend: "Legend+", divine: "Divine+" };
   var RANK_NOTE = { all: "все ранги", legend: "рейтинги Legend-Ancient и Divine-Immortal", divine: "рейтинг Divine-Immortal" };
 
   /* ---------- состояние в адресе (#r=carry&e=2,5,14), чтобы драфтом можно было делиться ---------- */
@@ -108,7 +108,7 @@
   }
 
   /* ---------- результаты ---------- */
-  function pp(adv) { var v = DMEngine.advPP(adv); return (v >= 0 ? "+" : "−") + Math.abs(v).toFixed(1) + " п.п."; }
+  function pp(adv) { var v = DMEngine.advPP(adv); return (v >= 0 ? "+" : "−") + Math.abs(v).toFixed(1).replace(".", ",") + " п.п."; }
   function why(r) {
     var parts = [];
     var good = r.pairs.filter(function (p) { return p.games >= D.min_pair; });
@@ -128,6 +128,17 @@
     if (r.low_evidence && good.length) parts.push("Выборка небольшая.");
     return parts.join(" ");
   }
+  function short(r) {
+    var good = r.pairs.filter(function (p) { return p.games >= D.min_pair; });
+    if (!good.length) return "Мало данных по этим парам";
+    var best = good.slice().sort(function (a, b) { return b.adv - a.adv; })[0];
+    var worst = good.slice().sort(function (a, b) { return a.adv - b.adv; })[0];
+    var plus = DMEngine.advPP(best.adv) >= 1, minus = DMEngine.advPP(worst.adv) <= -1 && worst.id !== best.id;
+    if (plus && minus) return "Лучше против " + D.byId[best.id].name + ", хуже против " + D.byId[worst.id].name;
+    if (plus) return "Лучше всего против " + D.byId[best.id].name + " (" + pp(best.adv) + ")";
+    if (minus) return "Хуже против " + D.byId[worst.id].name + " (" + pp(worst.adv) + ")";
+    return "Без заметных плюсов и минусов";
+  }
   function renderPicks() {
     var el = $("pk");
     if (!enemies.length) {
@@ -139,21 +150,24 @@
     rows = DMEngine.analyze(D, enemies, role, 8, rank, allies);
     $("ptitle").textContent = "Лучшие пики · " + ROLE_LABEL[role];
     if (selected >= rows.length) selected = 0;
-    el.innerHTML = rows.map(function (r, i) {
-      var v = DMEngine.verdict(r.score);
-      var l = Math.max(0, Math.min(100, (r.ci_low - 40) / 25 * 100));
-      var w = Math.max(2, Math.min(100 - l, (r.ci_high - r.ci_low) / 25 * 100));
+    el.innerHTML = rows.slice(0, 6).map(function (r, i) {
+      var v = DMEngine.verdict(r.score), sel = i === selected;
       var mm = r.pairs.map(function (p) {
         var st = DMEngine.pairStatus(p, D.min_pair), h = D.byId[p.id];
-        var tip = h.name + ": " + (p.games >= D.min_pair ? st.label.toLowerCase() + " (" + pp(p.adv) + ") · " + p.games + " игр" : st.label.toLowerCase());
-        return '<span class="' + st.key + '" title="' + esc(tip) + '"><img src="' + heroImg(h.slug) + '" alt="' + esc(tip) + '" onerror="' + hide + '"></span>';
+        var tip = h.name + ": " + (p.games >= D.min_pair ? st.label.toLowerCase() + " (" + pp(p.adv) + ")" : st.label.toLowerCase());
+        return '<span class="' + st.key + '" title="' + esc(tip) + '"><img src="' + heroImg(h.slug) + '" alt="" onerror="' + hide + '"></span>';
       }).join("");
-      return '<div class="card ' + v + (i === selected ? " sel" : "") + '" data-i="' + i + '" tabindex="0"><div class="im"><img src="' + heroImg(r.slug) + '" alt="" onerror="' + hide + '"></div><div class="b">' +
-        '<div class="hrow"><span class="nm">' + esc(r.name) + '</span><span class="pc">' + r.score.toFixed(1) + "%</span></div>" +
-        '<span class="chip">' + VERDICT[v] + '</span><span class="hint">шанс с этим героем</span>' +
-        '<div class="ci"><i style="left:' + l + "%;width:" + w + '%"></i><u></u></div>' +
-        '<div class="mm">' + mm + "</div>" +
-        "<p>" + esc(why(r)) + "</p><small>Коридор " + r.ci_low.toFixed(0) + "–" + r.ci_high.toFixed(0) + "% · " + r.eff_games.toLocaleString("ru") + ' игр в парах с этими врагами</small></div></div>';
+      var more = "";
+      if (sel) {
+        var l = Math.max(0, Math.min(100, (r.ci_low - 40) / 25 * 100));
+        var w = Math.max(2, Math.min(100 - l, (r.ci_high - r.ci_low) / 25 * 100));
+        more = '<div class="ci"><i style="left:' + l + "%;width:" + w + '%"></i><u></u></div><p>' + esc(why(r)) + "</p><small>Коридор " +
+          r.ci_low.toFixed(0) + "–" + r.ci_high.toFixed(0) + "% · " + r.eff_games.toLocaleString("ru") + " игр в парах с этими врагами</small>";
+      }
+      return '<div class="card hy ' + v + (sel ? " sel" : "") + '" data-i="' + i + '" tabindex="0"><div class="im"><img src="' + heroImg(r.slug) + '" alt="" onerror="' + hide + '"></div>' +
+        '<div class="b"><div class="hrow"><div><span class="nm">' + esc(r.name) + '</span>' + (sel ? "" : '<span class="rs">' + esc(short(r)) + "</span>") + "</div>" +
+        '<div class="vv"><span class="pc">' + r.score.toFixed(1).replace(".", ",") + '%</span><span class="chip">' + VERDICT[v] + "</span></div></div>" +
+        '<div class="mm">' + mm + "</div>" + more + "</div></div>";
     }).join("");
     Array.prototype.forEach.call(el.querySelectorAll(".card"), function (c) {
       var pick = function () { selected = +c.dataset.i; renderPicks(); renderBuild(); renderCounters(); };
@@ -168,10 +182,10 @@
   }
   function renderBuild() {
     var r = rows[selected];
-    if (!r) { $("bt").textContent = "Билд"; $("bd").innerHTML = '<div class="hint">Выберите врагов, и здесь появится билд лучшего пика.</div>'; return; }
+    if (!r) { $("btw").textContent = ""; $("bd").innerHTML = '<div class="hint">Выберите врагов, и здесь появится билд лучшего пика.</div>'; return; }
     var per = D.builds[String(r.id)] || {};
     var b = per[role] || per[Object.keys(per)[0]];
-    $("bt").textContent = "Билд · " + r.name;
+    $("bt").textContent = "Билд"; $("btw").textContent = r.name;
     if (!b) { $("bd").innerHTML = '<div class="hint">Для этого героя билда пока нет.</div>'; return; }
     var stages = [["Старт", b.start], ["До 15 минут", b.early], ["До 30 минут", b.core], ["Поздняя игра", b.late]];
     var note = b.src === "stratz"
@@ -184,16 +198,16 @@
   }
   function renderCounters() {
     var el = $("cn"), pick = rows[selected];
-    if (!enemies.length || !pick) { $("ct").textContent = "Контрпредметы"; el.innerHTML = '<div class="hint">Появятся после выбора врагов.</div>'; return; }
-    $("ct").textContent = "Контрпредметы · " + pick.name;
+    if (!enemies.length || !pick) { $("ctw").textContent = ""; el.innerHTML = '<div class="hint">Появятся после выбора врагов.</div>'; return; }
+    $("ctw").textContent = "за " + pick.name;
     var list = DMEngine.counters(D, pick.id, role, enemies, 6);
     var mine = {};
     var per = (D.hero_items || {})[String(pick.id)] || {};
     (per[role] || per[Object.keys(per)[0]] || []).forEach(function (s) { mine[s] = true; });
     el.innerHTML = list.map(function (c) {
-      var who = c.targets.map(function (id) { return '<img class="h" src="' + heroImg(D.byId[id].slug) + '" alt="" onerror="' + hide + '"> ' + esc(D.byId[id].name); }).join(", ");
-      var own = c.rare ? ' <span class="hint">· этот герой берёт редко</span>' : mine[c.slug] ? ' <span class="hint">· есть в билде</span>' : "";
-      return '<div class="cn"><img class="i" src="' + itemImg(c.slug) + '" alt="" onerror="' + hide + '"><div><b>' + esc(c.item) + "</b>" + own + "<br><small>против " + who + ": " + esc(c.reason) + "</small></div></div>";
+      var who = c.targets.map(function (id) { return '<img src="' + heroImg(D.byId[id].slug) + '" alt="" title="' + esc(D.byId[id].name) + '" onerror="' + hide + '">'; }).join("");
+      var own = c.rare ? " · этот герой берёт редко" : mine[c.slug] ? " · есть в билде" : "";
+      return '<div class="cn2"><img class="i" src="' + itemImg(c.slug) + '" alt="" onerror="' + hide + '"><div class="t"><b>' + esc(c.item) + "</b><small>" + esc(c.reason) + esc(own) + '</small></div><div class="w">' + who + "</div></div>";
     }).join("") || '<div class="hint">Для этого героя против этих врагов особых контрпредметов нет.</div>';
   }
   function renderFoot() {

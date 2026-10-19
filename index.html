@@ -123,6 +123,52 @@ header h1{margin:0;font-size:22px}header p{margin:2px 0 0;color:var(--mut);font-
 .qo img{width:56px;height:32px;border-radius:6px;object-fit:cover;flex:none}.qo span{flex:1;min-width:0}.qo small{display:block;color:var(--mut);font-size:11.5px}
 .qr{font-weight:800;font-size:16px;margin:10px 0 2px}.qr.up{color:var(--g)}.qr.down{color:var(--r)}
 .qnext{margin-top:10px;width:100%;padding:10px;border-radius:99px;border:1px solid var(--ac);background:none;color:var(--ac);font:inherit;font-weight:600;cursor:pointer}.qnext:hover{background:#241d44}
+
+/* ---- главная: три шага (враги, роль и ранг, результат) ---- */
+.bpn{margin-top:14px}
+@media(min-width:900px){.page{zoom:1.3}}
+.step{display:grid;grid-template-columns:34px minmax(0,1fr);gap:12px;margin:18px 0 0}
+.num{width:30px;height:30px;border-radius:50%;background:var(--ac);color:#0e0b1a;font-weight:800;display:flex;align-items:center;justify-content:center;margin-top:2px}
+.sb{min-width:0}.sh{display:flex;justify-content:space-between;align-items:flex-start;gap:10px;margin-bottom:10px}
+.sh h2{margin:0;font-size:18px}.sh p{margin:2px 0 0;color:var(--mut);font-size:13.5px}
+.sh .tools{display:flex;gap:12px;align-items:center;color:var(--mut);font-size:12px;white-space:nowrap;padding-top:4px}
+.box{border-color:#3b2f73}
+.chips{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:12px}
+.hc{display:inline-flex;align-items:center;gap:10px;padding:6px 14px 6px 6px;border-radius:14px;background:var(--c2);border:1px solid var(--line);color:var(--tx);font:inherit;font-weight:600;cursor:pointer;transition:border-color .15s}
+.hc img{width:36px;height:36px;border-radius:50%;object-fit:cover;border:2px solid #3b2f73}.hc .x{color:var(--mut);font-weight:400;margin-left:2px}
+.hc:hover{border-color:var(--ac)}
+.hc.empty{border-style:dashed;border-color:#4a3d8a;background:none;color:var(--mut);font-weight:400}
+.hc.empty .plus{width:36px;height:36px;border-radius:50%;border:2px dashed #4a3d8a;display:flex;align-items:center;justify-content:center;color:var(--ac);font-size:18px}
+.allies{margin:10px 0 0}
+.rr{display:flex;flex-wrap:wrap;align-items:center;gap:8px 10px}
+.rr .lbl{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--mut);margin:0 2px 0 6px}
+.rr .role{overflow:visible;flex-wrap:wrap}.rr .rank{background:none;border:0;padding:0;gap:6px;flex-wrap:wrap}
+.rr .rank button{background:var(--c2);color:var(--mut);padding:9px 14px;font-size:13px}.rr .rank button.on{background:var(--ac);color:#0e0b1a}
+.slots{margin-bottom:12px}
+.card.hy .im{width:104px}.card.hy .b{padding:12px 16px}
+.card.hy .hrow{align-items:flex-start;margin:0}.card.hy .nm{display:block;font-size:17px;color:var(--tx)}
+.card.hy .rs{display:block;color:var(--mut);font-size:13px;margin-top:1px}
+.card.hy .vv{text-align:right;flex:none}.card.hy .pc{display:block;font-size:24px}.card.hy .chip{margin-top:3px}
+.card.hy.strong .pc{color:var(--g)}.card.hy.ok .pc{color:var(--y)}.card.hy.weak .pc{color:var(--r)}
+.card.hy .mm{margin-top:8px}.card.hy.sel{border-color:var(--ac);background:#211a45}
+.pk2{display:flex;align-items:center;gap:14px;padding:14px 16px;background:var(--c);border:1px solid var(--line);border-radius:16px;cursor:pointer;transition:border-color .15s}
+.pk2:hover{border-color:#8b5cf6}.pk2.sel{border-color:var(--ac);background:#211a45}
+.pk2 img{width:52px;height:52px;border-radius:12px;object-fit:cover;flex:none}
+.pk2 .t{flex:1;min-width:0}.pk2 .t b{display:block;font-size:17px}.pk2 .t span{display:block;color:var(--mut);font-size:13.5px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.pk2 .v{text-align:right;flex:none}.pk2 .v b{display:block;font-size:24px;font-weight:800;font-variant-numeric:tabular-nums}
+.pk2.strong .v b{color:var(--g)}.pk2.ok .v b{color:var(--y)}.pk2.weak .v b{color:var(--r)}
+.pk2 .chip{margin-top:2px}
+.pt{display:flex;justify-content:space-between;align-items:baseline;gap:8px}.pt .sec{margin-bottom:10px}.pt span{color:var(--mut);font-size:12.5px}
+.cn2{display:flex;gap:12px;align-items:center;padding:9px 0;border-bottom:1px solid var(--line)}.cn2:last-child{border:0}
+.cn2 img.i{width:46px;height:34px;border-radius:7px;background:var(--c2);flex:none}.cn2 .t{flex:1;min-width:0}.cn2 b{display:block}.cn2 small{color:var(--mut);font-size:12.5px}
+.cn2 .w{display:flex;gap:3px;flex:none}.cn2 .w img{width:24px;height:24px;border-radius:50%;object-fit:cover;border:1px solid var(--line)}
+@media(max-width:600px){.step{grid-template-columns:28px minmax(0,1fr);gap:8px}.num{width:26px;height:26px;font-size:13px}
+ .sh{flex-direction:column}.hc{padding:4px;border-radius:50%}.hc span,.hc .x{display:none}.hc.empty .plus{border:0}
+ .card.hy .im{width:74px}.card.hy .b{padding:10px 12px}.card.hy .pc{font-size:20px}
+ .rr{flex-wrap:nowrap;overflow-x:auto;scrollbar-width:none;margin-right:-18px;padding-right:18px}.rr .lbl{display:none}
+ .rr .role,.rr .rank{flex-wrap:nowrap}.rr .rank{border-left:1px solid var(--line);padding-left:8px}.rr button{white-space:nowrap}
+ .card.hy .im{width:74px}.card.hy .b{padding:10px 12px}.card.hy .pc{font-size:20px}
+ .pk2{padding:12px}.pk2 .t span{white-space:normal}.pk2 img{width:44px;height:44px}}
 </style></head><body>
 <canvas id="rain" aria-hidden="true"></canvas>
 <div class="page">
@@ -133,19 +179,26 @@ header h1{margin:0;font-size:22px}header p{margin:2px 0 0;color:var(--mut);font-
 <a href="hero/"><b>Контрпики</b><span>Кто кого контрит и билды</span></a>
 <a href="meta/"><b>Мета патча</b><span>Топ-10 на каждую позицию</span></a></nav>
 
-<section class="draft pn"><div class="dh"><div class="sec">Вражеская команда</div>
+<section class="step"><div class="num">1</div><div class="sb">
+<div class="sh"><div><h2>Кто играет за врагов</h2><p>Добавьте до 5 героев. Состав можно поменять в любой момент.</p></div>
 <div class="tools"><span id="cnt"></span><button class="link" id="share" type="button" title="Скопировать ссылку на этот драфт">Ссылка</button><button class="link" id="reset" type="button">Очистить</button></div></div>
-<div class="slots" id="en"></div>
-<div class="allies" id="al"></div>
-<div class="dctl"><div class="tgt" id="tgt" role="group" aria-label="Кого добавлять"><button type="button" data-t="e" class="on">Враги</button><button type="button" data-t="a">Союзники</button></div><div class="srch"><input id="q" placeholder="Найти героя: начните вводить имя…" autocomplete="off" aria-label="Поиск героя"><div class="dd" id="dd"></div></div>
-<div class="role" id="role" role="group" aria-label="Ваша роль"></div></div></section>
+<div class="pn box"><div class="slots" id="en"></div>
+<div class="dctl"><div class="tgt" id="tgt" role="group" aria-label="Кого добавлять"><button type="button" data-t="e" class="on">Враги</button><button type="button" data-t="a">Союзники</button></div><div class="srch"><input id="q" placeholder="Найти героя: начните вводить имя…" autocomplete="off" aria-label="Поиск героя"><div class="dd" id="dd"></div></div></div>
+<div class="allies" id="al"></div></div></div></section>
 
+<section class="step"><div class="num">2</div><div class="sb">
+<div class="sh"><div><h2>Ваша роль и ранги</h2><p>Влияет на список пиков и на предметы.</p></div></div>
+<div class="rr"><span class="lbl">Роль</span><div class="role" id="role" role="group" aria-label="Ваша роль"></div>
+<span class="lbl">Ранг</span><div class="rank" id="rank" role="group" aria-label="Ранг игроков"></div></div></div></section>
+
+<section class="step"><div class="num">3</div><div class="sb">
+<div class="sh"><div><h2>Результат</h2><p>Слева - кого брать. Справа - что покупать против этих врагов.</p></div></div>
 <div class="layout">
-<main><div class="sechead"><div class="sec" id="ptitle">Лучшие пики</div><div class="rank" id="rank" role="group" aria-label="Ранг игроков, по матчам которых считается оценка"></div></div><div class="cards" id="pk"></div></main>
-<aside class="side-col"><div class="pn"><div class="sec" id="bt">Билд</div><div id="bd"></div></div>
-<div class="pn"><div class="sec" id="ct">Контрпредметы</div><div id="cn"></div></div>
+<main><div class="sec" id="ptitle" hidden></div><div class="cards" id="pk"></div>
+<div class="pn bpn"><div class="pt"><div class="sec" id="bt">Билд</div><span id="btw"></span></div><div id="bd"></div></div></main>
+<aside class="side-col"><div class="pn"><div class="pt"><div class="sec" id="ct">Купить против врагов</div><span id="ctw"></span></div><div id="cn"></div></div>
 <div class="pn" id="quiz"><div class="sec">Мини-игры</div><div class="qm" id="qmodes"></div><div class="qs" id="qscore"></div><div id="qz"></div></div></aside>
-</div>
+</div></div></section>
 
 <footer class="foot" id="foot">Загрузка данных…</footer>
 </div>
