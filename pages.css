@@ -59,12 +59,14 @@ footer{color:var(--mut);font-size:13px;margin-top:20px}
 .hc{display:flex;flex-direction:column;align-items:center;gap:2px;width:64px;color:var(--tx);font-size:13px;font-weight:700}
 .hc:hover{text-decoration:none}.hc img{width:64px;height:36px;border-radius:6px;object-fit:cover;background:var(--c2)}
 .pl{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:0 18px}
-.tl{display:flex;gap:2px;height:10px;margin-top:4px;border-radius:99px;overflow:hidden}.tl b{display:block;height:100%}
-.ul{position:relative;height:18px;margin:3px 0 6px}.ul span{position:absolute;transform:translateX(-50%);font-size:11px;font-weight:800;color:#1a1530;background:#fbbf24;border-radius:99px;padding:0 6px}
-.srs{display:flex;flex-direction:column;gap:5px}.sr{display:flex;align-items:center;gap:10px}
-.sr .lv{flex:none;width:92px;text-align:center;font-size:12px;font-weight:700;padding:4px 0;border:2px solid var(--line);border-radius:8px}
-.sr .lv.u{border-color:#fbbf24;color:#fbbf24}.sr img{width:32px;height:32px;border-radius:6px;flex:none}
-.sr b{display:block;font-size:14px}.sr small{display:block;color:var(--mut);font-size:12px}
+.sgw{overflow-x:auto;margin-top:4px;padding-bottom:2px}
+.sgd{display:grid;grid-template-columns:34px repeat(18,minmax(17px,1fr));gap:3px;min-width:420px;align-items:center}
+.sgd>span{aspect-ratio:1;border-radius:4px;background:var(--c2);display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:800}
+.sgd>span.on{background:#2d2363;border:1px solid var(--ac);color:var(--tx)}
+.sgd>span.u{border-color:#fbbf24;color:#fbbf24}.sgd>span.t{border-color:var(--g);color:var(--g)}
+.sgh img{width:34px;height:34px;border-radius:6px;display:block}
+.sgh .ti{display:flex;width:34px;height:34px;align-items:center;justify-content:center;border-radius:6px;background:var(--c2);color:var(--mut);font-weight:800}
+.tln{display:block;color:var(--mut);font-size:12px;margin-top:4px}
 .tt{display:flex;flex-direction:column;gap:4px}
 .tr{display:grid;grid-template-columns:1fr 34px 1fr;gap:6px;align-items:stretch;font-size:13px}
 .tr .lv{display:flex;align-items:center;justify-content:center;border-radius:50%;background:#3b2f73;font-weight:800;height:34px}

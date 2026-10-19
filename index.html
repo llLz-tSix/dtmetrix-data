@@ -36,10 +36,11 @@ header h1{margin:0;font-size:22px}header p{margin:2px 0 0;color:var(--mut);font-
 .dl:hover{background:rgba(196,181,253,.12)}
 .pn{background:var(--c);border:1px solid var(--line);border-radius:18px;padding:14px}
 .sec{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--mut);margin:0 0 10px}
-.tabs{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:10px;margin:4px 0 14px}
+.tabs{display:grid;grid-template-columns:2fr 1fr 1fr;gap:10px;margin:4px 0 14px}
 .tabs a{display:flex;flex-direction:column;gap:2px;padding:12px 16px;border-radius:14px;border:1px solid var(--line);background:var(--c);color:var(--tx);text-decoration:none;transition:border-color .15s,background .15s}
 .tabs a b{font-size:17px}.tabs a span{color:var(--mut);font-size:13px}
-.tabs a.on{border-color:var(--ac);background:#241d44}.tabs a:hover{border-color:var(--ac)}
+.tabs a.on{border-color:var(--ac);background:#241d44}
+@media(max-width:700px){.tabs{grid-template-columns:1fr 1fr}.tabs a:first-child{grid-column:1/-1}}.tabs a:hover{border-color:var(--ac)}
 .draft{margin:6px 0 16px;border-color:#3b2f73}
 .dh{display:flex;justify-content:space-between;align-items:center;margin-bottom:10px;gap:8px}.dh .sec{margin:0}
 .dh .tools{display:flex;gap:12px;align-items:center;color:var(--mut);font-size:12px;white-space:nowrap}.dh .sec{white-space:nowrap}
@@ -115,8 +116,8 @@ header h1{margin:0;font-size:22px}header p{margin:2px 0 0;color:var(--mut);font-
 <a class="soon dl" href="download.html" title="Оверлей поверх игры: пики во время драфта, билд и контрпредметы в матче. Windows 10/11, ~76 МБ">Скачать оверлей · Windows</a></header>
 
 <nav class="tabs" aria-label="Разделы сайта"><a class="on" href="./" aria-current="page"><b>Подбор пика</b><span>Враги и роль - лучшие пики, билд и предметы</span></a>
-<a href="hero/"><b>Контрпики героев</b><span>Кого контрит каждый герой, кто контрит его, пары и билды</span></a>
-<a href="meta/"><b>Мета патча</b><span>Топ-10 героев каждой позиции: почему сильны, прокачка и билд</span></a></nav>
+<a href="hero/"><b>Контрпики</b><span>Кто кого контрит и билды</span></a>
+<a href="meta/"><b>Мета патча</b><span>Топ-10 на каждую позицию</span></a></nav>
 
 <section class="draft pn"><div class="dh"><div class="sec">Вражеская команда</div>
 <div class="tools"><span id="cnt"></span><button class="link" id="share" type="button" title="Скопировать ссылку на этот драфт">Ссылка</button><button class="link" id="reset" type="button">Очистить</button></div></div>
