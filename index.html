@@ -87,7 +87,7 @@ header h1{margin:0;font-size:22px}header p{margin:2px 0 0;color:var(--mut);font-
  .page{padding:0 28px 40px}
  .layout{grid-template-columns:minmax(0,1fr) 340px;align-items:start}
  .cards{grid-template-columns:repeat(auto-fill,minmax(330px,1fr))}
- .side-col{position:sticky;top:12px}
+ .side-col{position:static}
 }
 @media(max-width:600px){
  .slots{gap:6px}
@@ -109,6 +109,20 @@ header h1{margin:0;font-size:22px}header p{margin:2px 0 0;color:var(--mut);font-
 .tgt{display:flex;gap:4px;background:var(--c);border:1px solid var(--line);border-radius:99px;padding:3px;flex:none}
 .tgt button{border:0;background:none;color:var(--mut);font:inherit;font-size:12.5px;padding:7px 12px;border-radius:99px;cursor:pointer}
 .tgt button.on{background:var(--ac);color:#0e0b1a;font-weight:600}
+.qm{display:flex;flex-wrap:wrap;gap:5px;margin:2px 0 8px}.qm button{border:1px solid var(--line);background:var(--c2);color:var(--mut);font:inherit;font-size:12px;padding:5px 10px;border-radius:99px;cursor:pointer}
+.qm button.on{background:var(--ac);color:#0e0b1a;border-color:var(--ac);font-weight:600}
+.qs{font-size:12px;color:var(--mut);margin-bottom:10px}.qs b{color:var(--tx)}
+.qt{font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--ac)}.qq{font-weight:600;margin:2px 0 8px}
+.qh{display:block;width:100%;max-width:200px;aspect-ratio:16/9;object-fit:cover;border-radius:12px;margin:0 auto 10px}
+.qa{display:block;width:72px;height:72px;border-radius:12px;margin:0 auto 10px}
+.qi{display:flex;flex-wrap:wrap;gap:5px;justify-content:center;margin-bottom:10px}.qi img{width:50px;height:37px;border-radius:7px;background:var(--c2)}
+.qo{display:flex;flex-direction:column;gap:6px}
+.qo button{display:flex;align-items:center;gap:10px;text-align:left;padding:5px 10px 5px 5px;border:1px solid var(--line);border-radius:12px;background:var(--c2);color:var(--tx);font:inherit;font-size:13.5px;cursor:pointer;transition:border-color .15s}
+.qo button:hover:not(:disabled){border-color:var(--ac)}.qo button:disabled{cursor:default;opacity:.65}
+.qo button.ok{border-color:var(--g);background:#4ade8022;opacity:1}.qo button.no{border-color:var(--r);background:#fb718522;opacity:1}
+.qo img{width:56px;height:32px;border-radius:6px;object-fit:cover;flex:none}.qo span{flex:1;min-width:0}.qo small{display:block;color:var(--mut);font-size:11.5px}
+.qr{font-weight:800;font-size:16px;margin:10px 0 2px}.qr.up{color:var(--g)}.qr.down{color:var(--r)}
+.qnext{margin-top:10px;width:100%;padding:10px;border-radius:99px;border:1px solid var(--ac);background:none;color:var(--ac);font:inherit;font-weight:600;cursor:pointer}.qnext:hover{background:#241d44}
 </style></head><body>
 <canvas id="rain" aria-hidden="true"></canvas>
 <div class="page">
@@ -129,11 +143,12 @@ header h1{margin:0;font-size:22px}header p{margin:2px 0 0;color:var(--mut);font-
 <div class="layout">
 <main><div class="sechead"><div class="sec" id="ptitle">Лучшие пики</div><div class="rank" id="rank" role="group" aria-label="Ранг игроков, по матчам которых считается оценка"></div></div><div class="cards" id="pk"></div></main>
 <aside class="side-col"><div class="pn"><div class="sec" id="bt">Билд</div><div id="bd"></div></div>
-<div class="pn"><div class="sec" id="ct">Контрпредметы</div><div id="cn"></div></div></aside>
+<div class="pn"><div class="sec" id="ct">Контрпредметы</div><div id="cn"></div></div>
+<div class="pn" id="quiz"><div class="sec">Мини-игры</div><div class="qm" id="qmodes"></div><div class="qs" id="qscore"></div><div id="qz"></div></div></aside>
 </div>
 
 <footer class="foot" id="foot">Загрузка данных…</footer>
 </div>
 <script src="engine.js"></script>
-<script src="rain.js" defer></script><script src="app.js"></script>
+<script src="rain.js" defer></script><script src="quiz.js"></script><script src="app.js"></script>
 </body></html>

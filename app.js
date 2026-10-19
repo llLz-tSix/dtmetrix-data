@@ -237,6 +237,7 @@
     };
     addEventListener("hashchange", function () { readHash(); selected = 0; update(); });
     update();
+    if (window.DMQuiz) DMQuiz.start(D);
   }
 
   fetch("data.json", { cache: "no-cache" }).then(function (r) { if (!r.ok) throw new Error(r.status); return r.json(); })
