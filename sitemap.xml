@@ -2,6 +2,12 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url><loc>https://lllz-tsix.github.io/dtmetrix-data/</loc><changefreq>daily</changefreq><priority>1.0</priority></url>
   <url><loc>https://lllz-tsix.github.io/dtmetrix-data/download.html</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://lllz-tsix.github.io/dtmetrix-data/meta/</loc><lastmod>2026-10-19</lastmod><changefreq>daily</changefreq><priority>0.9</priority></url>
+  <url><loc>https://lllz-tsix.github.io/dtmetrix-data/meta/carry/</loc><lastmod>2026-10-19</lastmod><changefreq>daily</changefreq><priority>0.9</priority></url>
+  <url><loc>https://lllz-tsix.github.io/dtmetrix-data/meta/mid/</loc><lastmod>2026-10-19</lastmod><changefreq>daily</changefreq><priority>0.9</priority></url>
+  <url><loc>https://lllz-tsix.github.io/dtmetrix-data/meta/offlane/</loc><lastmod>2026-10-19</lastmod><changefreq>daily</changefreq><priority>0.9</priority></url>
+  <url><loc>https://lllz-tsix.github.io/dtmetrix-data/meta/support-4/</loc><lastmod>2026-10-19</lastmod><changefreq>daily</changefreq><priority>0.9</priority></url>
+  <url><loc>https://lllz-tsix.github.io/dtmetrix-data/meta/support-5/</loc><lastmod>2026-10-19</lastmod><changefreq>daily</changefreq><priority>0.9</priority></url>
   <url><loc>https://lllz-tsix.github.io/dtmetrix-data/hero/</loc><lastmod>2026-10-19</lastmod><changefreq>daily</changefreq><priority>0.8</priority></url>
   <url><loc>https://lllz-tsix.github.io/dtmetrix-data/hero/anti-mage/</loc><lastmod>2026-10-19</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
   <url><loc>https://lllz-tsix.github.io/dtmetrix-data/hero/axe/</loc><lastmod>2026-10-19</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
@@ -132,10 +138,10 @@
   <url><loc>https://lllz-tsix.github.io/dtmetrix-data/hero/largo/</loc><lastmod>2026-10-19</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
   <url><loc>https://lllz-tsix.github.io/dtmetrix-data/hero/anti-mage/vs/axe/</loc><lastmod>2026-10-19</lastmod><changefreq>daily</changefreq><priority>0.5</priority></url>
   <url><loc>https://lllz-tsix.github.io/dtmetrix-data/hero/anti-mage/vs/razor/</loc><lastmod>2026-10-19</lastmod><changefreq>daily</changefreq><priority>0.5</priority></url>
+  <url><loc>https://lllz-tsix.github.io/dtmetrix-data/hero/anti-mage/vs/storm-spirit/</loc><lastmod>2026-10-19</lastmod><changefreq>daily</changefreq><priority>0.5</priority></url>
   <url><loc>https://lllz-tsix.github.io/dtmetrix-data/hero/anti-mage/vs/slardar/</loc><lastmod>2026-10-19</lastmod><changefreq>daily</changefreq><priority>0.5</priority></url>
   <url><loc>https://lllz-tsix.github.io/dtmetrix-data/hero/anti-mage/vs/tinker/</loc><lastmod>2026-10-19</lastmod><changefreq>daily</changefreq><priority>0.5</priority></url>
   <url><loc>https://lllz-tsix.github.io/dtmetrix-data/hero/anti-mage/vs/huskar/</loc><lastmod>2026-10-19</lastmod><changefreq>daily</changefreq><priority>0.5</priority></url>
-  <url><loc>https://lllz-tsix.github.io/dtmetrix-data/hero/anti-mage/vs/brewmaster/</loc><lastmod>2026-10-19</lastmod><changefreq>daily</changefreq><priority>0.5</priority></url>
   <url><loc>https://lllz-tsix.github.io/dtmetrix-data/hero/anti-mage/vs/meepo/</loc><lastmod>2026-10-19</lastmod><changefreq>daily</changefreq><priority>0.5</priority></url>
   <url><loc>https://lllz-tsix.github.io/dtmetrix-data/hero/anti-mage/vs/medusa/</loc><lastmod>2026-10-19</lastmod><changefreq>daily</changefreq><priority>0.5</priority></url>
   <url><loc>https://lllz-tsix.github.io/dtmetrix-data/hero/anti-mage/vs/troll-warlord/</loc><lastmod>2026-10-19</lastmod><changefreq>daily</changefreq><priority>0.5</priority></url>
@@ -151,6 +157,7 @@
   <url><loc>https://lllz-tsix.github.io/dtmetrix-data/hero/axe/vs/abaddon/</loc><lastmod>2026-10-19</lastmod><changefreq>daily</changefreq><priority>0.5</priority></url>
   <url><loc>https://lllz-tsix.github.io/dtmetrix-data/hero/axe/vs/terrorblade/</loc><lastmod>2026-10-19</lastmod><changefreq>daily</changefreq><priority>0.5</priority></url>
   <url><loc>https://lllz-tsix.github.io/dtmetrix-data/hero/bane/vs/morphling/</loc><lastmod>2026-10-19</lastmod><changefreq>daily</changefreq><priority>0.5</priority></url>
+  <url><loc>https://lllz-tsix.github.io/dtmetrix-data/hero/bane/vs/sven/</loc><lastmod>2026-10-19</lastmod><changefreq>daily</changefreq><priority>0.5</priority></url>
   <url><loc>https://lllz-tsix.github.io/dtmetrix-data/hero/bane/vs/beastmaster/</loc><lastmod>2026-10-19</lastmod><changefreq>daily</changefreq><priority>0.5</priority></url>
   <url><loc>https://lllz-tsix.github.io/dtmetrix-data/hero/bane/vs/lifestealer/</loc><lastmod>2026-10-19</lastmod><changefreq>daily</changefreq><priority>0.5</priority></url>
   <url><loc>https://lllz-tsix.github.io/dtmetrix-data/hero/bane/vs/ursa/</loc><lastmod>2026-10-19</lastmod><changefreq>daily</changefreq><priority>0.5</priority></url>
@@ -159,7 +166,6 @@
   <url><loc>https://lllz-tsix.github.io/dtmetrix-data/hero/bane/vs/visage/</loc><lastmod>2026-10-19</lastmod><changefreq>daily</changefreq><priority>0.5</priority></url>
   <url><loc>https://lllz-tsix.github.io/dtmetrix-data/hero/bane/vs/monkey-king/</loc><lastmod>2026-10-19</lastmod><changefreq>daily</changefreq><priority>0.5</priority></url>
   <url><loc>https://lllz-tsix.github.io/dtmetrix-data/hero/bane/vs/pangolier/</loc><lastmod>2026-10-19</lastmod><changefreq>daily</changefreq><priority>0.5</priority></url>
-  <url><loc>https://lllz-tsix.github.io/dtmetrix-data/hero/bane/vs/kez/</loc><lastmod>2026-10-19</lastmod><changefreq>daily</changefreq><priority>0.5</priority></url>
   <url><loc>https://lllz-tsix.github.io/dtmetrix-data/hero/bloodseeker/vs/juggernaut/</loc><lastmod>2026-10-19</lastmod><changefreq>daily</changefreq><priority>0.5</priority></url>
   <url><loc>https://lllz-tsix.github.io/dtmetrix-data/hero/bloodseeker/vs/witch-doctor/</loc><lastmod>2026-10-19</lastmod><changefreq>daily</changefreq><priority>0.5</priority></url>
   <url><loc>https://lllz-tsix.github.io/dtmetrix-data/hero/bloodseeker/vs/dark-seer/</loc><lastmod>2026-10-19</lastmod><changefreq>daily</changefreq><priority>0.5</priority></url>
@@ -260,12 +266,12 @@
   <url><loc>https://lllz-tsix.github.io/dtmetrix-data/hero/puck/vs/ancient-apparition/</loc><lastmod>2026-10-19</lastmod><changefreq>daily</changefreq><priority>0.5</priority></url>
   <url><loc>https://lllz-tsix.github.io/dtmetrix-data/hero/puck/vs/invoker/</loc><lastmod>2026-10-19</lastmod><changefreq>daily</changefreq><priority>0.5</priority></url>
   <url><loc>https://lllz-tsix.github.io/dtmetrix-data/hero/puck/vs/brewmaster/</loc><lastmod>2026-10-19</lastmod><changefreq>daily</changefreq><priority>0.5</priority></url>
+  <url><loc>https://lllz-tsix.github.io/dtmetrix-data/hero/pudge/vs/crystal-maiden/</loc><lastmod>2026-10-19</lastmod><changefreq>daily</changefreq><priority>0.5</priority></url>
   <url><loc>https://lllz-tsix.github.io/dtmetrix-data/hero/pudge/vs/slardar/</loc><lastmod>2026-10-19</lastmod><changefreq>daily</changefreq><priority>0.5</priority></url>
   <url><loc>https://lllz-tsix.github.io/dtmetrix-data/hero/pudge/vs/sniper/</loc><lastmod>2026-10-19</lastmod><changefreq>daily</changefreq><priority>0.5</priority></url>
   <url><loc>https://lllz-tsix.github.io/dtmetrix-data/hero/pudge/vs/phantom-assassin/</loc><lastmod>2026-10-19</lastmod><changefreq>daily</changefreq><priority>0.5</priority></url>
   <url><loc>https://lllz-tsix.github.io/dtmetrix-data/hero/pudge/vs/pugna/</loc><lastmod>2026-10-19</lastmod><changefreq>daily</changefreq><priority>0.5</priority></url>
   <url><loc>https://lllz-tsix.github.io/dtmetrix-data/hero/pudge/vs/clinkz/</loc><lastmod>2026-10-19</lastmod><changefreq>daily</changefreq><priority>0.5</priority></url>
-  <url><loc>https://lllz-tsix.github.io/dtmetrix-data/hero/pudge/vs/enchantress/</loc><lastmod>2026-10-19</lastmod><changefreq>daily</changefreq><priority>0.5</priority></url>
   <url><loc>https://lllz-tsix.github.io/dtmetrix-data/hero/pudge/vs/weaver/</loc><lastmod>2026-10-19</lastmod><changefreq>daily</changefreq><priority>0.5</priority></url>
   <url><loc>https://lllz-tsix.github.io/dtmetrix-data/hero/pudge/vs/ursa/</loc><lastmod>2026-10-19</lastmod><changefreq>daily</changefreq><priority>0.5</priority></url>
   <url><loc>https://lllz-tsix.github.io/dtmetrix-data/hero/pudge/vs/bristleback/</loc><lastmod>2026-10-19</lastmod><changefreq>daily</changefreq><priority>0.5</priority></url>
@@ -304,7 +310,7 @@
   <url><loc>https://lllz-tsix.github.io/dtmetrix-data/hero/sven/vs/slardar/</loc><lastmod>2026-10-19</lastmod><changefreq>daily</changefreq><priority>0.5</priority></url>
   <url><loc>https://lllz-tsix.github.io/dtmetrix-data/hero/sven/vs/templar-assassin/</loc><lastmod>2026-10-19</lastmod><changefreq>daily</changefreq><priority>0.5</priority></url>
   <url><loc>https://lllz-tsix.github.io/dtmetrix-data/hero/sven/vs/dark-seer/</loc><lastmod>2026-10-19</lastmod><changefreq>daily</changefreq><priority>0.5</priority></url>
-  <url><loc>https://lllz-tsix.github.io/dtmetrix-data/hero/sven/vs/batrider/</loc><lastmod>2026-10-19</lastmod><changefreq>daily</changefreq><priority>0.5</priority></url>
+  <url><loc>https://lllz-tsix.github.io/dtmetrix-data/hero/sven/vs/clinkz/</loc><lastmod>2026-10-19</lastmod><changefreq>daily</changefreq><priority>0.5</priority></url>
   <url><loc>https://lllz-tsix.github.io/dtmetrix-data/hero/sven/vs/lycan/</loc><lastmod>2026-10-19</lastmod><changefreq>daily</changefreq><priority>0.5</priority></url>
   <url><loc>https://lllz-tsix.github.io/dtmetrix-data/hero/sven/vs/meepo/</loc><lastmod>2026-10-19</lastmod><changefreq>daily</changefreq><priority>0.5</priority></url>
   <url><loc>https://lllz-tsix.github.io/dtmetrix-data/hero/sven/vs/naga-siren/</loc><lastmod>2026-10-19</lastmod><changefreq>daily</changefreq><priority>0.5</priority></url>
@@ -313,10 +319,10 @@
   <url><loc>https://lllz-tsix.github.io/dtmetrix-data/hero/tiny/vs/morphling/</loc><lastmod>2026-10-19</lastmod><changefreq>daily</changefreq><priority>0.5</priority></url>
   <url><loc>https://lllz-tsix.github.io/dtmetrix-data/hero/tiny/vs/phantom-lancer/</loc><lastmod>2026-10-19</lastmod><changefreq>daily</changefreq><priority>0.5</priority></url>
   <url><loc>https://lllz-tsix.github.io/dtmetrix-data/hero/tiny/vs/puck/</loc><lastmod>2026-10-19</lastmod><changefreq>daily</changefreq><priority>0.5</priority></url>
-  <url><loc>https://lllz-tsix.github.io/dtmetrix-data/hero/tiny/vs/vengeful-spirit/</loc><lastmod>2026-10-19</lastmod><changefreq>daily</changefreq><priority>0.5</priority></url>
   <url><loc>https://lllz-tsix.github.io/dtmetrix-data/hero/tiny/vs/necrophos/</loc><lastmod>2026-10-19</lastmod><changefreq>daily</changefreq><priority>0.5</priority></url>
   <url><loc>https://lllz-tsix.github.io/dtmetrix-data/hero/tiny/vs/wraith-king/</loc><lastmod>2026-10-19</lastmod><changefreq>daily</changefreq><priority>0.5</priority></url>
   <url><loc>https://lllz-tsix.github.io/dtmetrix-data/hero/tiny/vs/lifestealer/</loc><lastmod>2026-10-19</lastmod><changefreq>daily</changefreq><priority>0.5</priority></url>
+  <url><loc>https://lllz-tsix.github.io/dtmetrix-data/hero/tiny/vs/huskar/</loc><lastmod>2026-10-19</lastmod><changefreq>daily</changefreq><priority>0.5</priority></url>
   <url><loc>https://lllz-tsix.github.io/dtmetrix-data/hero/tiny/vs/spirit-breaker/</loc><lastmod>2026-10-19</lastmod><changefreq>daily</changefreq><priority>0.5</priority></url>
   <url><loc>https://lllz-tsix.github.io/dtmetrix-data/hero/tiny/vs/slark/</loc><lastmod>2026-10-19</lastmod><changefreq>daily</changefreq><priority>0.5</priority></url>
   <url><loc>https://lllz-tsix.github.io/dtmetrix-data/hero/tiny/vs/underlord/</loc><lastmod>2026-10-19</lastmod><changefreq>daily</changefreq><priority>0.5</priority></url>
@@ -331,11 +337,11 @@
   <url><loc>https://lllz-tsix.github.io/dtmetrix-data/hero/vengeful-spirit/vs/underlord/</loc><lastmod>2026-10-19</lastmod><changefreq>daily</changefreq><priority>0.5</priority></url>
   <url><loc>https://lllz-tsix.github.io/dtmetrix-data/hero/vengeful-spirit/vs/kez/</loc><lastmod>2026-10-19</lastmod><changefreq>daily</changefreq><priority>0.5</priority></url>
   <url><loc>https://lllz-tsix.github.io/dtmetrix-data/hero/windranger/vs/axe/</loc><lastmod>2026-10-19</lastmod><changefreq>daily</changefreq><priority>0.5</priority></url>
-  <url><loc>https://lllz-tsix.github.io/dtmetrix-data/hero/windranger/vs/phantom-lancer/</loc><lastmod>2026-10-19</lastmod><changefreq>daily</changefreq><priority>0.5</priority></url>
   <url><loc>https://lllz-tsix.github.io/dtmetrix-data/hero/windranger/vs/slardar/</loc><lastmod>2026-10-19</lastmod><changefreq>daily</changefreq><priority>0.5</priority></url>
   <url><loc>https://lllz-tsix.github.io/dtmetrix-data/hero/windranger/vs/faceless-void/</loc><lastmod>2026-10-19</lastmod><changefreq>daily</changefreq><priority>0.5</priority></url>
   <url><loc>https://lllz-tsix.github.io/dtmetrix-data/hero/windranger/vs/viper/</loc><lastmod>2026-10-19</lastmod><changefreq>daily</changefreq><priority>0.5</priority></url>
   <url><loc>https://lllz-tsix.github.io/dtmetrix-data/hero/windranger/vs/huskar/</loc><lastmod>2026-10-19</lastmod><changefreq>daily</changefreq><priority>0.5</priority></url>
+  <url><loc>https://lllz-tsix.github.io/dtmetrix-data/hero/windranger/vs/naga-siren/</loc><lastmod>2026-10-19</lastmod><changefreq>daily</changefreq><priority>0.5</priority></url>
   <url><loc>https://lllz-tsix.github.io/dtmetrix-data/hero/windranger/vs/io/</loc><lastmod>2026-10-19</lastmod><changefreq>daily</changefreq><priority>0.5</priority></url>
   <url><loc>https://lllz-tsix.github.io/dtmetrix-data/hero/windranger/vs/centaur-warrunner/</loc><lastmod>2026-10-19</lastmod><changefreq>daily</changefreq><priority>0.5</priority></url>
   <url><loc>https://lllz-tsix.github.io/dtmetrix-data/hero/windranger/vs/mars/</loc><lastmod>2026-10-19</lastmod><changefreq>daily</changefreq><priority>0.5</priority></url>
@@ -375,7 +381,7 @@
   <url><loc>https://lllz-tsix.github.io/dtmetrix-data/hero/lion/vs/razor/</loc><lastmod>2026-10-19</lastmod><changefreq>daily</changefreq><priority>0.5</priority></url>
   <url><loc>https://lllz-tsix.github.io/dtmetrix-data/hero/lion/vs/storm-spirit/</loc><lastmod>2026-10-19</lastmod><changefreq>daily</changefreq><priority>0.5</priority></url>
   <url><loc>https://lllz-tsix.github.io/dtmetrix-data/hero/lion/vs/wraith-king/</loc><lastmod>2026-10-19</lastmod><changefreq>daily</changefreq><priority>0.5</priority></url>
-  <url><loc>https://lllz-tsix.github.io/dtmetrix-data/hero/lion/vs/omniknight/</loc><lastmod>2026-10-19</lastmod><changefreq>daily</changefreq><priority>0.5</priority></url>
+  <url><loc>https://lllz-tsix.github.io/dtmetrix-data/hero/lion/vs/dragon-knight/</loc><lastmod>2026-10-19</lastmod><changefreq>daily</changefreq><priority>0.5</priority></url>
   <url><loc>https://lllz-tsix.github.io/dtmetrix-data/hero/lion/vs/huskar/</loc><lastmod>2026-10-19</lastmod><changefreq>daily</changefreq><priority>0.5</priority></url>
   <url><loc>https://lllz-tsix.github.io/dtmetrix-data/hero/lion/vs/broodmother/</loc><lastmod>2026-10-19</lastmod><changefreq>daily</changefreq><priority>0.5</priority></url>
   <url><loc>https://lllz-tsix.github.io/dtmetrix-data/hero/lion/vs/spectre/</loc><lastmod>2026-10-19</lastmod><changefreq>daily</changefreq><priority>0.5</priority></url>
@@ -422,9 +428,9 @@
   <url><loc>https://lllz-tsix.github.io/dtmetrix-data/hero/witch-doctor/vs/bristleback/</loc><lastmod>2026-10-19</lastmod><changefreq>daily</changefreq><priority>0.5</priority></url>
   <url><loc>https://lllz-tsix.github.io/dtmetrix-data/hero/lich/vs/anti-mage/</loc><lastmod>2026-10-19</lastmod><changefreq>daily</changefreq><priority>0.5</priority></url>
   <url><loc>https://lllz-tsix.github.io/dtmetrix-data/hero/lich/vs/enigma/</loc><lastmod>2026-10-19</lastmod><changefreq>daily</changefreq><priority>0.5</priority></url>
-  <url><loc>https://lllz-tsix.github.io/dtmetrix-data/hero/lich/vs/weaver/</loc><lastmod>2026-10-19</lastmod><changefreq>daily</changefreq><priority>0.5</priority></url>
   <url><loc>https://lllz-tsix.github.io/dtmetrix-data/hero/lich/vs/chen/</loc><lastmod>2026-10-19</lastmod><changefreq>daily</changefreq><priority>0.5</priority></url>
   <url><loc>https://lllz-tsix.github.io/dtmetrix-data/hero/lich/vs/spirit-breaker/</loc><lastmod>2026-10-19</lastmod><changefreq>daily</changefreq><priority>0.5</priority></url>
+  <url><loc>https://lllz-tsix.github.io/dtmetrix-data/hero/lich/vs/lycan/</loc><lastmod>2026-10-19</lastmod><changefreq>daily</changefreq><priority>0.5</priority></url>
   <url><loc>https://lllz-tsix.github.io/dtmetrix-data/hero/lich/vs/shadow-demon/</loc><lastmod>2026-10-19</lastmod><changefreq>daily</changefreq><priority>0.5</priority></url>
   <url><loc>https://lllz-tsix.github.io/dtmetrix-data/hero/lich/vs/medusa/</loc><lastmod>2026-10-19</lastmod><changefreq>daily</changefreq><priority>0.5</priority></url>
   <url><loc>https://lllz-tsix.github.io/dtmetrix-data/hero/lich/vs/bristleback/</loc><lastmod>2026-10-19</lastmod><changefreq>daily</changefreq><priority>0.5</priority></url>
@@ -440,7 +446,7 @@
   <url><loc>https://lllz-tsix.github.io/dtmetrix-data/hero/riki/vs/visage/</loc><lastmod>2026-10-19</lastmod><changefreq>daily</changefreq><priority>0.5</priority></url>
   <url><loc>https://lllz-tsix.github.io/dtmetrix-data/hero/riki/vs/troll-warlord/</loc><lastmod>2026-10-19</lastmod><changefreq>daily</changefreq><priority>0.5</priority></url>
   <url><loc>https://lllz-tsix.github.io/dtmetrix-data/hero/riki/vs/underlord/</loc><lastmod>2026-10-19</lastmod><changefreq>daily</changefreq><priority>0.5</priority></url>
-  <url><loc>https://lllz-tsix.github.io/dtmetrix-data/hero/enigma/vs/sand-king/</loc><lastmod>2026-10-19</lastmod><changefreq>daily</changefreq><priority>0.5</priority></url>
+  <url><loc>https://lllz-tsix.github.io/dtmetrix-data/hero/enigma/vs/phantom-lancer/</loc><lastmod>2026-10-19</lastmod><changefreq>daily</changefreq><priority>0.5</priority></url>
   <url><loc>https://lllz-tsix.github.io/dtmetrix-data/hero/enigma/vs/sniper/</loc><lastmod>2026-10-19</lastmod><changefreq>daily</changefreq><priority>0.5</priority></url>
   <url><loc>https://lllz-tsix.github.io/dtmetrix-data/hero/enigma/vs/lifestealer/</loc><lastmod>2026-10-19</lastmod><changefreq>daily</changefreq><priority>0.5</priority></url>
   <url><loc>https://lllz-tsix.github.io/dtmetrix-data/hero/enigma/vs/omniknight/</loc><lastmod>2026-10-19</lastmod><changefreq>daily</changefreq><priority>0.5</priority></url>
@@ -465,15 +471,15 @@
   <url><loc>https://lllz-tsix.github.io/dtmetrix-data/hero/sniper/vs/puck/</loc><lastmod>2026-10-19</lastmod><changefreq>daily</changefreq><priority>0.5</priority></url>
   <url><loc>https://lllz-tsix.github.io/dtmetrix-data/hero/sniper/vs/storm-spirit/</loc><lastmod>2026-10-19</lastmod><changefreq>daily</changefreq><priority>0.5</priority></url>
   <url><loc>https://lllz-tsix.github.io/dtmetrix-data/hero/sniper/vs/enigma/</loc><lastmod>2026-10-19</lastmod><changefreq>daily</changefreq><priority>0.5</priority></url>
-  <url><loc>https://lllz-tsix.github.io/dtmetrix-data/hero/sniper/vs/templar-assassin/</loc><lastmod>2026-10-19</lastmod><changefreq>daily</changefreq><priority>0.5</priority></url>
+  <url><loc>https://lllz-tsix.github.io/dtmetrix-data/hero/sniper/vs/beastmaster/</loc><lastmod>2026-10-19</lastmod><changefreq>daily</changefreq><priority>0.5</priority></url>
   <url><loc>https://lllz-tsix.github.io/dtmetrix-data/hero/sniper/vs/spectre/</loc><lastmod>2026-10-19</lastmod><changefreq>daily</changefreq><priority>0.5</priority></url>
   <url><loc>https://lllz-tsix.github.io/dtmetrix-data/hero/sniper/vs/lycan/</loc><lastmod>2026-10-19</lastmod><changefreq>daily</changefreq><priority>0.5</priority></url>
   <url><loc>https://lllz-tsix.github.io/dtmetrix-data/hero/sniper/vs/disruptor/</loc><lastmod>2026-10-19</lastmod><changefreq>daily</changefreq><priority>0.5</priority></url>
   <url><loc>https://lllz-tsix.github.io/dtmetrix-data/hero/sniper/vs/medusa/</loc><lastmod>2026-10-19</lastmod><changefreq>daily</changefreq><priority>0.5</priority></url>
   <url><loc>https://lllz-tsix.github.io/dtmetrix-data/hero/necrophos/vs/drow-ranger/</loc><lastmod>2026-10-19</lastmod><changefreq>daily</changefreq><priority>0.5</priority></url>
   <url><loc>https://lllz-tsix.github.io/dtmetrix-data/hero/necrophos/vs/wraith-king/</loc><lastmod>2026-10-19</lastmod><changefreq>daily</changefreq><priority>0.5</priority></url>
+  <url><loc>https://lllz-tsix.github.io/dtmetrix-data/hero/necrophos/vs/dragon-knight/</loc><lastmod>2026-10-19</lastmod><changefreq>daily</changefreq><priority>0.5</priority></url>
   <url><loc>https://lllz-tsix.github.io/dtmetrix-data/hero/necrophos/vs/huskar/</loc><lastmod>2026-10-19</lastmod><changefreq>daily</changefreq><priority>0.5</priority></url>
-  <url><loc>https://lllz-tsix.github.io/dtmetrix-data/hero/necrophos/vs/broodmother/</loc><lastmod>2026-10-19</lastmod><changefreq>daily</changefreq><priority>0.5</priority></url>
   <url><loc>https://lllz-tsix.github.io/dtmetrix-data/hero/necrophos/vs/ancient-apparition/</loc><lastmod>2026-10-19</lastmod><changefreq>daily</changefreq><priority>0.5</priority></url>
   <url><loc>https://lllz-tsix.github.io/dtmetrix-data/hero/necrophos/vs/lycan/</loc><lastmod>2026-10-19</lastmod><changefreq>daily</changefreq><priority>0.5</priority></url>
   <url><loc>https://lllz-tsix.github.io/dtmetrix-data/hero/necrophos/vs/meepo/</loc><lastmod>2026-10-19</lastmod><changefreq>daily</changefreq><priority>0.5</priority></url>
@@ -501,25 +507,25 @@
   <url><loc>https://lllz-tsix.github.io/dtmetrix-data/hero/beastmaster/vs/medusa/</loc><lastmod>2026-10-19</lastmod><changefreq>daily</changefreq><priority>0.5</priority></url>
   <url><loc>https://lllz-tsix.github.io/dtmetrix-data/hero/beastmaster/vs/bristleback/</loc><lastmod>2026-10-19</lastmod><changefreq>daily</changefreq><priority>0.5</priority></url>
   <url><loc>https://lllz-tsix.github.io/dtmetrix-data/hero/queen-of-pain/vs/puck/</loc><lastmod>2026-10-19</lastmod><changefreq>daily</changefreq><priority>0.5</priority></url>
+  <url><loc>https://lllz-tsix.github.io/dtmetrix-data/hero/queen-of-pain/vs/razor/</loc><lastmod>2026-10-19</lastmod><changefreq>daily</changefreq><priority>0.5</priority></url>
   <url><loc>https://lllz-tsix.github.io/dtmetrix-data/hero/queen-of-pain/vs/riki/</loc><lastmod>2026-10-19</lastmod><changefreq>daily</changefreq><priority>0.5</priority></url>
   <url><loc>https://lllz-tsix.github.io/dtmetrix-data/hero/queen-of-pain/vs/huskar/</loc><lastmod>2026-10-19</lastmod><changefreq>daily</changefreq><priority>0.5</priority></url>
   <url><loc>https://lllz-tsix.github.io/dtmetrix-data/hero/queen-of-pain/vs/batrider/</loc><lastmod>2026-10-19</lastmod><changefreq>daily</changefreq><priority>0.5</priority></url>
   <url><loc>https://lllz-tsix.github.io/dtmetrix-data/hero/queen-of-pain/vs/lycan/</loc><lastmod>2026-10-19</lastmod><changefreq>daily</changefreq><priority>0.5</priority></url>
   <url><loc>https://lllz-tsix.github.io/dtmetrix-data/hero/queen-of-pain/vs/shadow-demon/</loc><lastmod>2026-10-19</lastmod><changefreq>daily</changefreq><priority>0.5</priority></url>
-  <url><loc>https://lllz-tsix.github.io/dtmetrix-data/hero/queen-of-pain/vs/keeper-of-the-light/</loc><lastmod>2026-10-19</lastmod><changefreq>daily</changefreq><priority>0.5</priority></url>
   <url><loc>https://lllz-tsix.github.io/dtmetrix-data/hero/queen-of-pain/vs/medusa/</loc><lastmod>2026-10-19</lastmod><changefreq>daily</changefreq><priority>0.5</priority></url>
   <url><loc>https://lllz-tsix.github.io/dtmetrix-data/hero/queen-of-pain/vs/ember-spirit/</loc><lastmod>2026-10-19</lastmod><changefreq>daily</changefreq><priority>0.5</priority></url>
   <url><loc>https://lllz-tsix.github.io/dtmetrix-data/hero/queen-of-pain/vs/primal-beast/</loc><lastmod>2026-10-19</lastmod><changefreq>daily</changefreq><priority>0.5</priority></url>
   <url><loc>https://lllz-tsix.github.io/dtmetrix-data/hero/venomancer/vs/phantom-lancer/</loc><lastmod>2026-10-19</lastmod><changefreq>daily</changefreq><priority>0.5</priority></url>
   <url><loc>https://lllz-tsix.github.io/dtmetrix-data/hero/venomancer/vs/storm-spirit/</loc><lastmod>2026-10-19</lastmod><changefreq>daily</changefreq><priority>0.5</priority></url>
   <url><loc>https://lllz-tsix.github.io/dtmetrix-data/hero/venomancer/vs/batrider/</loc><lastmod>2026-10-19</lastmod><changefreq>daily</changefreq><priority>0.5</priority></url>
+  <url><loc>https://lllz-tsix.github.io/dtmetrix-data/hero/venomancer/vs/ursa/</loc><lastmod>2026-10-19</lastmod><changefreq>daily</changefreq><priority>0.5</priority></url>
   <url><loc>https://lllz-tsix.github.io/dtmetrix-data/hero/venomancer/vs/meepo/</loc><lastmod>2026-10-19</lastmod><changefreq>daily</changefreq><priority>0.5</priority></url>
   <url><loc>https://lllz-tsix.github.io/dtmetrix-data/hero/venomancer/vs/io/</loc><lastmod>2026-10-19</lastmod><changefreq>daily</changefreq><priority>0.5</priority></url>
   <url><loc>https://lllz-tsix.github.io/dtmetrix-data/hero/venomancer/vs/visage/</loc><lastmod>2026-10-19</lastmod><changefreq>daily</changefreq><priority>0.5</priority></url>
   <url><loc>https://lllz-tsix.github.io/dtmetrix-data/hero/venomancer/vs/slark/</loc><lastmod>2026-10-19</lastmod><changefreq>daily</changefreq><priority>0.5</priority></url>
   <url><loc>https://lllz-tsix.github.io/dtmetrix-data/hero/venomancer/vs/legion-commander/</loc><lastmod>2026-10-19</lastmod><changefreq>daily</changefreq><priority>0.5</priority></url>
   <url><loc>https://lllz-tsix.github.io/dtmetrix-data/hero/venomancer/vs/arc-warden/</loc><lastmod>2026-10-19</lastmod><changefreq>daily</changefreq><priority>0.5</priority></url>
-  <url><loc>https://lllz-tsix.github.io/dtmetrix-data/hero/venomancer/vs/monkey-king/</loc><lastmod>2026-10-19</lastmod><changefreq>daily</changefreq><priority>0.5</priority></url>
   <url><loc>https://lllz-tsix.github.io/dtmetrix-data/hero/faceless-void/vs/dark-seer/</loc><lastmod>2026-10-19</lastmod><changefreq>daily</changefreq><priority>0.5</priority></url>
   <url><loc>https://lllz-tsix.github.io/dtmetrix-data/hero/faceless-void/vs/night-stalker/</loc><lastmod>2026-10-19</lastmod><changefreq>daily</changefreq><priority>0.5</priority></url>
   <url><loc>https://lllz-tsix.github.io/dtmetrix-data/hero/faceless-void/vs/weaver/</loc><lastmod>2026-10-19</lastmod><changefreq>daily</changefreq><priority>0.5</priority></url>
@@ -535,11 +541,11 @@
   <url><loc>https://lllz-tsix.github.io/dtmetrix-data/hero/wraith-king/vs/warlock/</loc><lastmod>2026-10-19</lastmod><changefreq>daily</changefreq><priority>0.5</priority></url>
   <url><loc>https://lllz-tsix.github.io/dtmetrix-data/hero/wraith-king/vs/templar-assassin/</loc><lastmod>2026-10-19</lastmod><changefreq>daily</changefreq><priority>0.5</priority></url>
   <url><loc>https://lllz-tsix.github.io/dtmetrix-data/hero/wraith-king/vs/clinkz/</loc><lastmod>2026-10-19</lastmod><changefreq>daily</changefreq><priority>0.5</priority></url>
+  <url><loc>https://lllz-tsix.github.io/dtmetrix-data/hero/wraith-king/vs/broodmother/</loc><lastmod>2026-10-19</lastmod><changefreq>daily</changefreq><priority>0.5</priority></url>
   <url><loc>https://lllz-tsix.github.io/dtmetrix-data/hero/wraith-king/vs/doom/</loc><lastmod>2026-10-19</lastmod><changefreq>daily</changefreq><priority>0.5</priority></url>
   <url><loc>https://lllz-tsix.github.io/dtmetrix-data/hero/wraith-king/vs/ursa/</loc><lastmod>2026-10-19</lastmod><changefreq>daily</changefreq><priority>0.5</priority></url>
   <url><loc>https://lllz-tsix.github.io/dtmetrix-data/hero/wraith-king/vs/meepo/</loc><lastmod>2026-10-19</lastmod><changefreq>daily</changefreq><priority>0.5</priority></url>
   <url><loc>https://lllz-tsix.github.io/dtmetrix-data/hero/wraith-king/vs/naga-siren/</loc><lastmod>2026-10-19</lastmod><changefreq>daily</changefreq><priority>0.5</priority></url>
-  <url><loc>https://lllz-tsix.github.io/dtmetrix-data/hero/wraith-king/vs/underlord/</loc><lastmod>2026-10-19</lastmod><changefreq>daily</changefreq><priority>0.5</priority></url>
   <url><loc>https://lllz-tsix.github.io/dtmetrix-data/hero/death-prophet/vs/anti-mage/</loc><lastmod>2026-10-19</lastmod><changefreq>daily</changefreq><priority>0.5</priority></url>
   <url><loc>https://lllz-tsix.github.io/dtmetrix-data/hero/death-prophet/vs/bloodseeker/</loc><lastmod>2026-10-19</lastmod><changefreq>daily</changefreq><priority>0.5</priority></url>
   <url><loc>https://lllz-tsix.github.io/dtmetrix-data/hero/death-prophet/vs/crystal-maiden/</loc><lastmod>2026-10-19</lastmod><changefreq>daily</changefreq><priority>0.5</priority></url>
@@ -592,12 +598,12 @@
   <url><loc>https://lllz-tsix.github.io/dtmetrix-data/hero/viper/vs/arc-warden/</loc><lastmod>2026-10-19</lastmod><changefreq>daily</changefreq><priority>0.5</priority></url>
   <url><loc>https://lllz-tsix.github.io/dtmetrix-data/hero/luna/vs/anti-mage/</loc><lastmod>2026-10-19</lastmod><changefreq>daily</changefreq><priority>0.5</priority></url>
   <url><loc>https://lllz-tsix.github.io/dtmetrix-data/hero/luna/vs/drow-ranger/</loc><lastmod>2026-10-19</lastmod><changefreq>daily</changefreq><priority>0.5</priority></url>
-  <url><loc>https://lllz-tsix.github.io/dtmetrix-data/hero/luna/vs/zeus/</loc><lastmod>2026-10-19</lastmod><changefreq>daily</changefreq><priority>0.5</priority></url>
   <url><loc>https://lllz-tsix.github.io/dtmetrix-data/hero/luna/vs/kunkka/</loc><lastmod>2026-10-19</lastmod><changefreq>daily</changefreq><priority>0.5</priority></url>
   <url><loc>https://lllz-tsix.github.io/dtmetrix-data/hero/luna/vs/slardar/</loc><lastmod>2026-10-19</lastmod><changefreq>daily</changefreq><priority>0.5</priority></url>
   <url><loc>https://lllz-tsix.github.io/dtmetrix-data/hero/luna/vs/riki/</loc><lastmod>2026-10-19</lastmod><changefreq>daily</changefreq><priority>0.5</priority></url>
   <url><loc>https://lllz-tsix.github.io/dtmetrix-data/hero/luna/vs/undying/</loc><lastmod>2026-10-19</lastmod><changefreq>daily</changefreq><priority>0.5</priority></url>
   <url><loc>https://lllz-tsix.github.io/dtmetrix-data/hero/luna/vs/naga-siren/</loc><lastmod>2026-10-19</lastmod><changefreq>daily</changefreq><priority>0.5</priority></url>
+  <url><loc>https://lllz-tsix.github.io/dtmetrix-data/hero/luna/vs/medusa/</loc><lastmod>2026-10-19</lastmod><changefreq>daily</changefreq><priority>0.5</priority></url>
   <url><loc>https://lllz-tsix.github.io/dtmetrix-data/hero/luna/vs/bristleback/</loc><lastmod>2026-10-19</lastmod><changefreq>daily</changefreq><priority>0.5</priority></url>
   <url><loc>https://lllz-tsix.github.io/dtmetrix-data/hero/luna/vs/elder-titan/</loc><lastmod>2026-10-19</lastmod><changefreq>daily</changefreq><priority>0.5</priority></url>
   <url><loc>https://lllz-tsix.github.io/dtmetrix-data/hero/dragon-knight/vs/puck/</loc><lastmod>2026-10-19</lastmod><changefreq>daily</changefreq><priority>0.5</priority></url>
@@ -611,10 +617,10 @@
   <url><loc>https://lllz-tsix.github.io/dtmetrix-data/hero/dragon-knight/vs/lycan/</loc><lastmod>2026-10-19</lastmod><changefreq>daily</changefreq><priority>0.5</priority></url>
   <url><loc>https://lllz-tsix.github.io/dtmetrix-data/hero/dragon-knight/vs/chaos-knight/</loc><lastmod>2026-10-19</lastmod><changefreq>daily</changefreq><priority>0.5</priority></url>
   <url><loc>https://lllz-tsix.github.io/dtmetrix-data/hero/dazzle/vs/storm-spirit/</loc><lastmod>2026-10-19</lastmod><changefreq>daily</changefreq><priority>0.5</priority></url>
-  <url><loc>https://lllz-tsix.github.io/dtmetrix-data/hero/dazzle/vs/death-prophet/</loc><lastmod>2026-10-19</lastmod><changefreq>daily</changefreq><priority>0.5</priority></url>
   <url><loc>https://lllz-tsix.github.io/dtmetrix-data/hero/dazzle/vs/broodmother/</loc><lastmod>2026-10-19</lastmod><changefreq>daily</changefreq><priority>0.5</priority></url>
   <url><loc>https://lllz-tsix.github.io/dtmetrix-data/hero/dazzle/vs/weaver/</loc><lastmod>2026-10-19</lastmod><changefreq>daily</changefreq><priority>0.5</priority></url>
   <url><loc>https://lllz-tsix.github.io/dtmetrix-data/hero/dazzle/vs/ancient-apparition/</loc><lastmod>2026-10-19</lastmod><changefreq>daily</changefreq><priority>0.5</priority></url>
+  <url><loc>https://lllz-tsix.github.io/dtmetrix-data/hero/dazzle/vs/meepo/</loc><lastmod>2026-10-19</lastmod><changefreq>daily</changefreq><priority>0.5</priority></url>
   <url><loc>https://lllz-tsix.github.io/dtmetrix-data/hero/dazzle/vs/naga-siren/</loc><lastmod>2026-10-19</lastmod><changefreq>daily</changefreq><priority>0.5</priority></url>
   <url><loc>https://lllz-tsix.github.io/dtmetrix-data/hero/dazzle/vs/slark/</loc><lastmod>2026-10-19</lastmod><changefreq>daily</changefreq><priority>0.5</priority></url>
   <url><loc>https://lllz-tsix.github.io/dtmetrix-data/hero/dazzle/vs/centaur-warrunner/</loc><lastmod>2026-10-19</lastmod><changefreq>daily</changefreq><priority>0.5</priority></url>
@@ -685,18 +691,18 @@
   <url><loc>https://lllz-tsix.github.io/dtmetrix-data/hero/omniknight/vs/enigma/</loc><lastmod>2026-10-19</lastmod><changefreq>daily</changefreq><priority>0.5</priority></url>
   <url><loc>https://lllz-tsix.github.io/dtmetrix-data/hero/omniknight/vs/warlock/</loc><lastmod>2026-10-19</lastmod><changefreq>daily</changefreq><priority>0.5</priority></url>
   <url><loc>https://lllz-tsix.github.io/dtmetrix-data/hero/omniknight/vs/faceless-void/</loc><lastmod>2026-10-19</lastmod><changefreq>daily</changefreq><priority>0.5</priority></url>
-  <url><loc>https://lllz-tsix.github.io/dtmetrix-data/hero/omniknight/vs/lifestealer/</loc><lastmod>2026-10-19</lastmod><changefreq>daily</changefreq><priority>0.5</priority></url>
   <url><loc>https://lllz-tsix.github.io/dtmetrix-data/hero/omniknight/vs/alchemist/</loc><lastmod>2026-10-19</lastmod><changefreq>daily</changefreq><priority>0.5</priority></url>
   <url><loc>https://lllz-tsix.github.io/dtmetrix-data/hero/omniknight/vs/shadow-demon/</loc><lastmod>2026-10-19</lastmod><changefreq>daily</changefreq><priority>0.5</priority></url>
   <url><loc>https://lllz-tsix.github.io/dtmetrix-data/hero/omniknight/vs/legion-commander/</loc><lastmod>2026-10-19</lastmod><changefreq>daily</changefreq><priority>0.5</priority></url>
+  <url><loc>https://lllz-tsix.github.io/dtmetrix-data/hero/omniknight/vs/oracle/</loc><lastmod>2026-10-19</lastmod><changefreq>daily</changefreq><priority>0.5</priority></url>
   <url><loc>https://lllz-tsix.github.io/dtmetrix-data/hero/omniknight/vs/muerta/</loc><lastmod>2026-10-19</lastmod><changefreq>daily</changefreq><priority>0.5</priority></url>
   <url><loc>https://lllz-tsix.github.io/dtmetrix-data/hero/enchantress/vs/crystal-maiden/</loc><lastmod>2026-10-19</lastmod><changefreq>daily</changefreq><priority>0.5</priority></url>
+  <url><loc>https://lllz-tsix.github.io/dtmetrix-data/hero/enchantress/vs/pudge/</loc><lastmod>2026-10-19</lastmod><changefreq>daily</changefreq><priority>0.5</priority></url>
   <url><loc>https://lllz-tsix.github.io/dtmetrix-data/hero/enchantress/vs/zeus/</loc><lastmod>2026-10-19</lastmod><changefreq>daily</changefreq><priority>0.5</priority></url>
   <url><loc>https://lllz-tsix.github.io/dtmetrix-data/hero/enchantress/vs/beastmaster/</loc><lastmod>2026-10-19</lastmod><changefreq>daily</changefreq><priority>0.5</priority></url>
   <url><loc>https://lllz-tsix.github.io/dtmetrix-data/hero/enchantress/vs/wraith-king/</loc><lastmod>2026-10-19</lastmod><changefreq>daily</changefreq><priority>0.5</priority></url>
   <url><loc>https://lllz-tsix.github.io/dtmetrix-data/hero/enchantress/vs/phantom-assassin/</loc><lastmod>2026-10-19</lastmod><changefreq>daily</changefreq><priority>0.5</priority></url>
   <url><loc>https://lllz-tsix.github.io/dtmetrix-data/hero/enchantress/vs/spectre/</loc><lastmod>2026-10-19</lastmod><changefreq>daily</changefreq><priority>0.5</priority></url>
-  <url><loc>https://lllz-tsix.github.io/dtmetrix-data/hero/enchantress/vs/meepo/</loc><lastmod>2026-10-19</lastmod><changefreq>daily</changefreq><priority>0.5</priority></url>
   <url><loc>https://lllz-tsix.github.io/dtmetrix-data/hero/enchantress/vs/oracle/</loc><lastmod>2026-10-19</lastmod><changefreq>daily</changefreq><priority>0.5</priority></url>
   <url><loc>https://lllz-tsix.github.io/dtmetrix-data/hero/enchantress/vs/marci/</loc><lastmod>2026-10-19</lastmod><changefreq>daily</changefreq><priority>0.5</priority></url>
   <url><loc>https://lllz-tsix.github.io/dtmetrix-data/hero/enchantress/vs/primal-beast/</loc><lastmod>2026-10-19</lastmod><changefreq>daily</changefreq><priority>0.5</priority></url>
@@ -715,14 +721,14 @@
   <url><loc>https://lllz-tsix.github.io/dtmetrix-data/hero/night-stalker/vs/tinker/</loc><lastmod>2026-10-19</lastmod><changefreq>daily</changefreq><priority>0.5</priority></url>
   <url><loc>https://lllz-tsix.github.io/dtmetrix-data/hero/night-stalker/vs/faceless-void/</loc><lastmod>2026-10-19</lastmod><changefreq>daily</changefreq><priority>0.5</priority></url>
   <url><loc>https://lllz-tsix.github.io/dtmetrix-data/hero/night-stalker/vs/broodmother/</loc><lastmod>2026-10-19</lastmod><changefreq>daily</changefreq><priority>0.5</priority></url>
-  <url><loc>https://lllz-tsix.github.io/dtmetrix-data/hero/night-stalker/vs/meepo/</loc><lastmod>2026-10-19</lastmod><changefreq>daily</changefreq><priority>0.5</priority></url>
+  <url><loc>https://lllz-tsix.github.io/dtmetrix-data/hero/night-stalker/vs/lycan/</loc><lastmod>2026-10-19</lastmod><changefreq>daily</changefreq><priority>0.5</priority></url>
   <url><loc>https://lllz-tsix.github.io/dtmetrix-data/hero/night-stalker/vs/naga-siren/</loc><lastmod>2026-10-19</lastmod><changefreq>daily</changefreq><priority>0.5</priority></url>
   <url><loc>https://lllz-tsix.github.io/dtmetrix-data/hero/night-stalker/vs/slark/</loc><lastmod>2026-10-19</lastmod><changefreq>daily</changefreq><priority>0.5</priority></url>
   <url><loc>https://lllz-tsix.github.io/dtmetrix-data/hero/night-stalker/vs/troll-warlord/</loc><lastmod>2026-10-19</lastmod><changefreq>daily</changefreq><priority>0.5</priority></url>
   <url><loc>https://lllz-tsix.github.io/dtmetrix-data/hero/night-stalker/vs/terrorblade/</loc><lastmod>2026-10-19</lastmod><changefreq>daily</changefreq><priority>0.5</priority></url>
+  <url><loc>https://lllz-tsix.github.io/dtmetrix-data/hero/broodmother/vs/axe/</loc><lastmod>2026-10-19</lastmod><changefreq>daily</changefreq><priority>0.5</priority></url>
   <url><loc>https://lllz-tsix.github.io/dtmetrix-data/hero/broodmother/vs/earthshaker/</loc><lastmod>2026-10-19</lastmod><changefreq>daily</changefreq><priority>0.5</priority></url>
   <url><loc>https://lllz-tsix.github.io/dtmetrix-data/hero/broodmother/vs/puck/</loc><lastmod>2026-10-19</lastmod><changefreq>daily</changefreq><priority>0.5</priority></url>
-  <url><loc>https://lllz-tsix.github.io/dtmetrix-data/hero/broodmother/vs/sand-king/</loc><lastmod>2026-10-19</lastmod><changefreq>daily</changefreq><priority>0.5</priority></url>
   <url><loc>https://lllz-tsix.github.io/dtmetrix-data/hero/broodmother/vs/clinkz/</loc><lastmod>2026-10-19</lastmod><changefreq>daily</changefreq><priority>0.5</priority></url>
   <url><loc>https://lllz-tsix.github.io/dtmetrix-data/hero/broodmother/vs/huskar/</loc><lastmod>2026-10-19</lastmod><changefreq>daily</changefreq><priority>0.5</priority></url>
   <url><loc>https://lllz-tsix.github.io/dtmetrix-data/hero/broodmother/vs/night-stalker/</loc><lastmod>2026-10-19</lastmod><changefreq>daily</changefreq><priority>0.5</priority></url>
@@ -734,7 +740,7 @@
   <url><loc>https://lllz-tsix.github.io/dtmetrix-data/hero/bounty-hunter/vs/warlock/</loc><lastmod>2026-10-19</lastmod><changefreq>daily</changefreq><priority>0.5</priority></url>
   <url><loc>https://lllz-tsix.github.io/dtmetrix-data/hero/bounty-hunter/vs/clinkz/</loc><lastmod>2026-10-19</lastmod><changefreq>daily</changefreq><priority>0.5</priority></url>
   <url><loc>https://lllz-tsix.github.io/dtmetrix-data/hero/bounty-hunter/vs/night-stalker/</loc><lastmod>2026-10-19</lastmod><changefreq>daily</changefreq><priority>0.5</priority></url>
-  <url><loc>https://lllz-tsix.github.io/dtmetrix-data/hero/bounty-hunter/vs/lycan/</loc><lastmod>2026-10-19</lastmod><changefreq>daily</changefreq><priority>0.5</priority></url>
+  <url><loc>https://lllz-tsix.github.io/dtmetrix-data/hero/bounty-hunter/vs/spectre/</loc><lastmod>2026-10-19</lastmod><changefreq>daily</changefreq><priority>0.5</priority></url>
   <url><loc>https://lllz-tsix.github.io/dtmetrix-data/hero/bounty-hunter/vs/lone-druid/</loc><lastmod>2026-10-19</lastmod><changefreq>daily</changefreq><priority>0.5</priority></url>
   <url><loc>https://lllz-tsix.github.io/dtmetrix-data/hero/bounty-hunter/vs/meepo/</loc><lastmod>2026-10-19</lastmod><changefreq>daily</changefreq><priority>0.5</priority></url>
   <url><loc>https://lllz-tsix.github.io/dtmetrix-data/hero/bounty-hunter/vs/naga-siren/</loc><lastmod>2026-10-19</lastmod><changefreq>daily</changefreq><priority>0.5</priority></url>
@@ -744,13 +750,14 @@
   <url><loc>https://lllz-tsix.github.io/dtmetrix-data/hero/weaver/vs/faceless-void/</loc><lastmod>2026-10-19</lastmod><changefreq>daily</changefreq><priority>0.5</priority></url>
   <url><loc>https://lllz-tsix.github.io/dtmetrix-data/hero/weaver/vs/dazzle/</loc><lastmod>2026-10-19</lastmod><changefreq>daily</changefreq><priority>0.5</priority></url>
   <url><loc>https://lllz-tsix.github.io/dtmetrix-data/hero/weaver/vs/dark-seer/</loc><lastmod>2026-10-19</lastmod><changefreq>daily</changefreq><priority>0.5</priority></url>
+  <url><loc>https://lllz-tsix.github.io/dtmetrix-data/hero/weaver/vs/broodmother/</loc><lastmod>2026-10-19</lastmod><changefreq>daily</changefreq><priority>0.5</priority></url>
   <url><loc>https://lllz-tsix.github.io/dtmetrix-data/hero/weaver/vs/ursa/</loc><lastmod>2026-10-19</lastmod><changefreq>daily</changefreq><priority>0.5</priority></url>
   <url><loc>https://lllz-tsix.github.io/dtmetrix-data/hero/weaver/vs/brewmaster/</loc><lastmod>2026-10-19</lastmod><changefreq>daily</changefreq><priority>0.5</priority></url>
   <url><loc>https://lllz-tsix.github.io/dtmetrix-data/hero/weaver/vs/rubick/</loc><lastmod>2026-10-19</lastmod><changefreq>daily</changefreq><priority>0.5</priority></url>
   <url><loc>https://lllz-tsix.github.io/dtmetrix-data/hero/weaver/vs/medusa/</loc><lastmod>2026-10-19</lastmod><changefreq>daily</changefreq><priority>0.5</priority></url>
   <url><loc>https://lllz-tsix.github.io/dtmetrix-data/hero/weaver/vs/timbersaw/</loc><lastmod>2026-10-19</lastmod><changefreq>daily</changefreq><priority>0.5</priority></url>
-  <url><loc>https://lllz-tsix.github.io/dtmetrix-data/hero/weaver/vs/dark-willow/</loc><lastmod>2026-10-19</lastmod><changefreq>daily</changefreq><priority>0.5</priority></url>
   <url><loc>https://lllz-tsix.github.io/dtmetrix-data/hero/jakiro/vs/bane/</loc><lastmod>2026-10-19</lastmod><changefreq>daily</changefreq><priority>0.5</priority></url>
+  <url><loc>https://lllz-tsix.github.io/dtmetrix-data/hero/jakiro/vs/tidehunter/</loc><lastmod>2026-10-19</lastmod><changefreq>daily</changefreq><priority>0.5</priority></url>
   <url><loc>https://lllz-tsix.github.io/dtmetrix-data/hero/jakiro/vs/sniper/</loc><lastmod>2026-10-19</lastmod><changefreq>daily</changefreq><priority>0.5</priority></url>
   <url><loc>https://lllz-tsix.github.io/dtmetrix-data/hero/jakiro/vs/beastmaster/</loc><lastmod>2026-10-19</lastmod><changefreq>daily</changefreq><priority>0.5</priority></url>
   <url><loc>https://lllz-tsix.github.io/dtmetrix-data/hero/jakiro/vs/broodmother/</loc><lastmod>2026-10-19</lastmod><changefreq>daily</changefreq><priority>0.5</priority></url>
@@ -758,16 +765,15 @@
   <url><loc>https://lllz-tsix.github.io/dtmetrix-data/hero/jakiro/vs/meepo/</loc><lastmod>2026-10-19</lastmod><changefreq>daily</changefreq><priority>0.5</priority></url>
   <url><loc>https://lllz-tsix.github.io/dtmetrix-data/hero/jakiro/vs/rubick/</loc><lastmod>2026-10-19</lastmod><changefreq>daily</changefreq><priority>0.5</priority></url>
   <url><loc>https://lllz-tsix.github.io/dtmetrix-data/hero/jakiro/vs/visage/</loc><lastmod>2026-10-19</lastmod><changefreq>daily</changefreq><priority>0.5</priority></url>
-  <url><loc>https://lllz-tsix.github.io/dtmetrix-data/hero/jakiro/vs/slark/</loc><lastmod>2026-10-19</lastmod><changefreq>daily</changefreq><priority>0.5</priority></url>
   <url><loc>https://lllz-tsix.github.io/dtmetrix-data/hero/jakiro/vs/legion-commander/</loc><lastmod>2026-10-19</lastmod><changefreq>daily</changefreq><priority>0.5</priority></url>
   <url><loc>https://lllz-tsix.github.io/dtmetrix-data/hero/batrider/vs/sven/</loc><lastmod>2026-10-19</lastmod><changefreq>daily</changefreq><priority>0.5</priority></url>
   <url><loc>https://lllz-tsix.github.io/dtmetrix-data/hero/batrider/vs/tidehunter/</loc><lastmod>2026-10-19</lastmod><changefreq>daily</changefreq><priority>0.5</priority></url>
   <url><loc>https://lllz-tsix.github.io/dtmetrix-data/hero/batrider/vs/queen-of-pain/</loc><lastmod>2026-10-19</lastmod><changefreq>daily</changefreq><priority>0.5</priority></url>
+  <url><loc>https://lllz-tsix.github.io/dtmetrix-data/hero/batrider/vs/venomancer/</loc><lastmod>2026-10-19</lastmod><changefreq>daily</changefreq><priority>0.5</priority></url>
   <url><loc>https://lllz-tsix.github.io/dtmetrix-data/hero/batrider/vs/templar-assassin/</loc><lastmod>2026-10-19</lastmod><changefreq>daily</changefreq><priority>0.5</priority></url>
   <url><loc>https://lllz-tsix.github.io/dtmetrix-data/hero/batrider/vs/viper/</loc><lastmod>2026-10-19</lastmod><changefreq>daily</changefreq><priority>0.5</priority></url>
   <url><loc>https://lllz-tsix.github.io/dtmetrix-data/hero/batrider/vs/lone-druid/</loc><lastmod>2026-10-19</lastmod><changefreq>daily</changefreq><priority>0.5</priority></url>
   <url><loc>https://lllz-tsix.github.io/dtmetrix-data/hero/batrider/vs/meepo/</loc><lastmod>2026-10-19</lastmod><changefreq>daily</changefreq><priority>0.5</priority></url>
-  <url><loc>https://lllz-tsix.github.io/dtmetrix-data/hero/batrider/vs/slark/</loc><lastmod>2026-10-19</lastmod><changefreq>daily</changefreq><priority>0.5</priority></url>
   <url><loc>https://lllz-tsix.github.io/dtmetrix-data/hero/batrider/vs/troll-warlord/</loc><lastmod>2026-10-19</lastmod><changefreq>daily</changefreq><priority>0.5</priority></url>
   <url><loc>https://lllz-tsix.github.io/dtmetrix-data/hero/batrider/vs/monkey-king/</loc><lastmod>2026-10-19</lastmod><changefreq>daily</changefreq><priority>0.5</priority></url>
   <url><loc>https://lllz-tsix.github.io/dtmetrix-data/hero/chen/vs/juggernaut/</loc><lastmod>2026-10-19</lastmod><changefreq>daily</changefreq><priority>0.5</priority></url>
@@ -776,9 +782,9 @@
   <url><loc>https://lllz-tsix.github.io/dtmetrix-data/hero/chen/vs/huskar/</loc><lastmod>2026-10-19</lastmod><changefreq>daily</changefreq><priority>0.5</priority></url>
   <url><loc>https://lllz-tsix.github.io/dtmetrix-data/hero/chen/vs/spectre/</loc><lastmod>2026-10-19</lastmod><changefreq>daily</changefreq><priority>0.5</priority></url>
   <url><loc>https://lllz-tsix.github.io/dtmetrix-data/hero/chen/vs/brewmaster/</loc><lastmod>2026-10-19</lastmod><changefreq>daily</changefreq><priority>0.5</priority></url>
-  <url><loc>https://lllz-tsix.github.io/dtmetrix-data/hero/chen/vs/chaos-knight/</loc><lastmod>2026-10-19</lastmod><changefreq>daily</changefreq><priority>0.5</priority></url>
   <url><loc>https://lllz-tsix.github.io/dtmetrix-data/hero/chen/vs/medusa/</loc><lastmod>2026-10-19</lastmod><changefreq>daily</changefreq><priority>0.5</priority></url>
   <url><loc>https://lllz-tsix.github.io/dtmetrix-data/hero/chen/vs/winter-wyvern/</loc><lastmod>2026-10-19</lastmod><changefreq>daily</changefreq><priority>0.5</priority></url>
+  <url><loc>https://lllz-tsix.github.io/dtmetrix-data/hero/chen/vs/dawnbreaker/</loc><lastmod>2026-10-19</lastmod><changefreq>daily</changefreq><priority>0.5</priority></url>
   <url><loc>https://lllz-tsix.github.io/dtmetrix-data/hero/chen/vs/primal-beast/</loc><lastmod>2026-10-19</lastmod><changefreq>daily</changefreq><priority>0.5</priority></url>
   <url><loc>https://lllz-tsix.github.io/dtmetrix-data/hero/spectre/vs/shadow-shaman/</loc><lastmod>2026-10-19</lastmod><changefreq>daily</changefreq><priority>0.5</priority></url>
   <url><loc>https://lllz-tsix.github.io/dtmetrix-data/hero/spectre/vs/sniper/</loc><lastmod>2026-10-19</lastmod><changefreq>daily</changefreq><priority>0.5</priority></url>
@@ -794,11 +800,11 @@
   <url><loc>https://lllz-tsix.github.io/dtmetrix-data/hero/ancient-apparition/vs/necrophos/</loc><lastmod>2026-10-19</lastmod><changefreq>daily</changefreq><priority>0.5</priority></url>
   <url><loc>https://lllz-tsix.github.io/dtmetrix-data/hero/ancient-apparition/vs/dazzle/</loc><lastmod>2026-10-19</lastmod><changefreq>daily</changefreq><priority>0.5</priority></url>
   <url><loc>https://lllz-tsix.github.io/dtmetrix-data/hero/ancient-apparition/vs/huskar/</loc><lastmod>2026-10-19</lastmod><changefreq>daily</changefreq><priority>0.5</priority></url>
+  <url><loc>https://lllz-tsix.github.io/dtmetrix-data/hero/ancient-apparition/vs/spectre/</loc><lastmod>2026-10-19</lastmod><changefreq>daily</changefreq><priority>0.5</priority></url>
   <url><loc>https://lllz-tsix.github.io/dtmetrix-data/hero/ancient-apparition/vs/lycan/</loc><lastmod>2026-10-19</lastmod><changefreq>daily</changefreq><priority>0.5</priority></url>
   <url><loc>https://lllz-tsix.github.io/dtmetrix-data/hero/ancient-apparition/vs/brewmaster/</loc><lastmod>2026-10-19</lastmod><changefreq>daily</changefreq><priority>0.5</priority></url>
   <url><loc>https://lllz-tsix.github.io/dtmetrix-data/hero/ancient-apparition/vs/io/</loc><lastmod>2026-10-19</lastmod><changefreq>daily</changefreq><priority>0.5</priority></url>
-  <url><loc>https://lllz-tsix.github.io/dtmetrix-data/hero/ancient-apparition/vs/slark/</loc><lastmod>2026-10-19</lastmod><changefreq>daily</changefreq><priority>0.5</priority></url>
-  <url><loc>https://lllz-tsix.github.io/dtmetrix-data/hero/ancient-apparition/vs/medusa/</loc><lastmod>2026-10-19</lastmod><changefreq>daily</changefreq><priority>0.5</priority></url>
+  <url><loc>https://lllz-tsix.github.io/dtmetrix-data/hero/ancient-apparition/vs/troll-warlord/</loc><lastmod>2026-10-19</lastmod><changefreq>daily</changefreq><priority>0.5</priority></url>
   <url><loc>https://lllz-tsix.github.io/dtmetrix-data/hero/ancient-apparition/vs/arc-warden/</loc><lastmod>2026-10-19</lastmod><changefreq>daily</changefreq><priority>0.5</priority></url>
   <url><loc>https://lllz-tsix.github.io/dtmetrix-data/hero/doom/vs/morphling/</loc><lastmod>2026-10-19</lastmod><changefreq>daily</changefreq><priority>0.5</priority></url>
   <url><loc>https://lllz-tsix.github.io/dtmetrix-data/hero/doom/vs/necrophos/</loc><lastmod>2026-10-19</lastmod><changefreq>daily</changefreq><priority>0.5</priority></url>
@@ -830,16 +836,16 @@
   <url><loc>https://lllz-tsix.github.io/dtmetrix-data/hero/spirit-breaker/vs/dark-willow/</loc><lastmod>2026-10-19</lastmod><changefreq>daily</changefreq><priority>0.5</priority></url>
   <url><loc>https://lllz-tsix.github.io/dtmetrix-data/hero/spirit-breaker/vs/marci/</loc><lastmod>2026-10-19</lastmod><changefreq>daily</changefreq><priority>0.5</priority></url>
   <url><loc>https://lllz-tsix.github.io/dtmetrix-data/hero/spirit-breaker/vs/largo/</loc><lastmod>2026-10-19</lastmod><changefreq>daily</changefreq><priority>0.5</priority></url>
+  <url><loc>https://lllz-tsix.github.io/dtmetrix-data/hero/gyrocopter/vs/anti-mage/</loc><lastmod>2026-10-19</lastmod><changefreq>daily</changefreq><priority>0.5</priority></url>
   <url><loc>https://lllz-tsix.github.io/dtmetrix-data/hero/gyrocopter/vs/phantom-lancer/</loc><lastmod>2026-10-19</lastmod><changefreq>daily</changefreq><priority>0.5</priority></url>
   <url><loc>https://lllz-tsix.github.io/dtmetrix-data/hero/gyrocopter/vs/beastmaster/</loc><lastmod>2026-10-19</lastmod><changefreq>daily</changefreq><priority>0.5</priority></url>
+  <url><loc>https://lllz-tsix.github.io/dtmetrix-data/hero/gyrocopter/vs/leshrac/</loc><lastmod>2026-10-19</lastmod><changefreq>daily</changefreq><priority>0.5</priority></url>
   <url><loc>https://lllz-tsix.github.io/dtmetrix-data/hero/gyrocopter/vs/lifestealer/</loc><lastmod>2026-10-19</lastmod><changefreq>daily</changefreq><priority>0.5</priority></url>
   <url><loc>https://lllz-tsix.github.io/dtmetrix-data/hero/gyrocopter/vs/clinkz/</loc><lastmod>2026-10-19</lastmod><changefreq>daily</changefreq><priority>0.5</priority></url>
   <url><loc>https://lllz-tsix.github.io/dtmetrix-data/hero/gyrocopter/vs/chen/</loc><lastmod>2026-10-19</lastmod><changefreq>daily</changefreq><priority>0.5</priority></url>
-  <url><loc>https://lllz-tsix.github.io/dtmetrix-data/hero/gyrocopter/vs/brewmaster/</loc><lastmod>2026-10-19</lastmod><changefreq>daily</changefreq><priority>0.5</priority></url>
   <url><loc>https://lllz-tsix.github.io/dtmetrix-data/hero/gyrocopter/vs/meepo/</loc><lastmod>2026-10-19</lastmod><changefreq>daily</changefreq><priority>0.5</priority></url>
   <url><loc>https://lllz-tsix.github.io/dtmetrix-data/hero/gyrocopter/vs/slark/</loc><lastmod>2026-10-19</lastmod><changefreq>daily</changefreq><priority>0.5</priority></url>
   <url><loc>https://lllz-tsix.github.io/dtmetrix-data/hero/gyrocopter/vs/timbersaw/</loc><lastmod>2026-10-19</lastmod><changefreq>daily</changefreq><priority>0.5</priority></url>
-  <url><loc>https://lllz-tsix.github.io/dtmetrix-data/hero/gyrocopter/vs/grimstroke/</loc><lastmod>2026-10-19</lastmod><changefreq>daily</changefreq><priority>0.5</priority></url>
   <url><loc>https://lllz-tsix.github.io/dtmetrix-data/hero/alchemist/vs/slardar/</loc><lastmod>2026-10-19</lastmod><changefreq>daily</changefreq><priority>0.5</priority></url>
   <url><loc>https://lllz-tsix.github.io/dtmetrix-data/hero/alchemist/vs/enigma/</loc><lastmod>2026-10-19</lastmod><changefreq>daily</changefreq><priority>0.5</priority></url>
   <url><loc>https://lllz-tsix.github.io/dtmetrix-data/hero/alchemist/vs/wraith-king/</loc><lastmod>2026-10-19</lastmod><changefreq>daily</changefreq><priority>0.5</priority></url>
@@ -925,8 +931,8 @@
   <url><loc>https://lllz-tsix.github.io/dtmetrix-data/hero/chaos-knight/vs/faceless-void/</loc><lastmod>2026-10-19</lastmod><changefreq>daily</changefreq><priority>0.5</priority></url>
   <url><loc>https://lllz-tsix.github.io/dtmetrix-data/hero/chaos-knight/vs/viper/</loc><lastmod>2026-10-19</lastmod><changefreq>daily</changefreq><priority>0.5</priority></url>
   <url><loc>https://lllz-tsix.github.io/dtmetrix-data/hero/chaos-knight/vs/clinkz/</loc><lastmod>2026-10-19</lastmod><changefreq>daily</changefreq><priority>0.5</priority></url>
-  <url><loc>https://lllz-tsix.github.io/dtmetrix-data/hero/chaos-knight/vs/chen/</loc><lastmod>2026-10-19</lastmod><changefreq>daily</changefreq><priority>0.5</priority></url>
   <url><loc>https://lllz-tsix.github.io/dtmetrix-data/hero/chaos-knight/vs/outworld-destroyer/</loc><lastmod>2026-10-19</lastmod><changefreq>daily</changefreq><priority>0.5</priority></url>
+  <url><loc>https://lllz-tsix.github.io/dtmetrix-data/hero/chaos-knight/vs/ogre-magi/</loc><lastmod>2026-10-19</lastmod><changefreq>daily</changefreq><priority>0.5</priority></url>
   <url><loc>https://lllz-tsix.github.io/dtmetrix-data/hero/chaos-knight/vs/naga-siren/</loc><lastmod>2026-10-19</lastmod><changefreq>daily</changefreq><priority>0.5</priority></url>
   <url><loc>https://lllz-tsix.github.io/dtmetrix-data/hero/chaos-knight/vs/timbersaw/</loc><lastmod>2026-10-19</lastmod><changefreq>daily</changefreq><priority>0.5</priority></url>
   <url><loc>https://lllz-tsix.github.io/dtmetrix-data/hero/chaos-knight/vs/phoenix/</loc><lastmod>2026-10-19</lastmod><changefreq>daily</changefreq><priority>0.5</priority></url>
@@ -1070,8 +1076,8 @@
   <url><loc>https://lllz-tsix.github.io/dtmetrix-data/hero/troll-warlord/vs/ember-spirit/</loc><lastmod>2026-10-19</lastmod><changefreq>daily</changefreq><priority>0.5</priority></url>
   <url><loc>https://lllz-tsix.github.io/dtmetrix-data/hero/troll-warlord/vs/marci/</loc><lastmod>2026-10-19</lastmod><changefreq>daily</changefreq><priority>0.5</priority></url>
   <url><loc>https://lllz-tsix.github.io/dtmetrix-data/hero/troll-warlord/vs/muerta/</loc><lastmod>2026-10-19</lastmod><changefreq>daily</changefreq><priority>0.5</priority></url>
-  <url><loc>https://lllz-tsix.github.io/dtmetrix-data/hero/centaur-warrunner/vs/anti-mage/</loc><lastmod>2026-10-19</lastmod><changefreq>daily</changefreq><priority>0.5</priority></url>
   <url><loc>https://lllz-tsix.github.io/dtmetrix-data/hero/centaur-warrunner/vs/phantom-lancer/</loc><lastmod>2026-10-19</lastmod><changefreq>daily</changefreq><priority>0.5</priority></url>
+  <url><loc>https://lllz-tsix.github.io/dtmetrix-data/hero/centaur-warrunner/vs/windranger/</loc><lastmod>2026-10-19</lastmod><changefreq>daily</changefreq><priority>0.5</priority></url>
   <url><loc>https://lllz-tsix.github.io/dtmetrix-data/hero/centaur-warrunner/vs/tinker/</loc><lastmod>2026-10-19</lastmod><changefreq>daily</changefreq><priority>0.5</priority></url>
   <url><loc>https://lllz-tsix.github.io/dtmetrix-data/hero/centaur-warrunner/vs/dazzle/</loc><lastmod>2026-10-19</lastmod><changefreq>daily</changefreq><priority>0.5</priority></url>
   <url><loc>https://lllz-tsix.github.io/dtmetrix-data/hero/centaur-warrunner/vs/lifestealer/</loc><lastmod>2026-10-19</lastmod><changefreq>daily</changefreq><priority>0.5</priority></url>
@@ -1123,16 +1129,16 @@
   <url><loc>https://lllz-tsix.github.io/dtmetrix-data/hero/skywrath-mage/vs/riki/</loc><lastmod>2026-10-19</lastmod><changefreq>daily</changefreq><priority>0.5</priority></url>
   <url><loc>https://lllz-tsix.github.io/dtmetrix-data/hero/skywrath-mage/vs/necrophos/</loc><lastmod>2026-10-19</lastmod><changefreq>daily</changefreq><priority>0.5</priority></url>
   <url><loc>https://lllz-tsix.github.io/dtmetrix-data/hero/skywrath-mage/vs/wraith-king/</loc><lastmod>2026-10-19</lastmod><changefreq>daily</changefreq><priority>0.5</priority></url>
-  <url><loc>https://lllz-tsix.github.io/dtmetrix-data/hero/skywrath-mage/vs/lifestealer/</loc><lastmod>2026-10-19</lastmod><changefreq>daily</changefreq><priority>0.5</priority></url>
   <url><loc>https://lllz-tsix.github.io/dtmetrix-data/hero/skywrath-mage/vs/lycan/</loc><lastmod>2026-10-19</lastmod><changefreq>daily</changefreq><priority>0.5</priority></url>
   <url><loc>https://lllz-tsix.github.io/dtmetrix-data/hero/skywrath-mage/vs/medusa/</loc><lastmod>2026-10-19</lastmod><changefreq>daily</changefreq><priority>0.5</priority></url>
   <url><loc>https://lllz-tsix.github.io/dtmetrix-data/hero/skywrath-mage/vs/timbersaw/</loc><lastmod>2026-10-19</lastmod><changefreq>daily</changefreq><priority>0.5</priority></url>
   <url><loc>https://lllz-tsix.github.io/dtmetrix-data/hero/skywrath-mage/vs/bristleback/</loc><lastmod>2026-10-19</lastmod><changefreq>daily</changefreq><priority>0.5</priority></url>
   <url><loc>https://lllz-tsix.github.io/dtmetrix-data/hero/skywrath-mage/vs/ember-spirit/</loc><lastmod>2026-10-19</lastmod><changefreq>daily</changefreq><priority>0.5</priority></url>
   <url><loc>https://lllz-tsix.github.io/dtmetrix-data/hero/skywrath-mage/vs/phoenix/</loc><lastmod>2026-10-19</lastmod><changefreq>daily</changefreq><priority>0.5</priority></url>
+  <url><loc>https://lllz-tsix.github.io/dtmetrix-data/hero/skywrath-mage/vs/muerta/</loc><lastmod>2026-10-19</lastmod><changefreq>daily</changefreq><priority>0.5</priority></url>
   <url><loc>https://lllz-tsix.github.io/dtmetrix-data/hero/abaddon/vs/anti-mage/</loc><lastmod>2026-10-19</lastmod><changefreq>daily</changefreq><priority>0.5</priority></url>
-  <url><loc>https://lllz-tsix.github.io/dtmetrix-data/hero/abaddon/vs/axe/</loc><lastmod>2026-10-19</lastmod><changefreq>daily</changefreq><priority>0.5</priority></url>
   <url><loc>https://lllz-tsix.github.io/dtmetrix-data/hero/abaddon/vs/puck/</loc><lastmod>2026-10-19</lastmod><changefreq>daily</changefreq><priority>0.5</priority></url>
+  <url><loc>https://lllz-tsix.github.io/dtmetrix-data/hero/abaddon/vs/spectre/</loc><lastmod>2026-10-19</lastmod><changefreq>daily</changefreq><priority>0.5</priority></url>
   <url><loc>https://lllz-tsix.github.io/dtmetrix-data/hero/abaddon/vs/outworld-destroyer/</loc><lastmod>2026-10-19</lastmod><changefreq>daily</changefreq><priority>0.5</priority></url>
   <url><loc>https://lllz-tsix.github.io/dtmetrix-data/hero/abaddon/vs/brewmaster/</loc><lastmod>2026-10-19</lastmod><changefreq>daily</changefreq><priority>0.5</priority></url>
   <url><loc>https://lllz-tsix.github.io/dtmetrix-data/hero/abaddon/vs/undying/</loc><lastmod>2026-10-19</lastmod><changefreq>daily</changefreq><priority>0.5</priority></url>
@@ -1152,20 +1158,20 @@
   <url><loc>https://lllz-tsix.github.io/dtmetrix-data/hero/elder-titan/vs/terrorblade/</loc><lastmod>2026-10-19</lastmod><changefreq>daily</changefreq><priority>0.5</priority></url>
   <url><loc>https://lllz-tsix.github.io/dtmetrix-data/hero/legion-commander/vs/anti-mage/</loc><lastmod>2026-10-19</lastmod><changefreq>daily</changefreq><priority>0.5</priority></url>
   <url><loc>https://lllz-tsix.github.io/dtmetrix-data/hero/legion-commander/vs/venomancer/</loc><lastmod>2026-10-19</lastmod><changefreq>daily</changefreq><priority>0.5</priority></url>
-  <url><loc>https://lllz-tsix.github.io/dtmetrix-data/hero/legion-commander/vs/dazzle/</loc><lastmod>2026-10-19</lastmod><changefreq>daily</changefreq><priority>0.5</priority></url>
   <url><loc>https://lllz-tsix.github.io/dtmetrix-data/hero/legion-commander/vs/omniknight/</loc><lastmod>2026-10-19</lastmod><changefreq>daily</changefreq><priority>0.5</priority></url>
-  <url><loc>https://lllz-tsix.github.io/dtmetrix-data/hero/legion-commander/vs/brewmaster/</loc><lastmod>2026-10-19</lastmod><changefreq>daily</changefreq><priority>0.5</priority></url>
+  <url><loc>https://lllz-tsix.github.io/dtmetrix-data/hero/legion-commander/vs/huskar/</loc><lastmod>2026-10-19</lastmod><changefreq>daily</changefreq><priority>0.5</priority></url>
   <url><loc>https://lllz-tsix.github.io/dtmetrix-data/hero/legion-commander/vs/shadow-demon/</loc><lastmod>2026-10-19</lastmod><changefreq>daily</changefreq><priority>0.5</priority></url>
   <url><loc>https://lllz-tsix.github.io/dtmetrix-data/hero/legion-commander/vs/chaos-knight/</loc><lastmod>2026-10-19</lastmod><changefreq>daily</changefreq><priority>0.5</priority></url>
   <url><loc>https://lllz-tsix.github.io/dtmetrix-data/hero/legion-commander/vs/bristleback/</loc><lastmod>2026-10-19</lastmod><changefreq>daily</changefreq><priority>0.5</priority></url>
   <url><loc>https://lllz-tsix.github.io/dtmetrix-data/hero/legion-commander/vs/phoenix/</loc><lastmod>2026-10-19</lastmod><changefreq>daily</changefreq><priority>0.5</priority></url>
   <url><loc>https://lllz-tsix.github.io/dtmetrix-data/hero/legion-commander/vs/winter-wyvern/</loc><lastmod>2026-10-19</lastmod><changefreq>daily</changefreq><priority>0.5</priority></url>
+  <url><loc>https://lllz-tsix.github.io/dtmetrix-data/hero/legion-commander/vs/dawnbreaker/</loc><lastmod>2026-10-19</lastmod><changefreq>daily</changefreq><priority>0.5</priority></url>
   <url><loc>https://lllz-tsix.github.io/dtmetrix-data/hero/techies/vs/tinker/</loc><lastmod>2026-10-19</lastmod><changefreq>daily</changefreq><priority>0.5</priority></url>
   <url><loc>https://lllz-tsix.github.io/dtmetrix-data/hero/techies/vs/templar-assassin/</loc><lastmod>2026-10-19</lastmod><changefreq>daily</changefreq><priority>0.5</priority></url>
-  <url><loc>https://lllz-tsix.github.io/dtmetrix-data/hero/techies/vs/leshrac/</loc><lastmod>2026-10-19</lastmod><changefreq>daily</changefreq><priority>0.5</priority></url>
   <url><loc>https://lllz-tsix.github.io/dtmetrix-data/hero/techies/vs/lifestealer/</loc><lastmod>2026-10-19</lastmod><changefreq>daily</changefreq><priority>0.5</priority></url>
   <url><loc>https://lllz-tsix.github.io/dtmetrix-data/hero/techies/vs/lycan/</loc><lastmod>2026-10-19</lastmod><changefreq>daily</changefreq><priority>0.5</priority></url>
   <url><loc>https://lllz-tsix.github.io/dtmetrix-data/hero/techies/vs/meepo/</loc><lastmod>2026-10-19</lastmod><changefreq>daily</changefreq><priority>0.5</priority></url>
+  <url><loc>https://lllz-tsix.github.io/dtmetrix-data/hero/techies/vs/nyx-assassin/</loc><lastmod>2026-10-19</lastmod><changefreq>daily</changefreq><priority>0.5</priority></url>
   <url><loc>https://lllz-tsix.github.io/dtmetrix-data/hero/techies/vs/naga-siren/</loc><lastmod>2026-10-19</lastmod><changefreq>daily</changefreq><priority>0.5</priority></url>
   <url><loc>https://lllz-tsix.github.io/dtmetrix-data/hero/techies/vs/slark/</loc><lastmod>2026-10-19</lastmod><changefreq>daily</changefreq><priority>0.5</priority></url>
   <url><loc>https://lllz-tsix.github.io/dtmetrix-data/hero/techies/vs/bristleback/</loc><lastmod>2026-10-19</lastmod><changefreq>daily</changefreq><priority>0.5</priority></url>
@@ -1233,7 +1239,7 @@
   <url><loc>https://lllz-tsix.github.io/dtmetrix-data/hero/winter-wyvern/vs/anti-mage/</loc><lastmod>2026-10-19</lastmod><changefreq>daily</changefreq><priority>0.5</priority></url>
   <url><loc>https://lllz-tsix.github.io/dtmetrix-data/hero/winter-wyvern/vs/sand-king/</loc><lastmod>2026-10-19</lastmod><changefreq>daily</changefreq><priority>0.5</priority></url>
   <url><loc>https://lllz-tsix.github.io/dtmetrix-data/hero/winter-wyvern/vs/necrophos/</loc><lastmod>2026-10-19</lastmod><changefreq>daily</changefreq><priority>0.5</priority></url>
-  <url><loc>https://lllz-tsix.github.io/dtmetrix-data/hero/winter-wyvern/vs/pugna/</loc><lastmod>2026-10-19</lastmod><changefreq>daily</changefreq><priority>0.5</priority></url>
+  <url><loc>https://lllz-tsix.github.io/dtmetrix-data/hero/winter-wyvern/vs/phantom-assassin/</loc><lastmod>2026-10-19</lastmod><changefreq>daily</changefreq><priority>0.5</priority></url>
   <url><loc>https://lllz-tsix.github.io/dtmetrix-data/hero/winter-wyvern/vs/chen/</loc><lastmod>2026-10-19</lastmod><changefreq>daily</changefreq><priority>0.5</priority></url>
   <url><loc>https://lllz-tsix.github.io/dtmetrix-data/hero/winter-wyvern/vs/meepo/</loc><lastmod>2026-10-19</lastmod><changefreq>daily</changefreq><priority>0.5</priority></url>
   <url><loc>https://lllz-tsix.github.io/dtmetrix-data/hero/winter-wyvern/vs/timbersaw/</loc><lastmod>2026-10-19</lastmod><changefreq>daily</changefreq><priority>0.5</priority></url>
@@ -1282,12 +1288,12 @@
   <url><loc>https://lllz-tsix.github.io/dtmetrix-data/hero/pangolier/vs/grimstroke/</loc><lastmod>2026-10-19</lastmod><changefreq>daily</changefreq><priority>0.5</priority></url>
   <url><loc>https://lllz-tsix.github.io/dtmetrix-data/hero/grimstroke/vs/necrophos/</loc><lastmod>2026-10-19</lastmod><changefreq>daily</changefreq><priority>0.5</priority></url>
   <url><loc>https://lllz-tsix.github.io/dtmetrix-data/hero/grimstroke/vs/lifestealer/</loc><lastmod>2026-10-19</lastmod><changefreq>daily</changefreq><priority>0.5</priority></url>
-  <url><loc>https://lllz-tsix.github.io/dtmetrix-data/hero/grimstroke/vs/clinkz/</loc><lastmod>2026-10-19</lastmod><changefreq>daily</changefreq><priority>0.5</priority></url>
   <url><loc>https://lllz-tsix.github.io/dtmetrix-data/hero/grimstroke/vs/spectre/</loc><lastmod>2026-10-19</lastmod><changefreq>daily</changefreq><priority>0.5</priority></url>
   <url><loc>https://lllz-tsix.github.io/dtmetrix-data/hero/grimstroke/vs/lycan/</loc><lastmod>2026-10-19</lastmod><changefreq>daily</changefreq><priority>0.5</priority></url>
   <url><loc>https://lllz-tsix.github.io/dtmetrix-data/hero/grimstroke/vs/visage/</loc><lastmod>2026-10-19</lastmod><changefreq>daily</changefreq><priority>0.5</priority></url>
   <url><loc>https://lllz-tsix.github.io/dtmetrix-data/hero/grimstroke/vs/slark/</loc><lastmod>2026-10-19</lastmod><changefreq>daily</changefreq><priority>0.5</priority></url>
   <url><loc>https://lllz-tsix.github.io/dtmetrix-data/hero/grimstroke/vs/timbersaw/</loc><lastmod>2026-10-19</lastmod><changefreq>daily</changefreq><priority>0.5</priority></url>
+  <url><loc>https://lllz-tsix.github.io/dtmetrix-data/hero/grimstroke/vs/bristleback/</loc><lastmod>2026-10-19</lastmod><changefreq>daily</changefreq><priority>0.5</priority></url>
   <url><loc>https://lllz-tsix.github.io/dtmetrix-data/hero/grimstroke/vs/arc-warden/</loc><lastmod>2026-10-19</lastmod><changefreq>daily</changefreq><priority>0.5</priority></url>
   <url><loc>https://lllz-tsix.github.io/dtmetrix-data/hero/grimstroke/vs/pangolier/</loc><lastmod>2026-10-19</lastmod><changefreq>daily</changefreq><priority>0.5</priority></url>
   <url><loc>https://lllz-tsix.github.io/dtmetrix-data/hero/hoodwink/vs/anti-mage/</loc><lastmod>2026-10-19</lastmod><changefreq>daily</changefreq><priority>0.5</priority></url>
@@ -1295,9 +1301,9 @@
   <url><loc>https://lllz-tsix.github.io/dtmetrix-data/hero/hoodwink/vs/huskar/</loc><lastmod>2026-10-19</lastmod><changefreq>daily</changefreq><priority>0.5</priority></url>
   <url><loc>https://lllz-tsix.github.io/dtmetrix-data/hero/hoodwink/vs/spirit-breaker/</loc><lastmod>2026-10-19</lastmod><changefreq>daily</changefreq><priority>0.5</priority></url>
   <url><loc>https://lllz-tsix.github.io/dtmetrix-data/hero/hoodwink/vs/lycan/</loc><lastmod>2026-10-19</lastmod><changefreq>daily</changefreq><priority>0.5</priority></url>
-  <url><loc>https://lllz-tsix.github.io/dtmetrix-data/hero/hoodwink/vs/visage/</loc><lastmod>2026-10-19</lastmod><changefreq>daily</changefreq><priority>0.5</priority></url>
   <url><loc>https://lllz-tsix.github.io/dtmetrix-data/hero/hoodwink/vs/timbersaw/</loc><lastmod>2026-10-19</lastmod><changefreq>daily</changefreq><priority>0.5</priority></url>
   <url><loc>https://lllz-tsix.github.io/dtmetrix-data/hero/hoodwink/vs/bristleback/</loc><lastmod>2026-10-19</lastmod><changefreq>daily</changefreq><priority>0.5</priority></url>
+  <url><loc>https://lllz-tsix.github.io/dtmetrix-data/hero/hoodwink/vs/dark-willow/</loc><lastmod>2026-10-19</lastmod><changefreq>daily</changefreq><priority>0.5</priority></url>
   <url><loc>https://lllz-tsix.github.io/dtmetrix-data/hero/hoodwink/vs/mars/</loc><lastmod>2026-10-19</lastmod><changefreq>daily</changefreq><priority>0.5</priority></url>
   <url><loc>https://lllz-tsix.github.io/dtmetrix-data/hero/hoodwink/vs/primal-beast/</loc><lastmod>2026-10-19</lastmod><changefreq>daily</changefreq><priority>0.5</priority></url>
   <url><loc>https://lllz-tsix.github.io/dtmetrix-data/hero/void-spirit/vs/juggernaut/</loc><lastmod>2026-10-19</lastmod><changefreq>daily</changefreq><priority>0.5</priority></url>
@@ -1323,7 +1329,7 @@
   <url><loc>https://lllz-tsix.github.io/dtmetrix-data/hero/mars/vs/drow-ranger/</loc><lastmod>2026-10-19</lastmod><changefreq>daily</changefreq><priority>0.5</priority></url>
   <url><loc>https://lllz-tsix.github.io/dtmetrix-data/hero/mars/vs/shadow-fiend/</loc><lastmod>2026-10-19</lastmod><changefreq>daily</changefreq><priority>0.5</priority></url>
   <url><loc>https://lllz-tsix.github.io/dtmetrix-data/hero/mars/vs/phantom-lancer/</loc><lastmod>2026-10-19</lastmod><changefreq>daily</changefreq><priority>0.5</priority></url>
-  <url><loc>https://lllz-tsix.github.io/dtmetrix-data/hero/mars/vs/queen-of-pain/</loc><lastmod>2026-10-19</lastmod><changefreq>daily</changefreq><priority>0.5</priority></url>
+  <url><loc>https://lllz-tsix.github.io/dtmetrix-data/hero/mars/vs/storm-spirit/</loc><lastmod>2026-10-19</lastmod><changefreq>daily</changefreq><priority>0.5</priority></url>
   <url><loc>https://lllz-tsix.github.io/dtmetrix-data/hero/mars/vs/faceless-void/</loc><lastmod>2026-10-19</lastmod><changefreq>daily</changefreq><priority>0.5</priority></url>
   <url><loc>https://lllz-tsix.github.io/dtmetrix-data/hero/mars/vs/lifestealer/</loc><lastmod>2026-10-19</lastmod><changefreq>daily</changefreq><priority>0.5</priority></url>
   <url><loc>https://lllz-tsix.github.io/dtmetrix-data/hero/mars/vs/clinkz/</loc><lastmod>2026-10-19</lastmod><changefreq>daily</changefreq><priority>0.5</priority></url>
@@ -1347,7 +1353,7 @@
   <url><loc>https://lllz-tsix.github.io/dtmetrix-data/hero/dawnbreaker/vs/silencer/</loc><lastmod>2026-10-19</lastmod><changefreq>daily</changefreq><priority>0.5</priority></url>
   <url><loc>https://lllz-tsix.github.io/dtmetrix-data/hero/dawnbreaker/vs/meepo/</loc><lastmod>2026-10-19</lastmod><changefreq>daily</changefreq><priority>0.5</priority></url>
   <url><loc>https://lllz-tsix.github.io/dtmetrix-data/hero/dawnbreaker/vs/nyx-assassin/</loc><lastmod>2026-10-19</lastmod><changefreq>daily</changefreq><priority>0.5</priority></url>
-  <url><loc>https://lllz-tsix.github.io/dtmetrix-data/hero/dawnbreaker/vs/troll-warlord/</loc><lastmod>2026-10-19</lastmod><changefreq>daily</changefreq><priority>0.5</priority></url>
+  <url><loc>https://lllz-tsix.github.io/dtmetrix-data/hero/dawnbreaker/vs/bristleback/</loc><lastmod>2026-10-19</lastmod><changefreq>daily</changefreq><priority>0.5</priority></url>
   <url><loc>https://lllz-tsix.github.io/dtmetrix-data/hero/dawnbreaker/vs/legion-commander/</loc><lastmod>2026-10-19</lastmod><changefreq>daily</changefreq><priority>0.5</priority></url>
   <url><loc>https://lllz-tsix.github.io/dtmetrix-data/hero/dawnbreaker/vs/winter-wyvern/</loc><lastmod>2026-10-19</lastmod><changefreq>daily</changefreq><priority>0.5</priority></url>
   <url><loc>https://lllz-tsix.github.io/dtmetrix-data/hero/marci/vs/anti-mage/</loc><lastmod>2026-10-19</lastmod><changefreq>daily</changefreq><priority>0.5</priority></url>
@@ -1384,11 +1390,11 @@
   <url><loc>https://lllz-tsix.github.io/dtmetrix-data/hero/kez/vs/vengeful-spirit/</loc><lastmod>2026-10-19</lastmod><changefreq>daily</changefreq><priority>0.5</priority></url>
   <url><loc>https://lllz-tsix.github.io/dtmetrix-data/hero/kez/vs/shadow-shaman/</loc><lastmod>2026-10-19</lastmod><changefreq>daily</changefreq><priority>0.5</priority></url>
   <url><loc>https://lllz-tsix.github.io/dtmetrix-data/hero/kez/vs/tidehunter/</loc><lastmod>2026-10-19</lastmod><changefreq>daily</changefreq><priority>0.5</priority></url>
+  <url><loc>https://lllz-tsix.github.io/dtmetrix-data/hero/kez/vs/natures-prophet/</loc><lastmod>2026-10-19</lastmod><changefreq>daily</changefreq><priority>0.5</priority></url>
   <url><loc>https://lllz-tsix.github.io/dtmetrix-data/hero/kez/vs/spectre/</loc><lastmod>2026-10-19</lastmod><changefreq>daily</changefreq><priority>0.5</priority></url>
   <url><loc>https://lllz-tsix.github.io/dtmetrix-data/hero/kez/vs/meepo/</loc><lastmod>2026-10-19</lastmod><changefreq>daily</changefreq><priority>0.5</priority></url>
   <url><loc>https://lllz-tsix.github.io/dtmetrix-data/hero/kez/vs/io/</loc><lastmod>2026-10-19</lastmod><changefreq>daily</changefreq><priority>0.5</priority></url>
   <url><loc>https://lllz-tsix.github.io/dtmetrix-data/hero/kez/vs/medusa/</loc><lastmod>2026-10-19</lastmod><changefreq>daily</changefreq><priority>0.5</priority></url>
-  <url><loc>https://lllz-tsix.github.io/dtmetrix-data/hero/kez/vs/earth-spirit/</loc><lastmod>2026-10-19</lastmod><changefreq>daily</changefreq><priority>0.5</priority></url>
   <url><loc>https://lllz-tsix.github.io/dtmetrix-data/hero/kez/vs/void-spirit/</loc><lastmod>2026-10-19</lastmod><changefreq>daily</changefreq><priority>0.5</priority></url>
   <url><loc>https://lllz-tsix.github.io/dtmetrix-data/hero/largo/vs/anti-mage/</loc><lastmod>2026-10-19</lastmod><changefreq>daily</changefreq><priority>0.5</priority></url>
   <url><loc>https://lllz-tsix.github.io/dtmetrix-data/hero/largo/vs/bloodseeker/</loc><lastmod>2026-10-19</lastmod><changefreq>daily</changefreq><priority>0.5</priority></url>
