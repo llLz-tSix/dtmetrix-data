@@ -33,6 +33,6 @@ h1{margin:0 0 4px;font-size:28px;line-height:1.2}h2{margin:0 0 12px;font-size:19
 .list a{display:flex;flex-direction:column;gap:4px;padding:8px;background:var(--c);border:1px solid var(--line);border-radius:10px;color:var(--tx)}
 .list img{width:100%;aspect-ratio:16/9;border-radius:6px;object-fit:cover;background:var(--c2)}.list small{color:var(--mut)}
 .vs{display:grid;grid-template-columns:1fr auto 1fr;gap:12px;align-items:center;text-align:center;margin:0 0 14px}
-.vs img{width:100%;max-width:200px;border-radius:12px}.vs .big{font-size:34px;font-weight:800}
+.vs img{width:100%;max-width:200px;border-radius:12px}.vs .exp{color:var(--mut)}.vs .big{font-size:34px;font-weight:800}
 footer{color:var(--mut);font-size:13px;margin-top:20px}
 @media(max-width:560px){h1{font-size:23px}.hero img{width:96px;height:54px}.vs .big{font-size:26px}}
