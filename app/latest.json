@@ -1,19 +1,19 @@
 {
- "version": "0.1.25",
- "url": "app-0.1.25.zip",
- "sha256": "1c344884aeabe4e49a75f0ca0db6b822e9bd3f4d5cdab2cb1771345d4c5f09b9",
- "size": 1780962,
+ "version": "0.1.26",
+ "url": "app-0.1.26.zip",
+ "sha256": "6768a70f1bb86f68fad9b2698a0353cb9c86f994c6a29011c50ce82a74a7917b",
+ "size": 1780795,
  "min_runtime": 1,
  "python": "3.12",
  "min_version": "0.0.0",
  "block_message": "",
  "installer_url": "https://github.com/llLz-tSix/dtmetrix-data/releases/latest/download/DotaMetrix-Setup.exe",
- "notes": "GPM и нетворс обновляются сами; вещь в курьере не пропадает из нетворса; рейка не мешает прокрутке карты у края экрана; панель героя открывается по клику, в матче показывает матчапы против каждого врага",
+ "notes": "Итог матча считается и показывается один раз (раньше повторялся каждые 2 секунды)",
  "installer": {
   "runtime": "cd6feaaf940e63850252",
   "url": "https://github.com/llLz-tSix/dtmetrix-data/releases/download/v0.1.22/DotaMetrix-Setup.exe",
   "sha256": "2de826220b8e2041f35e1ff3f6c7d5eecce1e1957628a3bb565d12da379856cd",
   "size": 81378018
  },
- "sig": "b658a104dba85d91dfad19d8cb9685d63538fa6c198cd1b4a66ad52be2a0090a8d08b3f4f1ed0ab0722e50b39cea0f18a3b1a63158e7c24169a9265052aa950f"
+ "sig": "f59b85834081c4d2be6173cdebac8e509b86833d34a89cba959699b2f24292989fb8b3cd0326115e71d9827951b2c1632e2073ff6e4a989836ce1d4f5d15c101"
 }
