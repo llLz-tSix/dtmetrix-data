@@ -10,7 +10,7 @@
   var hide = "this.style.visibility='hidden'";
   var esc = function (s) { return String(s).replace(/[&<>"']/g, function (c) { return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]; }); };
 
-  var D = null, enemies = [], allies = [], target = "e", role = "carry", rank = "legend", selected = 0, rows = [], cur = 0;
+  var ddOpen = false, moreOpen = false, D = null, enemies = [], allies = [], target = "e", role = "carry", rank = "legend", selected = 0, rows = [], cur = 0;
   var RANK_LABEL = { all: "Все", legend: "Legend+", divine: "Divine+" };
   var RANK_NOTE = { all: "все ранги", legend: "рейтинги Legend-Ancient и Divine-Immortal", divine: "рейтинг Divine-Immortal" };
 
@@ -49,14 +49,15 @@
     }).join("") + (allies.length < 4 ? '<button type="button" class="ally empty" data-a="+">+ союзник</button>' : "");
     Array.prototype.forEach.call($("al").querySelectorAll(".ally"), function (b) {
       b.onclick = function () {
-        if (b.dataset.a === "+") { setTarget("a"); $("q").focus(); return; }
+        if (b.dataset.a === "+") { setTarget("a"); openList(); return; }
+        if (!once()) return;
         allies.splice(+b.dataset.a, 1); selected = 0; update(); listHeroes();
       };
     });
     Array.prototype.forEach.call(document.querySelectorAll(".slot"), function (s) {
       s.onclick = function () {
         var i = +s.dataset.i;
-        if (enemies[i] !== undefined) { enemies.splice(i, 1); update(); listHeroes(); } else { setTarget("e"); $("q").focus(); }
+        if (enemies[i] !== undefined) { if (!once()) return; enemies.splice(i, 1); update(); listHeroes(); } else { setTarget("e"); openList(); }
       };
     });
   }
@@ -95,16 +96,21 @@
     $("dd").innerHTML = r.map(function (h, i) {
       return '<div class="' + (i === 0 ? "on" : "") + '" data-id="' + h.id + '"><img src="' + heroImg(h.slug) + '" alt="" onerror="' + hide + '">' + esc(h.name) + "<small>" + h.pub.toFixed(1) + "%</small></div>";
     }).join("") || "<div>Ничего не найдено</div>";
-    $("dd").style.display = document.activeElement === $("q") && r.length && !full() ? "block" : "none";
+    $("dd").style.display = ddOpen && r.length && !full() ? "block" : "none";
     Array.prototype.forEach.call($("dd").querySelectorAll("div[data-id]"), function (d) {
-      d.onmousedown = function (e) { e.preventDefault(); add(+d.dataset.id); };
+      d.onmousedown = function (e) { e.preventDefault(); };
+      d.onclick = function () { add(+d.dataset.id); };
     });
   }
+  var lastTap = 0;
+  function once() { var t = Date.now(); if (t - lastTap < 400) return false; lastTap = t; return true; }
+  function openList() { ddOpen = true; if (document.activeElement !== $("q")) $("q").focus(); listHeroes(); }
   function add(id) {
+    if (!once()) return;
     if (full() || enemies.indexOf(id) >= 0 || allies.indexOf(id) >= 0 || !D.byId[id]) return;
     (target === "e" ? enemies : allies).push(id); selected = 0; $("q").value = "";
     update(); listHeroes();
-    if (full()) $("q").blur();
+    if (full()) { ddOpen = false; $("q").blur(); listHeroes(); }
   }
 
   /* ---------- результаты ---------- */
@@ -161,17 +167,18 @@
       if (sel) {
         var l = Math.max(0, Math.min(100, (r.ci_low - 40) / 25 * 100));
         var w = Math.max(2, Math.min(100 - l, (r.ci_high - r.ci_low) / 25 * 100));
-        more = '<div class="ci"><i style="left:' + l + "%;width:" + w + '%"></i><u></u></div><p>' + esc(why(r)) + "</p><small>Коридор " +
-          r.ci_low.toFixed(0) + "–" + r.ci_high.toFixed(0) + "% · " + r.eff_games.toLocaleString("ru") + " игр в парах с этими врагами</small>";
+        more = '<details class="more"' + (moreOpen ? " open" : "") + '><summary>Подробнее</summary><div class="ci"><i style="left:' + l + "%;width:" + w + '%"></i><u></u></div><p>' + esc(why(r)) +
+          "</p><small>Коридор " + r.ci_low.toFixed(0) + "–" + r.ci_high.toFixed(0) + "% · " + r.eff_games.toLocaleString("ru") + " игр в парах с этими врагами</small></details>";
       }
-      return '<div class="card hy ' + v + (sel ? " sel" : "") + '" data-i="' + i + '" tabindex="0"><div class="im"><img src="' + heroImg(r.slug) + '" alt="" onerror="' + hide + '"></div>' +
-        '<div class="b"><div class="hrow"><div><span class="nm">' + esc(r.name) + '</span>' + (sel ? "" : '<span class="rs">' + esc(short(r)) + "</span>") + "</div>" +
-        '<div class="vv"><span class="pc">' + r.score.toFixed(1).replace(".", ",") + '%</span><span class="chip">' + VERDICT[v] + "</span></div></div>" +
-        '<div class="mm">' + mm + "</div>" + more + "</div></div>";
+      return '<div class="card pc2 ' + v + (sel ? " sel" : "") + '" data-i="' + i + '" tabindex="0"><img class="pt" src="' + heroImg(r.slug) + '" alt="" onerror="' + hide + '">' +
+        '<div class="t"><b>' + esc(r.name) + '</b><span class="rs">' + esc(short(r)) + '</span><div class="mm">' + mm + "</div></div>" +
+        '<div class="vv"><span class="pc">' + r.score.toFixed(1).replace(".", ",") + '%</span><span class="chip">' + VERDICT[v] + "</span></div>" + more + "</div>";
     }).join("");
     Array.prototype.forEach.call(el.querySelectorAll(".card"), function (c) {
-      var pick = function () { selected = +c.dataset.i; renderPicks(); renderBuild(); renderCounters(); };
-      c.onclick = pick;
+      var pick = function () { if (selected !== +c.dataset.i) moreOpen = false; selected = +c.dataset.i; renderPicks(); renderBuild(); renderCounters(); };
+      c.onclick = function (e) { if (e.target.closest("details")) return; pick(); };
+      var det = c.querySelector("details");
+      if (det) det.addEventListener("toggle", function () { moreOpen = det.open; });
       c.onkeydown = function (e) { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); pick(); } };
     });
   }
@@ -227,9 +234,12 @@
 
   function boot() {
     DMEngine.prep(D); readHash();
-    $("q").addEventListener("input", listHeroes);
-    $("q").addEventListener("focus", listHeroes);
-    $("q").addEventListener("blur", function () { setTimeout(function () { $("dd").style.display = "none"; }, 120); });
+    $("q").addEventListener("input", openList);
+    $("q").addEventListener("focus", openList);
+    document.addEventListener("pointerdown", function (e) {
+      if (ddOpen && !e.target.closest(".srch, .slot, .ally, #tgt")) { ddOpen = false; listHeroes(); }
+    });
+    $("q").addEventListener("keydown", function (e) { if (e.key === "Escape") { ddOpen = false; listHeroes(); } });
     $("q").addEventListener("keydown", function (e) {
       var items = Array.prototype.slice.call($("dd").querySelectorAll("div[data-id]"));
       if (!items.length) return;
@@ -241,7 +251,7 @@
     });
     $("reset").onclick = function () { enemies = []; allies = []; selected = 0; setTarget("e"); update(); };
     Array.prototype.forEach.call($("tgt").querySelectorAll("button"), function (b) {
-      b.onclick = function () { setTarget(b.dataset.t); $("q").focus(); };
+      b.onclick = function () { setTarget(b.dataset.t); openList(); };
     });
     $("share").onclick = function () {
       var btn = $("share"), url = location.href;

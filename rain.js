@@ -25,5 +25,5 @@
     (function loop(t) { if (!document.hidden && t - last > 70) { tick(); last = t; } requestAnimationFrame(loop); })(0);
   }
 
-  if (document.getElementById("rain")) rain();
+  if (document.getElementById("rain") && !(window.matchMedia && matchMedia("(max-width: 700px)").matches)) rain();
 })();

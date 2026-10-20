@@ -87,7 +87,7 @@ header h1{margin:0;font-size:22px}header p{margin:2px 0 0;color:var(--mut);font-
  .page{padding:0 28px 40px}
  .layout{grid-template-columns:minmax(0,1fr) 340px;align-items:start}
  .cards{grid-template-columns:repeat(auto-fill,minmax(330px,1fr))}
- .side-col{position:static}
+ .side-col{position:sticky;top:12px;align-self:start}
 }
 @media(max-width:600px){
  .slots{gap:6px}
@@ -169,6 +169,27 @@ header h1{margin:0;font-size:22px}header p{margin:2px 0 0;color:var(--mut);font-
  .rr .role,.rr .rank{flex-wrap:nowrap}.rr .rank{border-left:1px solid var(--line);padding-left:8px}.rr button{white-space:nowrap}
  .card.hy .im{width:74px}.card.hy .b{padding:10px 12px}.card.hy .pc{font-size:20px}
  .pk2{padding:12px}.pk2 .t span{white-space:normal}.pk2 img{width:44px;height:44px}}
+
+/* ---- компактные карточки пиков, шаг 1 одним блоком, мини-игры отдельной секцией ---- */
+.bxh{display:flex;justify-content:space-between;align-items:center;gap:10px;margin-bottom:10px}.bxh .sec{margin:0}
+.bxh .tools{display:flex;gap:12px;align-items:center;color:var(--mut);font-size:12px;white-space:nowrap}
+.card.pc2{display:grid;grid-template-columns:52px minmax(0,1fr) auto;gap:4px 12px;align-items:center;padding:10px 14px;border-radius:14px;overflow:visible}
+.pc2 .pt{width:52px;height:52px;border-radius:10px;object-fit:cover;object-position:center 20%;background:var(--c2)}
+.pc2 .t{min-width:0}.pc2 .t b{display:block;font-size:16px;line-height:1.2}
+.pc2 .rs{display:block;color:var(--mut);font-size:13px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.pc2 .mm{margin:5px 0 0;gap:4px}.pc2 .mm span{width:20px;height:20px}
+.pc2 .vv{text-align:right}.pc2 .pc{display:block;font-size:22px;line-height:1.1}.pc2 .chip{margin-top:3px}
+.pc2.strong .pc{color:var(--g)}.pc2.ok .pc{color:var(--y)}.pc2.weak .pc{color:var(--r)}
+.pc2.sel{border-color:var(--ac);background:#211a45}
+.pc2 .more{grid-column:1/-1;margin-top:4px}.pc2 .more summary{cursor:pointer;color:var(--ac);font-size:13px;list-style:none;width:max-content}
+.pc2 .more summary::-webkit-details-marker{display:none}.pc2 .more summary::after{content:" ▾"}.pc2 .more[open] summary::after{content:" ▴"}
+.pc2 .more p{margin:6px 0 4px;font-size:13px;color:#cfc9ee}.pc2 .more small{color:var(--mut);font-size:12px}
+.games{margin-top:22px;border-color:#3b2f73}.games .gh h2{margin:0;font-size:18px}.games .gh p{margin:2px 0 12px;color:var(--mut);font-size:13.5px}
+@media(min-width:900px){.games .qo{display:grid;grid-template-columns:repeat(5,minmax(0,1fr))}.games .qo button{flex-direction:column;align-items:stretch;text-align:center;padding:6px}
+ .games .qo img{width:100%;height:auto;aspect-ratio:16/9}.games .qh{max-width:260px}}
+@media(max-width:700px){#rain{display:none}}
+@media(max-width:600px){.pc2{grid-template-columns:44px minmax(0,1fr) auto;padding:9px 10px;gap:2px 10px}.pc2 .pt{width:44px;height:44px}
+ .pc2 .t b{font-size:15px}.pc2 .rs{white-space:normal;font-size:12.5px}.pc2 .pc{font-size:19px}.pc2 .chip{font-size:10px;padding:2px 7px}}
 </style></head><body>
 <canvas id="rain" aria-hidden="true"></canvas>
 <div class="page">
@@ -181,8 +202,8 @@ header h1{margin:0;font-size:22px}header p{margin:2px 0 0;color:var(--mut);font-
 
 <section class="step"><div class="num">1</div><div class="sb">
 <div class="sh"><div><h2>Кто играет за врагов</h2><p>Добавьте до 5 героев. Состав можно поменять в любой момент.</p></div>
-<div class="tools"><span id="cnt"></span><button class="link" id="share" type="button" title="Скопировать ссылку на этот драфт">Ссылка</button><button class="link" id="reset" type="button">Очистить</button></div></div>
-<div class="pn box"><div class="slots" id="en"></div>
+</div>
+<div class="pn box"><div class="bxh"><span class="sec">Враги</span><div class="tools"><span id="cnt"></span><button class="link" id="share" type="button" title="Скопировать ссылку на этот драфт">Ссылка</button><button class="link" id="reset" type="button">Очистить</button></div></div><div class="slots" id="en"></div>
 <div class="dctl"><div class="tgt" id="tgt" role="group" aria-label="Кого добавлять"><button type="button" data-t="e" class="on">Враги</button><button type="button" data-t="a">Союзники</button></div><div class="srch"><input id="q" placeholder="Найти героя: начните вводить имя…" autocomplete="off" aria-label="Поиск героя"><div class="dd" id="dd"></div></div></div>
 <div class="allies" id="al"></div></div></div></section>
 
@@ -196,9 +217,11 @@ header h1{margin:0;font-size:22px}header p{margin:2px 0 0;color:var(--mut);font-
 <div class="layout">
 <main><div class="sec" id="ptitle" hidden></div><div class="cards" id="pk"></div>
 <div class="pn bpn"><div class="pt"><div class="sec" id="bt">Билд</div><span id="btw"></span></div><div id="bd"></div></div></main>
-<aside class="side-col"><div class="pn"><div class="pt"><div class="sec" id="ct">Купить против врагов</div><span id="ctw"></span></div><div id="cn"></div></div>
-<div class="pn" id="quiz"><div class="sec">Мини-игры</div><div class="qm" id="qmodes"></div><div class="qs" id="qscore"></div><div id="qz"></div></div></aside>
+<aside class="side-col"><div class="pn"><div class="pt"><div class="sec" id="ct">Купить против врагов</div><span id="ctw"></span></div><div id="cn"></div></div></aside>
 </div></div></section>
+
+<section class="pn games" id="quiz"><div class="gh"><h2>Мини-игры</h2><p>Викторины на 5 вариантов по тем же данным. Проверьте, насколько хорошо знаете контрпики и мету.</p></div>
+<div class="qm" id="qmodes"></div><div class="qs" id="qscore"></div><div id="qz"></div></section>
 
 <footer class="foot" id="foot">Загрузка данных…</footer>
 </div>
