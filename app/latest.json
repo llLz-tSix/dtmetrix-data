@@ -1,19 +1,19 @@
 {
- "version": "0.1.24",
- "url": "app-0.1.24.zip",
- "sha256": "8f125a1053675336daa4dbb9538e2d0bca88a97a8330caf3496089e64cd117bc",
- "size": 1773366,
+ "version": "0.1.25",
+ "url": "app-0.1.25.zip",
+ "sha256": "1c344884aeabe4e49a75f0ca0db6b822e9bd3f4d5cdab2cb1771345d4c5f09b9",
+ "size": 1780962,
  "min_runtime": 1,
  "python": "3.12",
  "min_version": "0.0.0",
  "block_message": "",
  "installer_url": "https://github.com/llLz-tSix/dtmetrix-data/releases/latest/download/DotaMetrix-Setup.exe",
- "notes": "Матчапы против каждого врага на драфте; в матче нетворс, GPM против нормы героя и контрпредметы первыми; итог матча с оценкой драфта и своей статистикой; тёмные панели; руководства Dota без нейтралок и склада",
+ "notes": "GPM и нетворс обновляются сами; вещь в курьере не пропадает из нетворса; рейка не мешает прокрутке карты у края экрана; панель героя открывается по клику, в матче показывает матчапы против каждого врага",
  "installer": {
   "runtime": "cd6feaaf940e63850252",
   "url": "https://github.com/llLz-tSix/dtmetrix-data/releases/download/v0.1.22/DotaMetrix-Setup.exe",
   "sha256": "2de826220b8e2041f35e1ff3f6c7d5eecce1e1957628a3bb565d12da379856cd",
   "size": 81378018
  },
- "sig": "9403204a26f3a478e98bbc1a6c8564f332878f4a36e784025afa7398c097d64b1e4b7ea5c692532dd5d3ffc0703a99294c74faa8c58ef55c6bbbb540b7bf8a08"
+ "sig": "b658a104dba85d91dfad19d8cb9685d63538fa6c198cd1b4a66ad52be2a0090a8d08b3f4f1ed0ab0722e50b39cea0f18a3b1a63158e7c24169a9265052aa950f"
 }
