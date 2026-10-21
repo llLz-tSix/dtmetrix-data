@@ -232,6 +232,32 @@
       "Число игр — сумма по парам «ваш герой против каждого из врагов». Билды: STRATZ, Legend и выше. Позиции героев: OpenDota. " +
       "Dota 2 — товарный знак Valve Corporation; проект с Valve не связан.</p></details>";
   }
+  function renderTicker() {
+    var m = D.meta || {}, p = (m.patch || {}).name, made = D.generated ? new Date(D.generated) : null;
+    var games = ((m.roles || {}).carry || {}).matches;
+    var fmt = function (n) { return Math.round(n).toLocaleString("ru"); };
+    $("ticker").innerHTML = (p ? "<span>патч <b>" + esc(p) + "</b></span>" : "") +
+      (games ? "<span><b>" + fmt(games) + "</b> матчей Legend+ за патч</span>" : "") +
+      "<span><b>" + D.heroes.length + "</b> героев · <b>" + fmt(Object.keys(D.pairs || {}).reduce(function (n, k) { return n + Object.keys(D.pairs[k]).length; }, 0) / 2) + "</b> пар</span>" +
+      (made ? "<span>данные от <b>" + made.toLocaleDateString("ru") + "</b></span>" : "");
+  }
+  var countKey = "";
+  function countUp() {                  /* новый драфт: проценты «досчитываются» от 50 до своей оценки */
+    var key = enemies.join(",") + "|" + allies.join(",") + "|" + role + "|" + rank;
+    if (key === countKey || !enemies.length) { countKey = key; return; }
+    countKey = key;
+    if (window.matchMedia && matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+    [].forEach.call(document.querySelectorAll("#pk .pc"), function (el) {
+      var final = el.textContent, target = parseFloat(final.replace(",", ".")), t0 = null;
+      requestAnimationFrame(function step(t) {
+        if (t0 === null) t0 = t;
+        var k = Math.min(1, (t - t0) / 650), e = 1 - Math.pow(1 - k, 3);
+        if (el.isConnected) el.textContent = (50 + (target - 50) * e).toFixed(1).replace(".", ",") + "%";
+        if (k < 1) requestAnimationFrame(step);
+      });
+      setTimeout(function () { el.textContent = final; }, 720);     // фоновая вкладка без кадров: цифра всё равно верная
+    });
+  }
   function renderBest() {
     var bar = $("bestbar"), r = rows[0];
     if (!enemies.length || !r) { bar.hidden = true; return; }
@@ -248,11 +274,14 @@
       if (rows[0] && enemies.length) $("bestbar").hidden = pkSeen;
     }).observe($("pk"));
   }
-  function update() { renderSlots(); renderRole(); renderRank(); renderPicks(); renderBuild(); renderCounters(); renderFoot(); renderBest(); writeHash(); }
+  function update() { renderSlots(); renderRole(); renderRank(); renderPicks(); renderBuild(); renderCounters(); renderFoot(); renderBest(); countUp(); if (window.DMRain) DMRain.focus(enemies); writeHash(); }
 
   function boot() {
     DMEngine.prep(D); readHash();
     $("load").remove();
+    window.__dmD = D;
+    if (window.DMRain) DMRain.data(D);
+    renderTicker();
     document.body.classList.remove("busy");
     $("q").addEventListener("input", openList);
     $("q").addEventListener("focus", openList);
