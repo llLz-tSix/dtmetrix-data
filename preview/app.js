@@ -43,7 +43,7 @@
         : '<button type="button" class="slot empty" data-i="' + i + '" aria-label="Выбрать героя"><div class="plus">+</div><i>Выбрать героя</i></button>';
     }).join("");
     $("cnt").textContent = enemies.length + " из 5";
-    $("al").innerHTML = "<span>Ваша команда (если уже выбрали):</span>" + allies.map(function (id, i) {
+    $("al").innerHTML = "<span>Союзники:</span>" + allies.map(function (id, i) {
       var h = D.byId[id];
       return '<button type="button" class="ally" data-a="' + i + '" title="Убрать союзника"><img src="' + heroImg(h.slug) + '" alt="" onerror="' + hide + '">' + esc(h.name) + " ×</button>";
     }).join("") + (allies.length < 4 ? '<button type="button" class="ally empty" data-a="+">+ союзник</button>' : "");
@@ -114,7 +114,7 @@
   }
 
   /* ---------- результаты ---------- */
-  function pp(adv) { var v = DMEngine.advPP(adv); return (v >= 0 ? "+" : "−") + Math.abs(v).toFixed(1).replace(".", ",") + " п.п."; }
+  function pp(adv) { var v = DMEngine.advPP(adv); return (v >= 0 ? "+" : "−") + Math.abs(v).toFixed(1).replace(".", ",") + "% к шансу"; }
   function why(r) {
     var parts = [];
     var good = r.pairs.filter(function (p) { return p.games >= D.min_pair; });
@@ -130,7 +130,7 @@
     var syn = (r.synergy || []).filter(function (s) { return Math.abs(DMEngine.advPP(s.syn)) >= 1; })
       .sort(function (a, b) { return Math.abs(b.syn) - Math.abs(a.syn); })[0];
     if (syn) parts.push((syn.syn > 0 ? "Хорошо сочетается с " : "Плохо сочетается с ") + D.byId[syn.id].name + " (" + pp(syn.syn) + ").");
-    if (r.rarity_penalty >= 0.3) parts.push("Герой редкий, его винрейт завышают мейнеры: поправка −" + r.rarity_penalty.toFixed(1) + " п.п.");
+    if (r.rarity_penalty >= 0.3) parts.push("Герой редкий, его винрейт завышают мейнеры: поправка −" + r.rarity_penalty.toFixed(1) + "% к шансу");
     if (r.low_evidence && good.length) parts.push("Выборка небольшая.");
     return parts.join(" ");
   }
@@ -141,8 +141,8 @@
     var worst = good.slice().sort(function (a, b) { return a.adv - b.adv; })[0];
     var plus = DMEngine.advPP(best.adv) >= 1, minus = DMEngine.advPP(worst.adv) <= -1 && worst.id !== best.id;
     if (plus && minus) return "Лучше против " + D.byId[best.id].name + ", хуже против " + D.byId[worst.id].name;
-    if (plus) return "Лучше всего против " + D.byId[best.id].name + " (" + pp(best.adv) + ")";
-    if (minus) return "Хуже против " + D.byId[worst.id].name + " (" + pp(worst.adv) + ")";
+    if (plus) return "Лучше всего против " + D.byId[best.id].name;
+    if (minus) return "Хуже против " + D.byId[worst.id].name;
     return "Без заметных плюсов и минусов";
   }
   function renderPicks() {
@@ -224,18 +224,18 @@
       ? "Матчапы: STRATZ, " + RANK_NOTE[rank] + ", " + new Date(w.from).toLocaleDateString("ru") + " – " + new Date(w.to).toLocaleDateString("ru") + " (около двух месяцев). "
       : "Матчапы: STRATZ. ";
     var when = made ? made.toLocaleDateString("ru") : "";
-    $("fresh").textContent = "Слева - кого брать, справа - что покупать. По матчам " + RANK_LABEL[rank] + (when ? ", данные от " + when : "") + ".";
+    $("fresh").textContent = "По матчам " + RANK_LABEL[rank] + (when ? " на " + when : "") + ".";
     $("foot").innerHTML = "<details><summary>Данные: STRATZ, " + esc(RANK_LABEL[rank]) + (when ? ", обновлено " + when : "") +
-      (old ? ' <span class="warn">(устарели)</span>' : "") + " · подробнее</summary><p>" +
-      "Это подсказка по драфту, а не прогноз исхода матча: процент - оценка шанса на победу с этим героем при прочих равных " +
+      (old ? ' <span class="warn">(устарели)</span>' : "") + ". Подробнее</summary><p>" +
+      "Это подсказка по драфту, а не прогноз исхода матча: процент — оценка шанса на победу с этим героем при прочих равных " +
       "(общая сила героя, преимущества против выбранных врагов и сочетание с союзниками; модель проверена на 25 тыс. матчей Legend+). " + scope +
-      "Число игр - сумма по парам «ваш герой против каждого из врагов». Билды: STRATZ, Legend и выше. Позиции героев: OpenDota. " +
-      "Dota 2 - товарный знак Valve Corporation; проект с Valve не связан.</p></details>";
+      "Число игр — сумма по парам «ваш герой против каждого из врагов». Билды: STRATZ, Legend и выше. Позиции героев: OpenDota. " +
+      "Dota 2 — товарный знак Valve Corporation; проект с Valve не связан.</p></details>";
   }
   function renderBest() {
     var bar = $("bestbar"), r = rows[0];
     if (!enemies.length || !r) { bar.hidden = true; return; }
-    bar.innerHTML = '<img src="' + heroImg(r.slug) + '" alt=""><b>' + esc(r.name) + "<small>лучший пик · смотреть все</small></b><em>" +
+    bar.innerHTML = '<img src="' + heroImg(r.slug) + '" alt=""><b>' + esc(r.name) + "<small>лучший пик, смотреть все</small></b><em>" +
       r.score.toFixed(1).replace(".", ",") + "%</em>";
     bar.onclick = function (e) { e.preventDefault(); $("pk").scrollIntoView({ behavior: "smooth", block: "start" }); };
     bar.hidden = pkSeen;
