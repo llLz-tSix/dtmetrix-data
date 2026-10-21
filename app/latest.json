@@ -1,19 +1,19 @@
 {
- "version": "0.1.26",
- "url": "app-0.1.26.zip",
- "sha256": "6768a70f1bb86f68fad9b2698a0353cb9c86f994c6a29011c50ce82a74a7917b",
- "size": 1780795,
+ "version": "0.1.27",
+ "url": "app-0.1.27.zip",
+ "sha256": "faa89e761e46b59b0cf32aafd2f12b5a4995bb28c0f80fca09a5e62d326ecc9b",
+ "size": 1785943,
  "min_runtime": 1,
  "python": "3.12",
  "min_version": "0.0.0",
  "block_message": "",
  "installer_url": "https://github.com/llLz-tSix/dtmetrix-data/releases/latest/download/DotaMetrix-Setup.exe",
- "notes": "Итог матча считается и показывается один раз (раньше повторялся каждые 2 секунды)",
+ "notes": "Бета-канал: в настройках появилась кнопка «бета-версии» — новые версии раньше всех",
  "installer": {
   "runtime": "cd6feaaf940e63850252",
   "url": "https://github.com/llLz-tSix/dtmetrix-data/releases/download/v0.1.22/DotaMetrix-Setup.exe",
   "sha256": "2de826220b8e2041f35e1ff3f6c7d5eecce1e1957628a3bb565d12da379856cd",
   "size": 81378018
  },
- "sig": "f59b85834081c4d2be6173cdebac8e509b86833d34a89cba959699b2f24292989fb8b3cd0326115e71d9827951b2c1632e2073ff6e4a989836ce1d4f5d15c101"
+ "sig": "7b12ffe3fbbb48d0fc5449a078a0efae5299e2aa955b306f18c45f3d68dac3fd7516440cdb32ee2b15c3f18addefa0dd64284235d93c537cec1b25ed401f1e0c"
 }
