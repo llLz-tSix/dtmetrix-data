@@ -13,112 +13,153 @@
 <link rel="apple-touch-icon" href="icon.png">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@500;700;800&display=swap" rel="stylesheet">
 <style>
-:root{--bg:#0e0b1a;--c:#1a1530;--c2:#241d44;--line:#2b2350;--tx:#f1eeff;--mut:#9a92c4;--ac:#c4b5fd;--g:#4ade80;--y:#facc15;--r:#fb7185}
+:root{--bg:#0e0b1a;--c:#1a1530;--c2:#241d44;--line:#2b2350;--tx:#f1eeff;--mut:#9a92c4;--ac:#c4b5fd;--g:#4ade80;--y:#facc15;--r:#fb7185;
+ --mono:"JetBrains Mono",ui-monospace,Consolas,monospace}
 *{box-sizing:border-box}html{color-scheme:dark}
 body{margin:0;background:#06040d;color:var(--tx);font:15px/1.6 "Segoe UI",system-ui,-apple-system,Roboto,sans-serif}
+a{color:var(--ac);text-decoration:none}a:hover{text-decoration:underline}
 #rain{opacity:.28;position:fixed;inset:0;width:100%;height:100%;z-index:0;pointer-events:none}
+@media(max-width:700px){#rain{display:none}}
 html{scrollbar-gutter:stable}@view-transition{navigation:auto}header{view-transition-name:shell-head}.ticker{view-transition-name:shell-tick;min-height:18px}.tabs{view-transition-name:shell-tabs}::view-transition-old(root),::view-transition-new(root){animation-duration:.16s}@media(prefers-reduced-motion:reduce){@view-transition{navigation:none}}
-.page>*:not(header):not(.tabs){max-width:900px}
-.brand small{display:block;margin:2px 0 0;color:var(--mut);font-size:13px;font-weight:400}
-.tabs{display:grid;grid-template-columns:2fr 1fr 1fr;gap:10px;margin:4px 0 14px}
-.tabs a{display:flex;flex-direction:column;gap:2px;padding:12px 16px;border-radius:14px;border:1px solid var(--line);background:var(--c);color:var(--tx);text-decoration:none;line-height:1.45;transition:border-color .15s,background .15s}
-.tabs a b{font-size:17px}.tabs a span{color:var(--mut);font-size:13px}.tabs a:hover{border-color:var(--ac)}
-@media(max-width:700px){.tabs{grid-template-columns:1fr 1fr}.tabs a:first-child{grid-column:1/-1}}
 .page{position:relative;z-index:1;max-width:1280px;margin:0 auto;padding:0 18px 48px;min-height:100vh;background-color:rgba(14,11,26,.6);background-image:linear-gradient(rgba(196,181,253,.045) 1px,transparent 1px),linear-gradient(90deg,rgba(196,181,253,.045) 1px,transparent 1px);background-size:32px 32px}
 @media(min-width:900px){.page{padding-left:28px;padding-right:28px}}
-.brand b{display:block;line-height:1.45}.brand small{line-height:1.45}
-.ticker{display:flex;margin:2px 0 12px}
-#meta{font-family:"JetBrains Mono",ui-monospace,Consolas,monospace;font-variant-numeric:tabular-nums}
+/* шапка, строка статистики и вкладки - один в один с остальными страницами */
 header{display:flex;justify-content:space-between;align-items:center;padding:20px 0 10px;gap:12px;flex-wrap:wrap}
-.brand{display:flex;align-items:center;gap:12px;color:inherit;text-decoration:none}.brand img{width:40px;height:40px}
-.brand b{font-size:22px}.back{color:var(--ac);text-decoration:none;font-size:14px}.back:hover{text-decoration:underline}
-.hero{margin:22px 0 18px;padding:26px 24px;border:1px solid #3b2f73;border-radius:22px;background:linear-gradient(135deg,rgba(36,29,68,.9),rgba(26,21,48,.9))}
-.hero h1{margin:0 0 6px;font-size:30px;line-height:1.2}.hero p{margin:0 0 18px;color:#d8d2f5}
-.btn{display:inline-flex;align-items:center;gap:10px;background:var(--ac);color:#0e0b1a;font-weight:700;font-size:17px;padding:13px 24px;border-radius:14px;text-decoration:none;transition:transform .12s,box-shadow .12s}
-.btn:hover{transform:translateY(-1px);box-shadow:0 8px 24px rgba(196,181,253,.25)}
-.meta{display:block;margin-top:10px;color:var(--mut);font-size:13px}
-.pn{background:rgba(26,21,48,.85);border:1px solid var(--line);border-radius:18px;padding:18px 20px;margin:14px 0}
-h2{margin:0 0 10px;font-size:19px}
-h3{margin:16px 0 8px;font-size:15px}
-.steps{counter-reset:s;list-style:none;margin:0;padding:0}
-.steps li{counter-increment:s;position:relative;padding:0 0 12px 44px;min-height:32px}
-.steps li::before{content:counter(s);position:absolute;left:0;top:0;width:30px;height:30px;border-radius:50%;background:var(--c2);border:1px solid var(--ac);color:var(--ac);font-weight:700;display:flex;align-items:center;justify-content:center;font-size:14px}
-.note{border-left:3px solid var(--y);padding:8px 12px;background:rgba(250,204,21,.06);border-radius:0 10px 10px 0;margin:10px 0;color:#eee7c8;font-size:14.5px}
-code,kbd{background:#0e0b1a;border:1px solid var(--line);border-radius:6px;padding:1px 6px;font-size:13.5px}
-kbd{font-family:inherit;font-weight:600;color:var(--ac)}
-ul{margin:6px 0;padding-left:20px}li{margin:3px 0}
-details{border-top:1px solid var(--line);padding:10px 0}details:first-of-type{border-top:0}
-summary{cursor:pointer;font-weight:600}summary:hover{color:var(--ac)}details p{margin:8px 0 2px;color:#d8d2f5}
-.muted{color:var(--mut);font-size:13px}
-footer{margin-top:22px;color:var(--mut);font-size:12.5px;line-height:1.55}
+.brand{display:flex;align-items:center;gap:12px;color:inherit}.brand:hover{text-decoration:none}.brand img{width:40px;height:40px;flex:none}
+.brand b{display:block;font-size:22px;line-height:1.45}.brand small{display:block;margin:2px 0 0;color:var(--mut);font-size:13px;line-height:1.45}
+.ticker{display:flex;flex-wrap:wrap;gap:4px 18px;margin:2px 0 12px;font:12px/1.5 var(--mono);color:var(--mut);font-variant-numeric:tabular-nums}
+.ticker b{color:var(--ac);font-weight:700}.ticker span::before{content:"▸ ";color:#4a3d8a}
+.tabs{display:grid;grid-template-columns:2fr 1fr 1fr;gap:10px;margin:4px 0 14px}
+.tabs a{display:flex;flex-direction:column;gap:2px;padding:12px 16px;border-radius:14px;border:1px solid var(--line);background:var(--c);color:var(--tx);line-height:1.45;transition:border-color .15s,background .15s}
+.tabs a b{font-size:17px}.tabs a span{color:var(--mut);font-size:13px}.tabs a:hover{border-color:var(--ac);text-decoration:none}
+@media(max-width:700px){.tabs{grid-template-columns:1fr 1fr}.tabs a:first-child{grid-column:1/-1}}
+/* страница: текст слева, закреплённая карточка загрузки справа */
+.lay{display:grid;grid-template-columns:minmax(0,1fr) 320px;gap:28px;align-items:start;margin-top:10px}
+@media(max-width:980px){.lay{grid-template-columns:minmax(0,1fr)}.get{order:-1;position:static!important}}
+.crumbs{color:var(--mut);font-size:14px;margin:6px 0 10px}.crumbs a{color:var(--mut)}
+h1{margin:0 0 8px;font-size:30px;line-height:1.2}
+.lead{margin:0 0 20px;color:#d8d2f5;max-width:640px}
+.feat{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:0;border-top:1px solid var(--line);border-bottom:1px solid var(--line);margin:0 0 30px}
+.feat div{padding:14px 16px 14px 0}.feat div+div{padding-left:16px;border-left:1px solid var(--line)}
+.feat i{display:block;font:700 12px var(--mono);color:var(--ac);font-style:normal;margin-bottom:4px}
+.feat b{display:block;font-size:15px}.feat span{color:var(--mut);font-size:13.5px}
+@media(max-width:640px){.feat{grid-template-columns:1fr}.feat div+div{padding-left:0;border-left:0;border-top:1px solid var(--line)}}
+section{margin:0 0 30px}
+h2{display:flex;align-items:baseline;gap:10px;margin:0 0 12px;font-size:20px}
+h2 small{font:600 12px var(--mono);color:var(--mut)}
+p{margin:0 0 10px}.muted{color:var(--mut);font-size:13.5px}
+.steps{list-style:none;margin:0;padding:0;counter-reset:s}
+.steps li{counter-increment:s;display:grid;grid-template-columns:44px minmax(0,1fr);gap:4px 12px;padding:12px 0;border-top:1px solid var(--line)}
+.steps li:first-child{border-top:0}
+.steps li::before{content:counter(s,decimal-leading-zero);font:700 15px/1.6 var(--mono);color:var(--ac)}
+.warn{display:grid;grid-template-columns:44px minmax(0,1fr);gap:12px;padding:12px 0;margin:6px 0 14px;border-top:1px dashed var(--line);border-bottom:1px dashed var(--line);color:#eee7c8;font-size:14.5px}
+.warn::before{content:"!";font:800 15px/1.6 var(--mono);color:var(--y)}
+code,kbd{font-family:var(--mono);font-size:13px;background:#0e0b1a;border:1px solid var(--line);border-radius:6px;padding:1px 6px}
+kbd{font-weight:700;color:var(--ac)}
+.cmd{display:flex;align-items:center;gap:10px;margin:8px 0 12px;padding:10px 10px 10px 14px;border:1px solid var(--line);border-radius:12px;background:#0e0b1a;font:600 14px var(--mono);overflow-x:auto}
+.cmd code{flex:1;background:none;border:0;padding:0;font-size:14px;color:var(--g);white-space:nowrap}
+.cmd button{flex:none;padding:7px 14px;border-radius:99px;border:1px solid var(--line);background:var(--c);color:var(--tx);font:600 13px "Segoe UI",system-ui,sans-serif;cursor:pointer;min-height:36px}
+.cmd button:hover{border-color:var(--ac)}
+.kv{display:grid;grid-template-columns:150px minmax(0,1fr);margin:0}
+.kv dt,.kv dd{margin:0;padding:10px 0;border-top:1px solid var(--line)}.kv dt:first-of-type,.kv dt:first-of-type+dd{border-top:0}
+.kv dt{font:600 12.5px/1.9 var(--mono);color:var(--ac)}
+@media(max-width:560px){.kv{grid-template-columns:1fr}.kv dd{border-top:0;padding-top:0}}
+.keys{display:flex;flex-wrap:wrap;gap:8px 18px;margin:12px 0 0;color:var(--mut);font-size:14px}
+.faq details{border-top:1px solid var(--line)}.faq details:last-child{border-bottom:1px solid var(--line)}
+.faq summary{display:flex;justify-content:space-between;gap:12px;padding:12px 0;cursor:pointer;font-weight:600;list-style:none}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";font:700 16px var(--mono);color:var(--ac);flex:none}.faq details[open] summary::after{content:"−"}
+.faq summary:hover{color:var(--ac)}.faq details p{margin:0 0 14px;color:#d8d2f5}
+/* карточка загрузки */
+.get{position:sticky;top:16px;padding:20px;border:1px solid #3b2f73;border-radius:18px;background:linear-gradient(160deg,rgba(36,29,68,.95),rgba(26,21,48,.95))}
+.get h3{margin:0 0 4px;font-size:17px}.get p{color:var(--mut);font-size:13.5px;margin:0 0 14px}
+.btn{display:flex;justify-content:center;align-items:center;gap:10px;background:var(--ac);color:#0e0b1a;font-weight:700;font-size:16px;padding:13px 18px;border-radius:12px;transition:transform .12s,box-shadow .12s}
+.btn:hover{transform:translateY(-1px);box-shadow:0 8px 24px rgba(196,181,253,.25);text-decoration:none}
+.spec{display:grid;grid-template-columns:auto 1fr;gap:0 12px;margin:14px 0 0;font:13px/1.5 var(--mono)}
+.spec dt,.spec dd{margin:0;padding:6px 0;border-top:1px dashed var(--line)}.spec dt{color:var(--mut)}.spec dd{text-align:right;color:var(--tx);font-weight:700}
+footer{margin-top:10px;padding-top:14px;border-top:1px solid var(--line);color:var(--mut);font-size:12.5px;line-height:1.55}
 </style></head><body>
 <canvas id="rain" aria-hidden="true"></canvas>
 <div class="page">
 <header><a class="brand" href="./"><img src="logo.svg" alt=""><span><b>Dota Metrix</b><small>Лучший пик против вражеского драфта за 10 секунд</small></span></a></header>
-<div class="ticker" aria-hidden="true"></div>
+<div class="ticker" id="tick"><span>оверлей для <b>Windows 10/11</b></span><span>установщик <b id="tsize">~77 МБ</b></span><span><b>бесплатно</b></span><span>обновляется <b>сам</b></span></div>
 <nav class="tabs" aria-label="Разделы сайта"><a href="./"><b>Подбор пика</b><span>Враги и роль — лучшие пики, билд и предметы</span></a>
 <a href="hero/"><b>Контрпики</b><span>Кто кого контрит и билды</span></a>
 <a href="meta/"><b>Мета патча</b><span>Топ-10 на каждую позицию</span></a></nav>
 
-<section class="hero">
+<p class="crumbs"><a href="./">Dota Metrix</a> / Оверлей</p>
+<div class="lay">
+<main>
 <h1>Оверлей Dota Metrix для Dota 2</h1>
-<p>Во время драфта показывает лучшие пики против врагов с учётом союзников, а после — билд и контрпредметы вашего героя. Всё поверх игры, без переключения окон.</p>
-<a class="btn" id="dl" href="https://github.com/llLz-tSix/dtmetrix-data/releases/latest/download/DotaMetrix-Setup.exe">⬇ Скачать для Windows</a>
-<span class="meta" id="meta">Windows 10/11 · около 77 МБ · бесплатно · обновляется сам</span>
-</section>
+<p class="lead">Подсказки поверх игры, без переключения окон: на драфте — лучшие пики против врагов с учётом союзников, в матче — билд и контрпредметы вашего героя.</p>
+<div class="feat">
+<div><i>01 · драфт</i><b>Лучшие пики</b><span>Сам видит врагов на верхней панели</span></div>
+<div><i>02 · матч</i><b>Билд и предметы</b><span>Против этих врагов, по матчам Legend+</span></div>
+<div><i>03 · после</i><b>Итог игры</b><span>Золото в минуту против нормы и история матчей</span></div>
+</div>
 
-<section class="pn"><h2>Установка за минуту</h2><ol class="steps">
-<li><b>Скачайте</b> установщик кнопкой выше и запустите <code>DotaMetrix-Setup.exe</code>.</li>
-<li>Если Windows покажет <b>«Система Windows защитила ваш компьютер»</b> — нажмите <b>«Подробнее» → «Выполнить в любом случае»</b>. Так Windows реагирует на любые новые программы без платной цифровой подписи.</li>
-<li>Установка не требует прав администратора. В конце оставьте галочку «Запустить Dota Metrix».</li>
-<li>При первом запуске программа один раз скачает портреты героев и прочитает портреты скинов из вашей Dota 2 (около 20 секунд).</li>
+<section><h2>Установка <small>~1 мин</small></h2><ol class="steps">
+<li><span><b>Скачайте</b> установщик кнопкой справа и запустите <code>DotaMetrix-Setup.exe</code>.</span></li>
+<li><span>Если Windows покажет <b>«Система Windows защитила ваш компьютер»</b> — нажмите <b>«Подробнее» → «Выполнить в любом случае»</b>. Так Windows встречает любые новые программы без платной цифровой подписи.</span></li>
+<li><span>Права администратора не нужны. В конце оставьте галочку «Запустить Dota Metrix».</span></li>
+<li><span>При первом запуске программа один раз скачает портреты героев и прочитает портреты скинов из вашей Dota 2, это около 20 секунд.</span></li>
 </ol></section>
 
-<section class="pn"><h2>Настройте Dota 2</h2>
-<p>Оверлей виден только поверх игры в режиме окна <b>«Без рамки»</b> (Borderless). В настоящем полноэкранном режиме Windows не даёт ничему рисовать поверх игры.</p>
-<ul>
-<li>В игре: <b>Настройки → Видео → режим отображения «Окно без рамки»</b>.</li>
-<li>Или в Steam: <b>Dota 2 → Свойства → Параметры запуска</b>: <code>-windowed -noborder</code></li>
-</ul>
-<div class="note">Если оверлей пишет «панель не найдена» или экран чёрный — почти всегда игра запущена в полноэкранном режиме.</div>
-<h3>Параметр запуска <code>-gamestateintegration</code></h3>
-<p>С ним Dota 2 сама сообщает оверлею вашу <b>сторону</b> (Radiant или Dire), <b>вашего героя</b> и <b>время матча</b>. Тогда не нужно выбирать команду вручную, а в матче оверлей подсказывает следующий предмет билда и сколько золота не хватает.</p>
-<ol class="steps">
-<li>Steam → библиотека → правый клик по <b>Dota 2 → Свойства → Общие → Параметры запуска</b>.</li>
-<li>Допишите через пробел: <code>-gamestateintegration</code>. Вместе с режимом без рамки строка будет такой: <code>-windowed -noborder -gamestateintegration</code></li>
-<li>Перезапустите Dota 2. Файл настройки для игры Dota Metrix кладёт сам.</li>
-</ol>
-<p>Без этого параметра оверлей тоже работает: сторону он находит по вашему нику Steam под портретами на драфте, а если не вышло — её можно выбрать в настройках.</p>
+<section><h2>Настройка Dota 2 <small>2 параметра</small></h2>
+<p>Оверлей рисуется только поверх окна <b>«Без рамки»</b> (Borderless): в настоящем полноэкранном режиме Windows ничего не даёт рисовать поверх игры. С параметром <code>-gamestateintegration</code> Dota 2 сама сообщает оверлею вашу сторону, героя и время матча.</p>
+<p>Steam → библиотека → правый клик по <b>Dota 2 → Свойства → Общие → Параметры запуска</b>, вставьте:</p>
+<div class="cmd"><code id="cmd">-windowed -noborder -gamestateintegration</code><button type="button" id="copy">Копировать</button></div>
+<p>Перезапустите Dota 2. Файл настройки для игры Dota Metrix кладёт сам. Режим без рамки можно включить и в игре: <b>Настройки → Видео → «Окно без рамки»</b>.</p>
+<div class="warn"><span>Оверлей пишет «панель не найдена» или экран чёрный — почти всегда игра в полноэкранном режиме.</span></div>
+<p class="muted">Без <code>-gamestateintegration</code> оверлей тоже работает: сторону он находит по вашему нику Steam на драфте, а если не вышло — её можно выбрать в настройках.</p>
 </section>
 
-<section class="pn"><h2>Как пользоваться</h2><ul>
-<li>Слева появится узкая <b>рейка</b>. Она сама находит врагов на верхней панели, когда открыта Dota 2.</li>
-<li><b>Во время драфта</b> в рейке лучшие пики для вашей роли. Наведите на героя — откроются билд и контрпредметы. Клик закрепляет панель.</li>
-<li><b>После драфта</b> остаётся ваш герой: его билд и предметы против этих врагов.</li>
-<li><b>Клик по логотипу</b> — настройки: роль, команда, ранги, ручной ввод врагов, «Сообщить об ошибке».</li>
-<li>Рейку можно перетащить мышью. Кнопки <b>«–»</b> и <b>«×»</b> вверху скрывают и закрывают её.</li>
-<li><b>Значок Dota Metrix у часов</b> на панели задач: показать или скрыть, настройки, проверить обновления, выход.</li>
-<li>Горячие клавиши: <kbd>F8</kbd> — пересканировать экран, <kbd>F9</kbd> — показать или скрыть, <kbd>F10</kbd> — выход.</li>
-</ul></section>
+<section><h2>Как пользоваться</h2><dl class="kv">
+<dt>рейка</dt><dd>Узкая панель слева. Сама находит врагов на верхней панели, когда открыта Dota 2. Перетаскивается мышью, <b>«–»</b> и <b>«×»</b> вверху скрывают и закрывают её.</dd>
+<dt>драфт</dt><dd>Лучшие пики для вашей роли. Наведите на героя — откроются билд и контрпредметы, клик закрепляет панель.</dd>
+<dt>матч</dt><dd>Ваш герой: следующий предмет билда, сколько золота не хватает, предметы против этих врагов.</dd>
+<dt>логотип</dt><dd>Настройки: роль, команда, ранги, ручной ввод врагов, «Сообщить об ошибке».</dd>
+<dt>значок у часов</dt><dd>Показать или скрыть, настройки, проверить обновления, выход.</dd>
+</dl>
+<div class="keys"><span><kbd>F8</kbd> пересканировать экран</span><span><kbd>F9</kbd> показать или скрыть</span><span><kbd>F10</kbd> выход</span></div>
+</section>
 
-<section class="pn"><h2>Вопросы</h2>
-<details><summary>Это бан в Dota 2?</summary><p>Оверлей не читает и не меняет память игры, не встраивается в неё и не нажимает клавиши за вас: он только делает снимок экрана, как OBS или Discord, получает от самой Dota 2 официальные данные Game State Integration (если включён параметр запуска) и показывает своё окно. Подсказки по пикам — та же статистика, что на Dotabuff или в Dota Plus.</p></details>
+<section class="faq"><h2>Вопросы</h2>
+<details><summary>Это бан в Dota 2?</summary><p>Нет. Оверлей не читает и не меняет память игры, не встраивается в неё и не нажимает клавиши за вас: он делает снимок экрана, как OBS или Discord, получает от самой Dota 2 официальные данные Game State Integration (если включён параметр запуска) и показывает своё окно. Подсказки по пикам — та же статистика, что на Dotabuff или в Dota Plus.</p></details>
+<details><summary>Безопасен ли параметр -gamestateintegration?</summary><p>Да. Это официальная функция Valve, на ней работают оверлеи для стримеров и подсветка клавиатур. Игра отправляет на ваш компьютер (адрес <code>127.0.0.1</code>, наружу ничего не уходит) только то, что вы и так видите: сторону, героя, предметы, золото и время матча. Данных о врагах она не даёт, а программа ничего не может отправить в игру. Отключить просто: удалите параметр в Steam.</p></details>
 <details><summary>Антивирус ругается на программу</summary><p>Программы, собранные из Python, иногда ошибочно помечаются антивирусами. Скачивайте установщик только с этой страницы; при ложном срабатывании добавьте папку <code>%LOCALAPPDATA%\DotaMetrix</code> в исключения.</p></details>
-<details><summary>Оверлей не видит героев</summary><p>Проверьте режим «Без рамки», нажмите <kbd>F8</kbd> на экране драфта или в матче. Если не помогло — клик по логотипу → «Сообщить об ошибке»: отчёт со снимком экрана придёт разработчику.</p></details>
-<details><summary>Безопасен ли параметр -gamestateintegration?</summary><p>Да. Это официальная функция Valve — <b>Game State Integration</b>: на ней работают оверлеи для стримеров и подсветка клавиатур и мышей. Игра сама отправляет на ваш компьютер (адрес <code>127.0.0.1</code>, наружу ничего не уходит) только то, что вы и так видите на экране: ваша сторона, герой, предметы, золото и время матча. Данных о врагах и скрытой информации игра через неё не даёт, а программа ничего не может отправить в игру. Это не чит и не причина для бана. Отключить просто: удалите параметр в Steam.</p></details>
-<details><summary>Как обновлять?</summary><p>Никак — программа обновляется сама при запуске и раз в несколько часов сообщает о новой версии значком у часов.</p></details>
-<details><summary>Что программа отправляет в интернет?</summary><p>Только скачивает данные (статистику, билды, обновления). Снимок экрана и журнал уходят разработчику <b>только когда вы сами нажали «Сообщить об ошибке»</b> и только с вашим описанием. Никакой слежки и рекламы.</p></details>
+<details><summary>Оверлей не видит героев</summary><p>Проверьте режим «Без рамки» и нажмите <kbd>F8</kbd> на экране драфта или в матче. Не помогло — клик по логотипу → «Сообщить об ошибке»: отчёт со снимком экрана придёт разработчику.</p></details>
+<details><summary>Как обновлять?</summary><p>Никак: программа обновляется сама при запуске и раз в несколько часов сообщает о новой версии значком у часов.</p></details>
+<details><summary>Что программа отправляет в интернет?</summary><p>Только скачивает данные: статистику, билды, обновления. Снимок экрана и журнал уходят разработчику <b>только когда вы сами нажали «Сообщить об ошибке»</b> и только с вашим описанием. Никакой слежки и рекламы.</p></details>
 <details><summary>Как удалить?</summary><p>Параметры Windows → Приложения → Dota Metrix → Удалить. Удаляются и все данные программы.</p></details>
 </section>
+</main>
+
+<aside class="get">
+<h3>Dota Metrix для Windows</h3>
+<p>Бесплатно, без рекламы и регистрации.</p>
+<a class="btn" id="dl" href="https://github.com/llLz-tSix/dtmetrix-data/releases/latest/download/DotaMetrix-Setup.exe">⬇ Скачать установщик</a>
+<dl class="spec"><dt>версия</dt><dd id="sver">последняя</dd><dt>размер</dt><dd id="ssize">~77 МБ</dd><dt>система</dt><dd>Windows 10/11</dd><dt>обновления</dt><dd>сами</dd></dl>
+</aside>
+</div>
 
 <footer>Dota Metrix — независимый проект. Dota 2 является товарным знаком Valve Corporation; проект не связан с Valve и не одобрен ею.</footer>
 </div>
 <script src="rain.js" defer></script><script src="nav.js" defer></script>
 <script>
-// версия и размер текущего установщика из манифеста обновлений (если не загрузится - остаётся текст по умолчанию)
+// версия и размер текущего установщика из манифеста обновлений (не загрузится - остаётся текст по умолчанию)
 fetch("app/latest.json", { cache: "no-cache" }).then(function (r) { return r.json(); }).then(function (m) {
-  var mb = m.installer && m.installer.size ? Math.round(m.installer.size / 1048576) + " МБ" : "около 77 МБ";
-  document.getElementById("meta").textContent = "Версия " + m.version + " · Windows 10/11 · " + mb + " · бесплатно · обновляется сам";
+  var mb = m.installer && m.installer.size ? Math.round(m.installer.size / 1048576) + " МБ" : "~77 МБ";
+  document.getElementById("sver").textContent = m.version;
+  document.getElementById("ssize").textContent = mb;
+  document.getElementById("tsize").textContent = mb;
+  document.getElementById("tick").insertAdjacentHTML("afterbegin", "<span>версия <b>" + m.version + "</b></span>");
 }).catch(function () {});
+document.getElementById("copy").addEventListener("click", function () {
+  var b = this, text = document.getElementById("cmd").textContent;
+  function done(t) { b.textContent = t; setTimeout(function () { b.textContent = "Копировать"; }, 1600); }
+  if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(text).then(function () { done("Скопировано"); }, function () { done("Выделите вручную"); });
+  else done("Выделите вручную");
+});
 </script>
 </body></html>
