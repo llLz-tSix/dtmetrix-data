@@ -43,7 +43,7 @@
         : '<button type="button" class="slot empty" data-i="' + i + '" aria-label="Выбрать героя"><div class="plus">+</div><i>Выбрать героя</i></button>';
     }).join("");
     $("cnt").textContent = enemies.length + " из 5";
-    $("al").innerHTML = "<span>Ваша команда (если уже выбрали):</span>" + allies.map(function (id, i) {
+    $("al").innerHTML = "<span>Союзники:</span>" + allies.map(function (id, i) {
       var h = D.byId[id];
       return '<button type="button" class="ally" data-a="' + i + '" title="Убрать союзника"><img src="' + heroImg(h.slug) + '" alt="" onerror="' + hide + '">' + esc(h.name) + " ×</button>";
     }).join("") + (allies.length < 4 ? '<button type="button" class="ally empty" data-a="+">+ союзник</button>' : "");
@@ -114,7 +114,7 @@
   }
 
   /* ---------- результаты ---------- */
-  function pp(adv) { var v = DMEngine.advPP(adv); return (v >= 0 ? "+" : "−") + Math.abs(v).toFixed(1).replace(".", ",") + " п.п."; }
+  function pp(adv) { var v = DMEngine.advPP(adv); return (v >= 0 ? "+" : "−") + Math.abs(v).toFixed(1).replace(".", ",") + "% к шансу"; }
   function why(r) {
     var parts = [];
     var good = r.pairs.filter(function (p) { return p.games >= D.min_pair; });
@@ -130,7 +130,7 @@
     var syn = (r.synergy || []).filter(function (s) { return Math.abs(DMEngine.advPP(s.syn)) >= 1; })
       .sort(function (a, b) { return Math.abs(b.syn) - Math.abs(a.syn); })[0];
     if (syn) parts.push((syn.syn > 0 ? "Хорошо сочетается с " : "Плохо сочетается с ") + D.byId[syn.id].name + " (" + pp(syn.syn) + ").");
-    if (r.rarity_penalty >= 0.3) parts.push("Герой редкий, его винрейт завышают мейнеры: поправка −" + r.rarity_penalty.toFixed(1) + " п.п.");
+    if (r.rarity_penalty >= 0.3) parts.push("Герой редкий, его винрейт завышают мейнеры: поправка −" + r.rarity_penalty.toFixed(1) + "% к шансу");
     if (r.low_evidence && good.length) parts.push("Выборка небольшая.");
     return parts.join(" ");
   }
@@ -141,8 +141,8 @@
     var worst = good.slice().sort(function (a, b) { return a.adv - b.adv; })[0];
     var plus = DMEngine.advPP(best.adv) >= 1, minus = DMEngine.advPP(worst.adv) <= -1 && worst.id !== best.id;
     if (plus && minus) return "Лучше против " + D.byId[best.id].name + ", хуже против " + D.byId[worst.id].name;
-    if (plus) return "Лучше всего против " + D.byId[best.id].name + " (" + pp(best.adv) + ")";
-    if (minus) return "Хуже против " + D.byId[worst.id].name + " (" + pp(worst.adv) + ")";
+    if (plus) return "Лучше всего против " + D.byId[best.id].name;
+    if (minus) return "Хуже против " + D.byId[worst.id].name;
     return "Без заметных плюсов и минусов";
   }
   function renderPicks() {
@@ -223,17 +223,66 @@
     var scope = w
       ? "Матчапы: STRATZ, " + RANK_NOTE[rank] + ", " + new Date(w.from).toLocaleDateString("ru") + " – " + new Date(w.to).toLocaleDateString("ru") + " (около двух месяцев). "
       : "Матчапы: STRATZ. ";
-    $("foot").innerHTML = "Это подсказка по драфту, а не прогноз исхода матча: процент - оценка шанса на победу с этим героем при прочих равных " +
+    var when = made ? made.toLocaleDateString("ru") : "";
+    $("fresh").textContent = "По матчам " + RANK_LABEL[rank] + (when ? " на " + when : "") + ".";
+    $("foot").innerHTML = "<details><summary>Данные: STRATZ, " + esc(RANK_LABEL[rank]) + (when ? ", обновлено " + when : "") +
+      (old ? ' <span class="warn">(устарели)</span>' : "") + ". Подробнее</summary><p>" +
+      "Это подсказка по драфту, а не прогноз исхода матча: процент — оценка шанса на победу с этим героем при прочих равных " +
       "(общая сила героя, преимущества против выбранных врагов и сочетание с союзниками; модель проверена на 25 тыс. матчей Legend+). " + scope +
-      "Число игр это сумма по парам «ваш герой против каждого из врагов», один матч может учитываться несколько раз. " +
-      "Билды: STRATZ, Legend и выше, последняя неделя данных. Позиции героев: OpenDota" +
-      (made ? ". Снимок от " + made.toLocaleDateString("ru") + (old ? ' <span class="warn">(данные устарели)</span>' : "") : "") +
-      ". Dota 2 является товарным знаком Valve Corporation; проект не связан с Valve.";
+      "Число игр — сумма по парам «ваш герой против каждого из врагов». Билды: STRATZ, Legend и выше. Позиции героев: OpenDota. " +
+      "Dota 2 — товарный знак Valve Corporation; проект с Valve не связан.</p></details>";
   }
-  function update() { renderSlots(); renderRole(); renderRank(); renderPicks(); renderBuild(); renderCounters(); renderFoot(); writeHash(); }
+  function renderTicker() {
+    var m = D.meta || {}, p = (m.patch || {}).name, made = D.generated ? new Date(D.generated) : null;
+    var games = ((m.roles || {}).carry || {}).matches;
+    var fmt = function (n) { return Math.round(n).toLocaleString("ru"); };
+    $("ticker").innerHTML = (p ? "<span>патч <b>" + esc(p) + "</b></span>" : "") +
+      (games ? "<span><b>" + fmt(games) + "</b> матчей Legend+ за патч</span>" : "") +
+      "<span><b>" + D.heroes.length + "</b> героев · <b>" + fmt(Object.keys(D.pairs || {}).reduce(function (n, k) { return n + Object.keys(D.pairs[k]).length; }, 0) / 2) + "</b> пар</span>" +
+      (made ? "<span>данные от <b>" + made.toLocaleDateString("ru") + "</b></span>" : "");
+  }
+  var countKey = "";
+  function countUp() {                  /* новый драфт: проценты «досчитываются» от 50 до своей оценки */
+    var key = enemies.join(",") + "|" + allies.join(",") + "|" + role + "|" + rank;
+    if (key === countKey || !enemies.length) { countKey = key; return; }
+    countKey = key;
+    if (window.matchMedia && matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+    [].forEach.call(document.querySelectorAll("#pk .pc"), function (el) {
+      var final = el.textContent, target = parseFloat(final.replace(",", ".")), t0 = null;
+      requestAnimationFrame(function step(t) {
+        if (t0 === null) t0 = t;
+        var k = Math.min(1, (t - t0) / 650), e = 1 - Math.pow(1 - k, 3);
+        if (el.isConnected) el.textContent = (50 + (target - 50) * e).toFixed(1).replace(".", ",") + "%";
+        if (k < 1) requestAnimationFrame(step);
+      });
+      setTimeout(function () { el.textContent = final; }, 720);     // фоновая вкладка без кадров: цифра всё равно верная
+    });
+  }
+  function renderBest() {
+    var bar = $("bestbar"), r = rows[0];
+    if (!enemies.length || !r) { bar.hidden = true; return; }
+    bar.innerHTML = '<img src="' + heroImg(r.slug) + '" alt=""><b>' + esc(r.name) + "<small>лучший пик, смотреть все</small></b><em>" +
+      r.score.toFixed(1).replace(".", ",") + "%</em>";
+    bar.onclick = function (e) { e.preventDefault(); $("pk").scrollIntoView({ behavior: "smooth", block: "start" }); };
+    bar.hidden = pkSeen;
+  }
+  var pkSeen = false;
+  function watchResults() {
+    if (!window.IntersectionObserver) return;
+    new IntersectionObserver(function (ents) {
+      pkSeen = ents[0].isIntersecting;
+      if (rows[0] && enemies.length) $("bestbar").hidden = pkSeen;
+    }).observe($("pk"));
+  }
+  function update() { renderSlots(); renderRole(); renderRank(); renderPicks(); renderBuild(); renderCounters(); renderFoot(); renderBest(); countUp(); if (window.DMRain) DMRain.focus(enemies); writeHash(); }
 
   function boot() {
     DMEngine.prep(D); readHash();
+    $("load").remove();
+    window.__dmD = D;
+    if (window.DMRain) DMRain.data(D);
+    renderTicker();
+    document.body.classList.remove("busy");
     $("q").addEventListener("input", openList);
     $("q").addEventListener("focus", openList);
     document.addEventListener("pointerdown", function (e) {
@@ -262,9 +311,17 @@
     addEventListener("hashchange", function () { readHash(); selected = 0; update(); });
     update();
     if (window.DMQuiz) DMQuiz.start(D);
+    watchResults();
   }
 
   fetch("data.json", { cache: "no-cache" }).then(function (r) { if (!r.ok) throw new Error(r.status); return r.json(); })
     .then(function (d) { D = d; boot(); })
-    .catch(function () { $("foot").innerHTML = '<span class="warn">Не удалось загрузить данные. Обновите страницу позже.</span>'; });
+    .catch(function () {
+      var el = $("load");
+      el.className = "load err";
+      el.innerHTML = "<i></i><span>Не удалось загрузить статистику. Проверьте интернет.</span>";
+      var b = document.createElement("button");
+      b.type = "button"; b.textContent = "Повторить"; b.onclick = function () { location.reload(); };
+      el.appendChild(b);
+    });
 })();

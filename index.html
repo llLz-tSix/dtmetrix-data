@@ -1,6 +1,7 @@
 <!doctype html>
 <html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Dota Metrix — контрпики Dota 2, лучшие пики против врагов, билды и оверлей</title>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@500;700;800&display=swap" rel="stylesheet">
+<title>Dota Metrix — подбор пика и контрпики Dota 2</title>
 <meta name="description" content="Dota Metrix: контрпики для Dota 2 по матчам Legend+ за 2 месяца. Выберите вражеских героев и свою роль — получите лучшие пики с учётом союзников, билд и контрпредметы. Бесплатный оверлей для драфта.">
 <meta name="keywords" content="Dota Metrix, dota metrix, контрпики дота 2, контрпик, кого пикнуть дота 2, dota 2 counter pick, драфт дота, билды дота 2, оверлей дота 2">
 <link rel="canonical" href="https://lllz-tsix.github.io/dtmetrix-data/">
@@ -35,7 +36,7 @@ header h1{margin:0;font-size:22px}header p{margin:2px 0 0;color:var(--mut);font-
 .dl{color:var(--ac);border-color:currentColor;text-decoration:none;font-weight:600;transition:background .15s}
 .dl:hover{background:rgba(196,181,253,.12)}
 .pn{background:var(--c);border:1px solid var(--line);border-radius:18px;padding:14px}
-.sec{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--mut);margin:0 0 10px}
+.sec{font-size:15px;font-weight:700;color:var(--tx);margin:0 0 12px}
 .tabs{display:grid;grid-template-columns:2fr 1fr 1fr;gap:10px;margin:4px 0 14px}
 .tabs a{display:flex;flex-direction:column;gap:2px;padding:12px 16px;border-radius:14px;border:1px solid var(--line);background:var(--c);color:var(--tx);text-decoration:none;transition:border-color .15s,background .15s}
 .tabs a b{font-size:17px}.tabs a span{color:var(--mut);font-size:13px}
@@ -76,7 +77,7 @@ header h1{margin:0;font-size:22px}header p{margin:2px 0 0;color:var(--mut);font-
 .mm{display:flex;gap:5px;margin:6px 0 2px}.mm span{width:22px;height:22px;border-radius:50%;border:2px solid var(--mut);overflow:hidden;display:block;flex:none;background:#0e0b1a}.mm img{width:100%;height:100%;object-fit:cover;display:block}
 .mm .good{border-color:var(--g)}.mm .bad{border-color:var(--r)}.mm .mid{border-color:var(--y)}.mm .none{border-color:#4a4470;opacity:.7}
 .empty-state{background:var(--c);border:1px dashed var(--line);border-radius:18px;padding:30px 18px;text-align:center;color:var(--mut)}
-.ph{margin-bottom:12px}.ph h4{margin:0 0 6px;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--ac)}
+.ph{margin-bottom:12px}.ph h4{margin:0 0 8px;font-size:13px;font-weight:600;color:var(--ac)}
 .items{display:flex;gap:8px;overflow-x:auto;scrollbar-width:none;padding-bottom:2px}.items div{flex:0 0 auto;text-align:center;font-size:10.5px;color:var(--mut);width:64px}.items img{width:56px;height:41px;border-radius:10px;object-fit:cover;background:var(--c2);display:block;margin:0 auto 3px}
 .cn{display:flex;gap:12px;align-items:center;padding:8px 0;border-bottom:1px solid var(--line)}.cn:last-child{border:0}.cn img.i{width:52px;height:38px;border-radius:8px;background:var(--c2);flex:none}
 .cn small{color:var(--mut)}.cn img.h{width:20px;height:20px;border-radius:50%;object-fit:cover;vertical-align:middle}
@@ -112,7 +113,7 @@ header h1{margin:0;font-size:22px}header p{margin:2px 0 0;color:var(--mut);font-
 .qm{display:flex;flex-wrap:wrap;gap:5px;margin:2px 0 8px}.qm button{border:1px solid var(--line);background:var(--c2);color:var(--mut);font:inherit;font-size:12px;padding:5px 10px;border-radius:99px;cursor:pointer}
 .qm button.on{background:var(--ac);color:#0e0b1a;border-color:var(--ac);font-weight:600}
 .qs{font-size:12px;color:var(--mut);margin-bottom:10px}.qs b{color:var(--tx)}
-.qt{font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--ac)}.qq{font-weight:600;margin:2px 0 8px}
+.qt{font-size:13px;font-weight:600;color:var(--ac)}.qq{font-weight:600;margin:2px 0 8px}
 .qh{display:block;width:100%;max-width:200px;aspect-ratio:16/9;object-fit:cover;border-radius:12px;margin:0 auto 10px}
 .qa{display:block;width:72px;height:72px;border-radius:12px;margin:0 auto 10px}
 .qi{display:flex;flex-wrap:wrap;gap:5px;justify-content:center;margin-bottom:10px}.qi img{width:50px;height:37px;border-radius:7px;background:var(--c2)}
@@ -141,7 +142,7 @@ header h1{margin:0;font-size:22px}header p{margin:2px 0 0;color:var(--mut);font-
 .hc.empty .plus{width:36px;height:36px;border-radius:50%;border:2px dashed #4a3d8a;display:flex;align-items:center;justify-content:center;color:var(--ac);font-size:18px}
 .allies{margin:10px 0 0}
 .rr{display:flex;flex-wrap:wrap;align-items:center;gap:8px 10px}
-.rr .lbl{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--mut);margin:0 2px 0 6px}
+.rr .lbl{font-size:13px;color:var(--mut);margin:0 2px 0 6px}
 .rr .role{overflow:visible;flex-wrap:wrap}.rr .rank{background:none;border:0;padding:0;gap:6px;flex-wrap:wrap}
 .rr .rank button{background:var(--c2);color:var(--mut);padding:9px 14px;font-size:13px}.rr .rank button.on{background:var(--ac);color:#0e0b1a}
 .slots{margin-bottom:12px}
@@ -190,30 +191,74 @@ header h1{margin:0;font-size:22px}header p{margin:2px 0 0;color:var(--mut);font-
 @media(max-width:700px){#rain{display:none}}
 @media(max-width:600px){.pc2{grid-template-columns:44px minmax(0,1fr) auto;padding:9px 10px;gap:2px 10px}.pc2 .pt{width:44px;height:44px}
  .pc2 .t b{font-size:15px}.pc2 .rs{white-space:normal;font-size:12.5px}.pc2 .pc{font-size:19px}.pc2 .chip{font-size:10px;padding:2px 7px}}
-</style></head><body>
+
+/* ---- черновик: состояния, крупные нажатия, шкала отступов 8/16/24/48, меньше рамок ---- */
+.step{margin-top:48px}.step:first-of-type{margin-top:24px}.sh{margin-bottom:16px}.layout{gap:24px}
+.box,.side-col>.pn,.bpn{border-color:transparent}
+.box{background:rgba(26,21,48,.55)}
+.load{display:flex;align-items:center;gap:12px;padding:12px 16px;margin:-4px -4px 16px;border-radius:12px;background:#241d44;color:var(--tx);font-size:14px}
+.load i{width:18px;height:18px;border-radius:50%;border:3px solid #4a3d8a;border-top-color:var(--ac);animation:spin .8s linear infinite;flex:none}
+.load.err{background:#3a1424;color:#fecdd3}.load.err i{display:none}
+.load button{margin-left:auto;padding:10px 16px;border-radius:99px;border:1px solid #fecdd3;background:none;color:#fecdd3;font:inherit;font-weight:600;cursor:pointer;min-height:40px}
+@keyframes spin{to{transform:rotate(360deg)}}
+body.busy .slots,body.busy .dctl,body.busy .allies{opacity:.45;pointer-events:none}
+.link{min-height:40px;padding:0 8px;font-size:13px}
+.role button,.rr .rank button,.tgt button,.ally{min-height:40px}
+.pc2 .more summary{padding:10px 0;font-size:14px}
+.qm button{min-height:40px;padding:8px 14px;font-size:13px}
+.slot i,.hint,.qs,.qo small,.chip,.dd small,.pt span,.ally{font-size:12px}
+.rr{gap:12px 24px}.rgrp{display:flex;align-items:center;gap:8px;flex-wrap:wrap;min-width:0}
+.bestbar{position:fixed;left:12px;right:12px;bottom:12px;z-index:30;display:flex;align-items:center;gap:12px;padding:10px 16px 10px 10px;
+ border-radius:16px;background:#2d2363;border:1px solid var(--ac);color:var(--tx);text-decoration:none;box-shadow:0 8px 24px #0008}
+.bestbar[hidden]{display:none}.bestbar img{width:40px;height:40px;border-radius:8px;object-fit:cover;flex:none}
+.bestbar b{flex:1;min-width:0;font-size:15px}.bestbar small{display:block;color:var(--mut);font-size:12px;font-weight:400}
+.bestbar em{font-style:normal;font-weight:800;font-size:20px;color:var(--g)}
+.foot details summary{cursor:pointer;color:var(--mut);padding:10px 0;font-size:13px}.foot details p{margin:8px 0 0}
+@media(max-width:899px){.layout{display:flex;flex-direction:column}.layout>main{display:contents}
+ #pk{order:1}.side-col{order:2}.bpn{order:3}}
+@media(min-width:900px){.bestbar{left:auto;right:24px;bottom:24px;max-width:380px}}
+/* ширина: две колонки только когда пикам хватает места; увеличение ступенями (1,3 на 980 px резало проценты) */
+@media(min-width:900px) and (max-width:1099px){.layout{display:flex;flex-direction:column}.layout>main{display:contents}
+ #pk{order:1}.side-col{order:2;position:static}.bpn{order:3}}
+@media(min-width:900px){.page{zoom:1}}
+/* телефон: «Роль» и «Ранг» двумя строками, каждая прокручивается вбок сама */
+@media(max-width:600px){.rr{flex-direction:column;align-items:stretch;flex-wrap:nowrap;overflow:visible;margin-right:0;padding-right:0;gap:8px}
+ .rr .rgrp{flex-wrap:nowrap;overflow-x:auto;scrollbar-width:none;margin-right:-16px;padding-right:16px}
+ .rr .rgrp::-webkit-scrollbar{display:none}.rr .lbl{display:block;flex:none;min-width:44px;margin:0}
+ .rr .role,.rr .rank{flex-wrap:nowrap;flex:none}.rr .rank{border-left:0;padding-left:0}}
+
+/* ---- концепция «анализ»: цифры как показания прибора, сетка, строка статистики ---- */
+.page{background-color:rgba(14,11,26,.6);background-image:linear-gradient(rgba(196,181,253,.045) 1px,transparent 1px),
+ linear-gradient(90deg,rgba(196,181,253,.045) 1px,transparent 1px);background-size:32px 32px}
+.pc2 .pc,.bestbar em,.slot:not(.empty) i,.ticker,.qo small,.dd small,.qs b{font-family:"JetBrains Mono",ui-monospace,Consolas,monospace;font-variant-numeric:tabular-nums;letter-spacing:-.02em}
+.pc2 .pc{font-weight:800}
+.ticker{display:flex;flex-wrap:wrap;gap:4px 18px;margin:2px 0 12px;font-size:12px;color:var(--mut)}
+.ticker b{color:var(--ac);font-weight:700}.ticker span::before{content:"▸ ";color:#4a3d8a}
+</style></head><body class="busy">
 <canvas id="rain" aria-hidden="true"></canvas>
 <div class="page">
-<header><div class="brand"><img src="logo.svg" alt=""><div><h1>Dota Metrix</h1><p>Контрпики Dota 2: подсказка по драфту, не предсказание исхода</p></div></div>
-<a class="soon dl" href="download.html" title="Оверлей поверх игры: пики во время драфта, билд и контрпредметы в матче. Windows 10/11, ~76 МБ">Скачать оверлей · Windows</a></header>
+<header><div class="brand"><img src="logo.svg" alt=""><div><h1>Dota Metrix</h1><p>Лучший пик против вражеского драфта за 10 секунд</p></div></div>
+<a class="soon dl" href="download.html" title="Оверлей поверх игры: пики во время драфта, билд и контрпредметы в матче. Windows 10/11, ~76 МБ">Скачать оверлей: подсказки прямо в драфте</a></header>
+<div class="ticker" id="ticker" aria-label="Статистика данных"></div>
 
-<nav class="tabs" aria-label="Разделы сайта"><a class="on" href="./" aria-current="page"><b>Подбор пика</b><span>Враги и роль - лучшие пики, билд и предметы</span></a>
+<nav class="tabs" aria-label="Разделы сайта"><a class="on" href="./" aria-current="page"><b>Подбор пика</b><span>Враги и роль — лучшие пики, билд и предметы</span></a>
 <a href="hero/"><b>Контрпики</b><span>Кто кого контрит и билды</span></a>
 <a href="meta/"><b>Мета патча</b><span>Топ-10 на каждую позицию</span></a></nav>
 
 <section class="step"><div class="num">1</div><div class="sb">
-<div class="sh"><div><h2>Кто играет за врагов</h2><p>Добавьте до 5 героев. Состав можно поменять в любой момент.</p></div>
+<div class="sh"><div><h2>Кто играет за врагов</h2></div>
 </div>
-<div class="pn box"><div class="bxh"><span class="sec">Враги</span><div class="tools"><span id="cnt"></span><button class="link" id="share" type="button" title="Скопировать ссылку на этот драфт">Ссылка</button><button class="link" id="reset" type="button">Очистить</button></div></div><div class="slots" id="en"></div>
+<div class="pn box"><div class="load" id="load"><i></i><span>Загружаем статистику матчей…</span></div><div class="bxh"><span class="sec">Враги</span><div class="tools"><span id="cnt"></span><button class="link" id="share" type="button" title="Скопировать ссылку на этот драфт">Ссылка</button><button class="link" id="reset" type="button">Очистить</button></div></div><div class="slots" id="en"></div>
 <div class="dctl"><div class="tgt" id="tgt" role="group" aria-label="Кого добавлять"><button type="button" data-t="e" class="on">Враги</button><button type="button" data-t="a">Союзники</button></div><div class="srch"><input id="q" placeholder="Найти героя: начните вводить имя…" autocomplete="off" aria-label="Поиск героя"><div class="dd" id="dd"></div></div></div>
 <div class="allies" id="al"></div></div></div></section>
 
 <section class="step"><div class="num">2</div><div class="sb">
-<div class="sh"><div><h2>Ваша роль и ранги</h2><p>Влияет на список пиков и на предметы.</p></div></div>
-<div class="rr"><span class="lbl">Роль</span><div class="role" id="role" role="group" aria-label="Ваша роль"></div>
-<span class="lbl">Ранг</span><div class="rank" id="rank" role="group" aria-label="Ранг игроков"></div></div></div></section>
+<div class="sh"><div><h2>Роль и ранг</h2></div></div>
+<div class="rr"><div class="rgrp"><span class="lbl">Роль</span><div class="role" id="role" role="group" aria-label="Ваша роль"></div></div>
+<div class="rgrp"><span class="lbl">Ранг</span><div class="rank" id="rank" role="group" aria-label="Ранг игроков"></div></div></div></div></section>
 
 <section class="step"><div class="num">3</div><div class="sb">
-<div class="sh"><div><h2>Результат</h2><p>Слева - кого брать. Справа - что покупать против этих врагов.</p></div></div>
+<div class="sh"><div><h2>Результат</h2><p id="fresh">Слева — кого брать. Справа — что покупать против этих врагов.</p></div></div>
 <div class="layout">
 <main><div class="sec" id="ptitle" hidden></div><div class="cards" id="pk"></div>
 <div class="pn bpn"><div class="pt"><div class="sec" id="bt">Билд</div><span id="btw"></span></div><div id="bd"></div></div></main>
@@ -223,6 +268,7 @@ header h1{margin:0;font-size:22px}header p{margin:2px 0 0;color:var(--mut);font-
 <section class="pn games" id="quiz"><div class="gh"><h2>Мини-игры</h2><p>Викторины на 5 вариантов по тем же данным. Проверьте, насколько хорошо знаете контрпики и мету.</p></div>
 <div class="qm" id="qmodes"></div><div class="qs" id="qscore"></div><div id="qz"></div></section>
 
+<a class="bestbar" id="bestbar" href="#" hidden></a>
 <footer class="foot" id="foot">Загрузка данных…</footer>
 </div>
 <script src="engine.js"></script>

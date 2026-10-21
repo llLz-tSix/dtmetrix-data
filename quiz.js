@@ -1,5 +1,5 @@
 /* Dota Metrix: мини-игры на главной. Викторины на 5 вариантов по тем же данным, что и подбор пика (data.json).
-   Игры: контрпик, связка, герой по билду, герой по способности, мета патча. Серия и рекорд - в localStorage. */
+   Игры: контрпик, связка, герой по билду, герой по способности, мета патча. Серия и рекорд — в localStorage. */
 (function (root) {
   "use strict";
   var CDN = "https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/";
@@ -13,7 +13,7 @@
   var logit = function (p) { p = Math.min(1 - EPS, Math.max(EPS, p)); return Math.log(p / (1 - p)); };
   var sigmoid = function (x) { return 1 / (1 + Math.exp(-x)); };
   var pick = function (a) { return a[Math.floor(Math.random() * a.length)]; };
-  var pp = function (x) { return (x >= 0 ? "+" : "−") + Math.abs(x).toFixed(1).replace(".", ",") + " п.п."; };
+  var pp = function (x) { return (x >= 0 ? "+" : "−") + Math.abs(x).toFixed(1).replace(".", ",") + "% к шансу"; };
   function shuffle(a) {
     a = a.slice();
     for (var i = a.length - 1; i > 0; i--) { var j = Math.floor(Math.random() * (i + 1)), t = a[i]; a[i] = a[j]; a[j] = t; }
@@ -57,7 +57,7 @@
       return { title: "Контрпик", ask: "Кто лучше всех играет против " + x.name + "?",
         show: '<img class="qh" src="' + heroImg(x) + '" alt="">',
         options: opts.map(function (r) { return heroOpt(r[0], pp(r[1])); }), right: opts.indexOf(good),
-        after: "Цифра - на сколько шанс на победу против " + x.name + " выше или ниже ожидаемого по силе героев." };
+        after: "Цифра — на сколько шанс на победу против " + x.name + " выше или ниже ожидаемого по силе героев." };
     } },
     duo: { label: "Связка", make: function () {
       var x = pick(popular()), rows = [];
@@ -70,7 +70,7 @@
       return { title: "Связка", ask: "С кем " + x.name + " сильнее всего в одной команде?",
         show: '<img class="qh" src="' + heroImg(x) + '" alt="">',
         options: opts.map(function (r) { return heroOpt(r[0], pp(r[1])); }), right: opts.indexOf(good),
-        after: "Цифра - насколько эта пара выигрывает чаще или реже ожидаемого." };
+        after: "Цифра — насколько эта пара выигрывает чаще или реже ожидаемого." };
     } },
     build: { label: "Билд", make: function () {
       var all = [];
