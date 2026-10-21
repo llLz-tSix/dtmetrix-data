@@ -1,0 +1,19 @@
+{
+ "version": "0.2.0",
+ "url": "app-0.2.0.zip",
+ "sha256": "97186eac62468d0f25496d7dcafc7a64fd9b7f0596f0b9d360f9c6f6e65c184e",
+ "size": 1823211,
+ "min_runtime": 1,
+ "python": "3.12",
+ "min_version": "0.0.0",
+ "block_message": "",
+ "installer_url": "https://github.com/llLz-tSix/dtmetrix-data/releases/latest/download/DotaMetrix-Setup.exe",
+ "notes": "Бета 0.2.0: новый вид оверлея; в матче цифры у интерфейса Dota — GPM и ценность слева вверху, следующий предмет над магазином, матчап под портретами врагов",
+ "installer": {
+  "runtime": "cd6feaaf940e63850252",
+  "url": "https://github.com/llLz-tSix/dtmetrix-data/releases/download/v0.1.22/DotaMetrix-Setup.exe",
+  "sha256": "2de826220b8e2041f35e1ff3f6c7d5eecce1e1957628a3bb565d12da379856cd",
+  "size": 81378018
+ },
+ "sig": "ca7bd65df4aadc11f077d719d8381cb5def20e809641646788a172abaae5a6bd6947e3730d7203f199c1d284b61a43b5611ba13c598e87be4b6a3ea0e15a2203"
+}
