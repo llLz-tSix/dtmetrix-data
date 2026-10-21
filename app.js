@@ -285,9 +285,15 @@
     document.body.classList.remove("busy");
     $("q").addEventListener("input", openList);
     $("q").addEventListener("focus", openList);
-    document.addEventListener("pointerdown", function (e) {
-      if (ddOpen && !e.target.closest(".srch, .slot, .ally, #tgt")) { ddOpen = false; listHeroes(); }
-    });
+    window.__dmApp = {                               // общие для документа обработчики смотрят на текущий запуск
+      down: function (e) { if (ddOpen && !e.target.closest(".srch, .slot, .ally, #tgt")) { ddOpen = false; listHeroes(); } },
+      hash: function () { readHash(); selected = 0; update(); }
+    };
+    if (!window.__dmAppOn) {
+      window.__dmAppOn = true;
+      document.addEventListener("pointerdown", function (e) { if (document.getElementById("q")) window.__dmApp.down(e); });
+      addEventListener("hashchange", function () { if (document.getElementById("q")) window.__dmApp.hash(); });
+    }
     $("q").addEventListener("keydown", function (e) { if (e.key === "Escape") { ddOpen = false; listHeroes(); } });
     $("q").addEventListener("keydown", function (e) {
       var items = Array.prototype.slice.call($("dd").querySelectorAll("div[data-id]"));
@@ -308,12 +314,12 @@
       if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(url).then(function () { done("Скопировано"); }, function () { done("Не вышло"); });
       else done("Скопируйте из адресной строки");
     };
-    addEventListener("hashchange", function () { readHash(); selected = 0; update(); });
     update();
     if (window.DMQuiz) DMQuiz.start(D);
     watchResults();
   }
 
+  if (window.__dmD) { D = window.__dmD; boot(); return; }        // вернулись на главную без перезагрузки
   fetch("data.json", { cache: "no-cache" }).then(function (r) { if (!r.ok) throw new Error(r.status); return r.json(); })
     .then(function (d) { D = d; boot(); })
     .catch(function () {

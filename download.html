@@ -15,11 +15,21 @@
 <style>
 :root{--bg:#0e0b1a;--c:#1a1530;--c2:#241d44;--line:#2b2350;--tx:#f1eeff;--mut:#9a92c4;--ac:#c4b5fd;--g:#4ade80;--y:#facc15;--r:#fb7185}
 *{box-sizing:border-box}html{color-scheme:dark}
-body{margin:0;background:#06040d;color:var(--tx);font:15.5px/1.6 "Segoe UI",system-ui,-apple-system,Roboto,sans-serif}
+body{margin:0;background:#06040d;color:var(--tx);font:15px/1.6 "Segoe UI",system-ui,-apple-system,Roboto,sans-serif}
 #rain{opacity:.28;position:fixed;inset:0;width:100%;height:100%;z-index:0;pointer-events:none}
-.page{position:relative;z-index:1;max-width:900px;margin:0 auto;padding:0 18px 48px;min-height:100vh;background-color:rgba(14,11,26,.6);background-image:linear-gradient(rgba(196,181,253,.045) 1px,transparent 1px),linear-gradient(90deg,rgba(196,181,253,.045) 1px,transparent 1px);background-size:32px 32px}
+html{scrollbar-gutter:stable}@view-transition{navigation:auto}header{view-transition-name:shell-head}.ticker{view-transition-name:shell-tick;min-height:18px}.tabs{view-transition-name:shell-tabs}::view-transition-old(root),::view-transition-new(root){animation-duration:.16s}@media(prefers-reduced-motion:reduce){@view-transition{navigation:none}}
+.page>*:not(header):not(.tabs){max-width:900px}
+.brand small{display:block;margin:2px 0 0;color:var(--mut);font-size:13px;font-weight:400}
+.tabs{display:grid;grid-template-columns:2fr 1fr 1fr;gap:10px;margin:4px 0 14px}
+.tabs a{display:flex;flex-direction:column;gap:2px;padding:12px 16px;border-radius:14px;border:1px solid var(--line);background:var(--c);color:var(--tx);text-decoration:none;line-height:1.45;transition:border-color .15s,background .15s}
+.tabs a b{font-size:17px}.tabs a span{color:var(--mut);font-size:13px}.tabs a:hover{border-color:var(--ac)}
+@media(max-width:700px){.tabs{grid-template-columns:1fr 1fr}.tabs a:first-child{grid-column:1/-1}}
+.page{position:relative;z-index:1;max-width:1280px;margin:0 auto;padding:0 18px 48px;min-height:100vh;background-color:rgba(14,11,26,.6);background-image:linear-gradient(rgba(196,181,253,.045) 1px,transparent 1px),linear-gradient(90deg,rgba(196,181,253,.045) 1px,transparent 1px);background-size:32px 32px}
+@media(min-width:900px){.page{padding-left:28px;padding-right:28px}}
+.brand b{display:block;line-height:1.45}.brand small{line-height:1.45}
+.ticker{display:flex;margin:2px 0 12px}
 #meta{font-family:"JetBrains Mono",ui-monospace,Consolas,monospace;font-variant-numeric:tabular-nums}
-header{display:flex;justify-content:space-between;align-items:center;padding:20px 0 6px;gap:12px;flex-wrap:wrap}
+header{display:flex;justify-content:space-between;align-items:center;padding:20px 0 10px;gap:12px;flex-wrap:wrap}
 .brand{display:flex;align-items:center;gap:12px;color:inherit;text-decoration:none}.brand img{width:40px;height:40px}
 .brand b{font-size:22px}.back{color:var(--ac);text-decoration:none;font-size:14px}.back:hover{text-decoration:underline}
 .hero{margin:22px 0 18px;padding:26px 24px;border:1px solid #3b2f73;border-radius:22px;background:linear-gradient(135deg,rgba(36,29,68,.9),rgba(26,21,48,.9))}
@@ -44,7 +54,11 @@ footer{margin-top:22px;color:var(--mut);font-size:12.5px;line-height:1.55}
 </style></head><body>
 <canvas id="rain" aria-hidden="true"></canvas>
 <div class="page">
-<header><a class="brand" href="./"><img src="logo.svg" alt=""><b>Dota Metrix</b></a><span><a class="back" href="hero/">Все герои</a> · <a class="back" href="./">← Подбор пиков на сайте</a></span></header>
+<header><a class="brand" href="./"><img src="logo.svg" alt=""><span><b>Dota Metrix</b><small>Лучший пик против вражеского драфта за 10 секунд</small></span></a></header>
+<div class="ticker" aria-hidden="true"></div>
+<nav class="tabs" aria-label="Разделы сайта"><a href="./"><b>Подбор пика</b><span>Враги и роль — лучшие пики, билд и предметы</span></a>
+<a href="hero/"><b>Контрпики</b><span>Кто кого контрит и билды</span></a>
+<a href="meta/"><b>Мета патча</b><span>Топ-10 на каждую позицию</span></a></nav>
 
 <section class="hero">
 <h1>Оверлей Dota Metrix для Dota 2</h1>
@@ -99,7 +113,7 @@ footer{margin-top:22px;color:var(--mut);font-size:12.5px;line-height:1.55}
 
 <footer>Dota Metrix — независимый проект. Dota 2 является товарным знаком Valve Corporation; проект не связан с Valve и не одобрен ею.</footer>
 </div>
-<script src="rain.js" defer></script>
+<script src="rain.js" defer></script><script src="nav.js" defer></script>
 <script>
 // версия и размер текущего установщика из манифеста обновлений (если не загрузится - остаётся текст по умолчанию)
 fetch("app/latest.json", { cache: "no-cache" }).then(function (r) { return r.json(); }).then(function (m) {

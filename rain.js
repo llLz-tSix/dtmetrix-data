@@ -42,7 +42,9 @@
       else if (Math.random() < 0.02) c.t = token();                 // строка меняется на лету: «идёт подсчёт»
     });
   }
+  function keep(k, v) { try { if (v === undefined) return JSON.parse(sessionStorage.getItem(k)); sessionStorage.setItem(k, JSON.stringify(v)); } catch (e) { return null; } }
   function use(list) {                                             // [[id, имя, винрейт, матчей], ...]
+    keep("dm_rain", list);
     tokens = list.map(function (r) {
       return { id: r[0], tag: short(r[1]), wr: (+r[2] || 50).toFixed(1), games: Math.round(r[3] / 1000) + "k" };
     });
@@ -52,14 +54,21 @@
     focus: function (ids) { hot = {}; (ids || []).forEach(function (id) { hot[id] = true; }); }
   };
   if (window.__dmD) window.DMRain.data(window.__dmD);
-  setTimeout(function () {                                         // страница без своих данных: короткий список героев
-    if (tokens.length || !base || !window.fetch) return;
+  if (!tokens.length && keep("dm_rain")) use(keep("dm_rain"));
+  if (!tokens.length && base && window.fetch) {                    // первый заход: короткий список героев
     fetch(base + "rain.json").then(function (r) { return r.ok ? r.json() : []; }).then(function (list) {
       if (!tokens.length && list.length) use(list);
     }).catch(function () {});
-  }, 1200);
+  }
   size(); addEventListener("resize", size);
-  if (still) { tick(); return; }
+  var was = keep("dm_rain_cols");                                  // струи продолжаются с прошлой страницы
+  if (was && was.w === w) cols.forEach(function (c, i) { if (was.c[i]) { c.y = was.c[i][0]; c.v = was.c[i][1]; } });
+  addEventListener("pagehide", function () { keep("dm_rain_cols", { w: w, c: cols.map(function (c) { return [c.y, c.v]; }) }); });
+  for (var i = 0; i < 40; i++) {                                   // прогрев: экран сразу со следами, а не пустой
+    cols.forEach(function (c) { c.y -= F * c.v * 0.5; });
+  }
+  for (i = 0; i < 40; i++) tick();
+  if (still) return;
   var last = 0;
   (function loop(t) { if (!document.hidden && t - last > 60) { tick(); last = t; } requestAnimationFrame(loop); })(0);
 })();

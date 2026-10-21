@@ -28,6 +28,7 @@
 html{color-scheme:dark}
 body{margin:0;background:#06040d;color:var(--tx);font:15px/1.45 "Segoe UI",system-ui,-apple-system,Roboto,sans-serif}
 #rain{opacity:.28;position:fixed;inset:0;width:100%;height:100%;z-index:0;pointer-events:none}
+html{scrollbar-gutter:stable}@view-transition{navigation:auto}header{view-transition-name:shell-head}.ticker{view-transition-name:shell-tick;min-height:18px}.tabs{view-transition-name:shell-tabs}::view-transition-old(root),::view-transition-new(root){animation-duration:.16s}@media(prefers-reduced-motion:reduce){@view-transition{navigation:none}}
 .page{overflow-x:clip;position:relative;z-index:1;max-width:1280px;margin:0 auto;padding:0 18px 40px;background:rgba(14,11,26,.6);min-height:100vh}
 header{display:flex;justify-content:space-between;align-items:center;padding:20px 0 10px;gap:12px;flex-wrap:wrap}
 .brand{display:flex;align-items:center;gap:12px}.brand img{width:40px;height:40px;flex:none}
@@ -272,5 +273,5 @@ body.busy .slots,body.busy .dctl,body.busy .allies{opacity:.45;pointer-events:no
 <footer class="foot" id="foot">Загрузка данных…</footer>
 </div>
 <script src="engine.js"></script>
-<script src="rain.js" defer></script><script src="quiz.js"></script><script src="app.js"></script>
+<script src="rain.js" defer></script><script src="nav.js" defer></script><script src="quiz.js"></script><script src="app.js"></script>
 </body></html>
