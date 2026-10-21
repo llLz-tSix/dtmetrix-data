@@ -39,7 +39,7 @@
     $("en").innerHTML = [0, 1, 2, 3, 4].map(function (i) {
       var h = enemies[i] && D.byId[enemies[i]];
       return h
-        ? '<button type="button" class="slot" data-i="' + i + '" title="Убрать героя" aria-label="Убрать ' + esc(h.name) + '"><span class="x">×</span><img src="' + heroImg(h.slug) + '" alt="" onerror="' + hide + '"><b>' + esc(h.name) + '</b><i>' + h.pub.toFixed(1) + '% винрейт</i></button>'
+        ? '<button type="button" class="slot" data-i="' + i + '" title="Убрать героя" aria-label="Убрать ' + esc(h.name) + '"><span class="x">×</span><img src="' + heroImg(h.slug) + '" alt="" onerror="' + hide + '"><b lang="en">' + esc(h.name) + '</b><i>' + h.pub.toFixed(1) + '% винрейт</i></button>'
         : '<button type="button" class="slot empty" data-i="' + i + '" aria-label="Выбрать героя"><div class="plus">+</div><i>Выбрать героя</i></button>';
     }).join("");
     $("cnt").textContent = enemies.length + " из 5";
@@ -269,10 +269,13 @@
   var pkSeen = false;
   function watchResults() {
     if (!window.IntersectionObserver) return;
-    new IntersectionObserver(function (ents) {
-      pkSeen = ents[0].isIntersecting;
+    var seen = {};                                   // плашка не нужна, пока видны сами пики, мини-игры или подвал
+    var io = new IntersectionObserver(function (ents) {
+      ents.forEach(function (e) { seen[e.target.id] = e.isIntersecting; });
+      pkSeen = seen.pk || seen.quiz || seen.foot;
       if (rows[0] && enemies.length) $("bestbar").hidden = pkSeen;
-    }).observe($("pk"));
+    });
+    ["pk", "quiz", "foot"].forEach(function (id) { if ($(id)) io.observe($(id)); });
   }
   function update() { renderSlots(); renderRole(); renderRank(); renderPicks(); renderBuild(); renderCounters(); renderFoot(); renderBest(); countUp(); if (window.DMRain) DMRain.focus(enemies); writeHash(); }
 
