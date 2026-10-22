@@ -1,19 +1,19 @@
 {
- "version": "0.2.1",
- "url": "app-0.2.1.zip",
- "sha256": "e6eb1f854ef3d4ba6aeba71526fbac24662f67593175ae86ab980d638de4a993",
- "size": 1827580,
+ "version": "0.2.2",
+ "url": "app-0.2.2.zip",
+ "sha256": "ab1045293657a0a0d8b92de7f91330674021ef25636dca6fb52785cbe56f5a56",
+ "size": 1848720,
  "min_runtime": 1,
  "python": "3.12",
  "min_version": "0.0.0",
  "block_message": "",
  "installer_url": "https://github.com/llLz-tSix/dtmetrix-data/releases/latest/download/DotaMetrix-Setup.exe",
- "notes": "Бета 0.2.1: узкая рейка (лого и ваш герой, по клику - гайд); в матче без золота, GPM с нормой героя после 15 минуты; советы покупок убраны, остался совет предмета после 2+ смертей; чтение подписи драфта в 40 раз легче для ПК; нет фантомных героев на пустой панели.",
+ "notes": "Бета 0.2.2: роль берётся из игры - подпись под вашим ником на рейтинговом драфте. Советы после смертей по времени: контрпредмет - когда подходит его обычная минута покупки, раньше - как играть (стоять за крипами, уйти в лес, фармить у своих башен). Нет фантомных героев на пустой панели.",
  "installer": {
   "runtime": "cd6feaaf940e63850252",
   "url": "https://github.com/llLz-tSix/dtmetrix-data/releases/download/v0.1.22/DotaMetrix-Setup.exe",
   "sha256": "2de826220b8e2041f35e1ff3f6c7d5eecce1e1957628a3bb565d12da379856cd",
   "size": 81378018
  },
- "sig": "7664084b69c72be8e2bfc0b7fb6b4d3b3542e0f151faa789350686176c2d72be1e3a241c3226c9f25b35c125627d7289f9420fdc5730c93a79bd8d00c76da407"
+ "sig": "f898a2c8d521e6f88bf37fa7c2bbf8d0e20277884a5f6d80bbdcaafa564edec16b21074dadd13b044b29acdc011c1841f9becd5775d048ab3ed7ea1001a11c05"
 }
