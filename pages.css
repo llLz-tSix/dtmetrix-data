@@ -18,6 +18,7 @@ header{display:flex;justify-content:space-between;align-items:center;padding:20p
 .tabs a b{font-size:17px}.tabs a span{color:var(--mut);font-size:13px}
 .tabs a.on{border-color:var(--ac);background:#241d44}.tabs a:hover{border-color:var(--ac)}
 @media(max-width:700px){.tabs{grid-template-columns:1fr 1fr}.tabs a:first-child{grid-column:1/-1}.soon{display:none}}
+@media(max-width:560px){header{padding:12px 0 6px}.brand img{width:32px;height:32px}.brand b{font-size:19px}.brand small{display:none}.page .ticker{margin:0 0 8px;font-size:11px;gap:4px 12px}.tabs{grid-template-columns:none;grid-auto-flow:column;grid-auto-columns:minmax(0,1fr);gap:6px;margin:0 0 12px}.tabs a:first-child{grid-column:auto}.tabs a{padding:9px 6px;border-radius:10px;align-items:center;text-align:center}.tabs a b{font-size:14px}.tabs a span{display:none}}  /* телефон: шапка в две строки, вкладки без описаний */
 html{scrollbar-gutter:stable}@view-transition{navigation:auto}header{view-transition-name:shell-head}.ticker{view-transition-name:shell-tick;min-height:18px}.tabs{view-transition-name:shell-tabs}::view-transition-old(root),::view-transition-new(root){animation-duration:.16s}@media(prefers-reduced-motion:reduce){@view-transition{navigation:none}}
 nav{display:flex;flex-wrap:wrap;gap:8px;font-size:14px}
 nav a{padding:7px 15px;border:1px solid var(--line);border-radius:99px;color:var(--tx);background:var(--c);white-space:nowrap;transition:border-color .15s,background .15s}
@@ -48,7 +49,9 @@ h1{margin:0 0 4px;font-size:28px;line-height:1.2}h2{margin:0 0 12px;font-size:19
  background:var(--c);color:var(--tx);font-weight:600;font-size:14px;transition:border-color .15s,background .15s}
 .back:hover{border-color:var(--ac);background:#241d44;text-decoration:none}
 .hint{font-size:14px;margin:0 0 14px}
-@media(max-width:560px){.ab:has(img)>span{display:none}.mech{flex-wrap:nowrap}}  /* телефон: способности иконками, название - в подсказке */
+@media(max-width:560px){.ab:has(img)>span{display:none}.mech{flex-wrap:nowrap;gap:4px}.row .ab img{width:20px;height:20px}.tg{min-width:0;overflow:hidden;text-overflow:ellipsis;font-size:10.5px;padding:1px 6px}.row .t{overflow:hidden}.row{gap:10px}.wb2{width:56px}.row .v{font-size:16px}}  /* телефон: способности иконками (название - в подсказке), длинная метка - с многоточием, процент не перекрыт */
+.pn h2{position:relative}.q{display:inline-grid;place-items:center;width:20px;height:20px;margin-left:6px;border:1px solid var(--line);border-radius:50%;color:var(--mut);font:600 12px/1 "JetBrains Mono",ui-monospace,Consolas,monospace;vertical-align:3px;cursor:help}
+.q:hover,.q:focus{color:var(--tx);border-color:var(--ac);outline:none}.q .qt{display:none;position:absolute;left:0;top:100%;z-index:3;max-width:300px;margin-top:6px;padding:8px 12px;border:1px solid var(--line);border-radius:10px;background:#1a1530;color:#d6d0f5;font:400 13.5px/1.45 "Segoe UI",system-ui,sans-serif}.q:hover .qt,.q:focus .qt{display:block}
 .row .v{font-weight:800;font-size:20px;white-space:nowrap}.up{color:var(--g)}.down{color:var(--r)}
 .items{display:flex;flex-wrap:wrap;gap:8px}
 .it{display:flex;gap:8px;align-items:center;padding:6px 10px 6px 6px;background:var(--c2);border:1px solid var(--line);border-radius:10px;max-width:100%}
@@ -139,7 +142,7 @@ footer{color:var(--mut);font-size:13px;margin-top:20px}
 .ic{display:flex;flex-wrap:wrap;gap:6px}.ic span{display:flex;flex-direction:column;align-items:center}
 .ic img{width:72px;height:53px;border-radius:8px;background:var(--c2)}.ic small{font-size:12.5px;color:var(--mut)}
 .wb{width:110px;flex:none}.wb .bar{margin:0}
-@media(max-width:560px){nav a{padding:6px 12px;font-size:13px}.row img{width:72px;height:40px}.row .v{font-size:17px}.wb{width:84px}.mh img{width:80px;height:45px}.mh .rk{font-size:19px}h1{font-size:23px}.hero img{width:96px;height:54px}.vs .big{font-size:26px}}
+@media(max-width:560px){nav a{padding:6px 12px;font-size:13px}.row img{width:64px;height:36px}.wb{width:84px}.mh img{width:80px;height:45px}.mh .rk{font-size:19px}h1{font-size:23px}.hero img{width:96px;height:54px}.vs .big{font-size:26px}}
 .mono{font-family:"JetBrains Mono",ui-monospace,Consolas,monospace}
 .sub2{color:var(--mut);font-size:13px;margin:4px 0 18px;font-family:"JetBrains Mono",ui-monospace,Consolas,monospace}
 .tabs2{display:flex;gap:4px;border-bottom:1px solid var(--line);margin:0 0 4px;overflow-x:auto;scrollbar-width:none}
