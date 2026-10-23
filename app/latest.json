@@ -1,19 +1,19 @@
 {
- "version": "0.1.27",
- "url": "app-0.1.27.zip",
- "sha256": "faa89e761e46b59b0cf32aafd2f12b5a4995bb28c0f80fca09a5e62d326ecc9b",
- "size": 1785943,
+ "version": "0.2.3",
+ "url": "app-0.2.3.zip",
+ "sha256": "f63f88993cfd83fe945908f392203d44054a9967bb7b7f8310088dd11946e131",
+ "size": 1854441,
  "min_runtime": 1,
  "python": "3.12",
  "min_version": "0.0.0",
  "block_message": "",
  "installer_url": "https://github.com/llLz-tSix/dtmetrix-data/releases/latest/download/DotaMetrix-Setup.exe",
- "notes": "Бета-канал: в настройках появилась кнопка «бета-версии» — новые версии раньше всех",
+ "notes": "Бета 0.2.3: сторона миникарты определяется по экрану матча - при миникарте справа совет после смертей встаёт над магазином слева.",
  "installer": {
   "runtime": "cd6feaaf940e63850252",
   "url": "https://github.com/llLz-tSix/dtmetrix-data/releases/download/v0.1.22/DotaMetrix-Setup.exe",
   "sha256": "2de826220b8e2041f35e1ff3f6c7d5eecce1e1957628a3bb565d12da379856cd",
   "size": 81378018
  },
- "sig": "7b12ffe3fbbb48d0fc5449a078a0efae5299e2aa955b306f18c45f3d68dac3fd7516440cdb32ee2b15c3f18addefa0dd64284235d93c537cec1b25ed401f1e0c"
+ "sig": "de8d8947ba8515399b207f71ca16e79d7bf0a72e33c608af25d1e893eb681be04dbff76f2cc51900b34f18ba21e098e071f334c04e608196fb4c256048230604"
 }
