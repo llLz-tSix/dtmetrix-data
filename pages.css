@@ -37,6 +37,9 @@ h1{margin:0 0 4px;font-size:28px;line-height:1.2}h2{margin:0 0 12px;font-size:19
 .row img{width:96px;height:54px;background:linear-gradient(90deg,var(--c2),#2d2560,var(--c2));border-radius:6px;object-fit:cover;flex:none;background:var(--c2)}
 .row .t{flex:1;min-width:0}.row .t b{display:block}.row .t small{display:block;color:var(--mut);font-size:13px}
 .row .t small.why{color:#d6d0f5;font-size:13.5px;margin:2px 0}
+.pw{display:flex;align-items:flex-start;gap:8px;margin:3px 0 2px}.pw small.why{margin:1px 0 0}
+.ics{display:flex;gap:3px;flex:none}.row .ics img{width:22px;height:22px;border-radius:5px;object-fit:cover;background:var(--c2)}.pw small.why{min-width:0}
+@media(max-width:560px){.row .ics img{width:20px;height:20px}.pw{flex-direction:column;gap:3px}}  /* телефон: иконки над текстом, чтобы фраза не сжималась в узкую колонку */
 .mech{display:flex;align-items:center;flex-wrap:wrap;gap:4px 8px;margin:4px 0 3px;font-size:13.5px}
 .ab{display:inline-flex;align-items:center;gap:6px;color:#e4defc;font-weight:600}
 .row .ab img{width:22px;height:22px;border-radius:5px;object-fit:cover;background:var(--c2)}
